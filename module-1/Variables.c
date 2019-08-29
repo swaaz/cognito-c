@@ -1,3 +1,4 @@
+{
 int variables()
 {
     int o,z=1;
@@ -18,3 +19,4 @@ int variables()
     }
     return 0;
 }
+
