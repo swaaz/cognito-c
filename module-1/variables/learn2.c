@@ -1,6 +1,4 @@
-
-
-int learn()
+int learn2() //variables
 {
    printf("\n-------------------LEARN---------------------\n");
    printf("Variables :\n");
@@ -25,5 +23,5 @@ int learn()
    printf("Intialization :\n");
    printf("The declaration of variables be the assigned value at the declaration time is called initalization.later the assigned value can be changed\n");
    printf("Examples:\n1.int age=18,2.int num=100\n");
-   
-} 
+
+}

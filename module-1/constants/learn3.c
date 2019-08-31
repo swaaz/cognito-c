@@ -1,4 +1,4 @@
-int learn()
+nt learn3() //constants
 {
   printf("Constants :\n");
   printf("    \tConstants is a fixed value assigned to a variable which cannot be modified in a program. In C program constants is declared by using a keyword const.\n");
@@ -30,5 +30,4 @@ int learn()
   printf("\n String constants :\n");
   printf("These constants are single alphabet single digit or single special alphabet(s), single or several digit(s) or single several special symbols or combination of these enclosed within double quotes.\n");
   printf("Example :'a@34','745','sony' etc.\n");
-         }
-
+}
