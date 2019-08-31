@@ -1,9 +1,9 @@
-int constants()
+int variables()
 {
     int o,z=1;
     while (z)
     {
-        printf("\n----------CONSTANTS----------\n");
+        printf("\n----------VARIABLES----------\n");
         printf("Do you want to\n1.Learn\n2.Quiz\n3.Back to previous menu\n");
         printf("Enter the option\n");
         scanf("%d",&o);
