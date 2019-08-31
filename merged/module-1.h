@@ -11,7 +11,6 @@ int module_1()
         {
             case 1:c_tokens(); break;
             case 2:variable(); break;
-            case 3:constants(); break;
             case 3:z=0;break;
         
             
