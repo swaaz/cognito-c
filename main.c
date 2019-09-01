@@ -1,5 +1,9 @@
 #include<stdio.h>
 #include<stdlib.h>
+typedef struct
+{
+    int q[10];
+}quiz;
 void main()
 {
     int o;
