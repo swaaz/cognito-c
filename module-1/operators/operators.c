@@ -9,7 +9,7 @@ int operators()
         scanf("%d",&o);
         switch (o)
         {
-            case 1:learn2();break;
+            case 1:learn4();break;
             //case 2:quiz(); break;
             case 3:return 0;
             case 4:exit(0);
