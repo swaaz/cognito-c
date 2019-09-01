@@ -1,4 +1,4 @@
-nt learn3() //constants
+int learn3() //constants
 {
   printf("Constants :\n");
   printf("    \tConstants is a fixed value assigned to a variable which cannot be modified in a program. In C program constants is declared by using a keyword const.\n");
