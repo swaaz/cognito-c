@@ -1,4 +1,4 @@
-int learn4()
+int learn4() //operators
 {
       printf(" Operators :\n");
     printf("\n  Operators in c are the symbols, which are used to perform operations i.e operators specify the operations to be performed.\n");

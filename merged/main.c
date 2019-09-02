@@ -1,5 +1,11 @@
+
 #include<stdio.h>
+//#include<conio.h>
+//#include<ctype.h>
 #include<stdlib.h>
+//#include<string.h>
+
+//#include<conio.h>
 //#include<module-1.h>
 //#include<c-tokens.h>
 //#include<constant.h>
@@ -9,12 +15,13 @@
 //#include<learn3.h>
 
 int module_1()
-{
+{system("clear");
     int o;
+ //   clrscr();
     while(1)
     {
         printf("\n----------MODULE-1----------\n");
-        printf("1.C TOKENS\n2.VARIABLES\n3.CONSTANTS\n4.BACK TO MAIN MENU\n5.EXIT\n");
+        printf("1.C TOKENS\n2.VARIABLES\n3.CONSTANTS\n4.OPERATORS\n5.BACK TO MAIN MENU\n6.EXIT\n");
         printf("Enter the option : ");
         scanf("%d",&o);
         switch (o)
@@ -22,8 +29,9 @@ int module_1()
             case 1:c_tokens(); break;
             case 2:variables(); break;
             case 3:constants(); break;
-            case 4:return 0;
-            case 5:exit(0);
+            case 4:operators(); break;
+            case 5:return 0;
+            case 6:exit(0);
 
 
             default:printf("Sorry!! It's an invalid option\n");
@@ -34,7 +42,7 @@ int module_1()
 }
 
 int c_tokens()
-{
+{system("clear");
     int o;
     while (1)
     {
@@ -55,12 +63,12 @@ int c_tokens()
     return 0;
 }
 int variables()
-{
+{system("clear");
     int o;
     while (1)
     {
         printf("\n----------VARIABLES----------\n");
-        printf("Do you want to\n1.Learn\n2.Quiz\n3.Back to previous menu\n");
+        printf("Do you want to\n1.Learn\n2.Quiz\n3.Back to previous menu\n4.Exit\n");
         printf("Enter the option : ");
         scanf("%d",&o);
         switch (o)
@@ -68,6 +76,7 @@ int variables()
             case 1:learn2();break;
             //case 2:quiz(); break;
             case 3:return 0;
+            case 4:exit(0);
             default:printf("Invalid option\n");
 
         }
@@ -76,7 +85,7 @@ int variables()
 }
 
 int constants()
-{
+{system("clear");
     int o;
     while (1)
     {
@@ -96,8 +105,30 @@ int constants()
     }
     return 0;
 }
+int operators()
+{system("clear");
+    int o;
+    while (1)
+    {
+        printf("\n----------OPERATORS----------\n");
+        printf("Do you want to\n1.Learn\n2.Quiz\n3.Back to previous menu\n4.Exit\n");
+        printf("Enter the option : ");
+        scanf("%d",&o);
+        switch (o)
+        {
+            case 1:learn4();break;
+            //case 2:quiz(); break;
+            case 3:return 0;
+            case 4:exit(0);
+            default:printf("Invalid option\n");
+
+        }
+    }
+    return 0;
+}
+
 int learn1() //c-tokens
-{
+{system("clear");
     printf("\n----------Learn----------\n");
     printf("C-Tokens and the smallesT individual Hits of a C-program. These are the basic building blocks in a C program that cannot be further broken down into elements\n");
     printf("There are mainly five C tokens namely\nKeywords\nIdentifiers (Variables)\nConstants\nStrings\nOperators\n");
@@ -106,7 +137,7 @@ int learn1() //c-tokens
 
 
 int learn2() //variables
-{
+{system("clear");
    printf("\n-------------------LEARN---------------------\n");
    printf("Variables :\n");
    printf("Identifiers are the names provided to the elements of a program such as variables,functions and array.Identifiers consist of letter, number or an under score.\n");
@@ -133,7 +164,7 @@ int learn2() //variables
 
 }
 int learn3() //constants
-{
+{system("clear");
   printf("Constants :\n");
   printf("    \tConstants is a fixed value assigned to a variable which cannot be modified in a program. In C program constants is declared by using a keyword const.\n");
   printf("\nExamples :\n1.const int a=3.14, const char letter='N'.\n");
@@ -166,10 +197,81 @@ int learn3() //constants
   printf("Example :'a@34','745','sony' etc.\n");
 }
 
-
+int learn4() //operators
+{system("clear");
+      printf(" Operators :\n");
+    printf("\n  Operators in c are the symbols, which are used to perform operations i.e operators specify the operations to be performed.\n");
+    printf("\n    • operands are the data upon which operators act.\n");
+    printf("\n\n the operators in c are classified based on :\n");
+    printf("      i) the number of operands an operator acts upon.\n");
+    printf("     ii) the type of operations the operator performs.\n");
+    printf("\n Based on the number of operands on operator has :\n");
+    printf("->unary operators\n->binary operators\n->turnary operators\n->special operators\n ");
+    printf("\nBased on the type of operators :\n ");
+    printf("->arithmetic operators\n ->assignment operator\n ->increment/decrement operator\n ->relational operator\n ->logical operator\n ->conditional operator\n ->bitwise operator\n ->special operator\n ");
+    printf("\n Types of operators :\n");
+    printf("    |-->arithmetic operators(+,*,-,/,%)\n");
+    printf("    |\n");
+    printf("    |-->relational operators(<,>,<=,>=,==,!=)\n");
+    printf("    |\n");
+    printf("    |-->increment/decrement operators(++,--)\n");
+    printf("    |\n");
+    printf("    |-->logical operators(&&,||,!)\n");
+    printf("    |\n");
+    printf("    |-->assignment operators(=,+=,-=,*=,/=,%=)\n");
+    printf("    |\n");
+    printf("    |-->conditional operators(?:)\n");
+    printf("    |\n");
+    printf("    |-->bitwise operators(&,|,^,<<,>>)\n");
+    printf("    |\n");
+    printf("    |-->special operators(',-operator','size operator','address operator')\n");
+    printf("\n Arithmetic operators :\n");
+    printf("    • Arithmetic operators perform the usual arithmetic operators in a c program");
+    printf("\n  ___________________________________________________________\n");
+    printf("  | operators       | meaning                               |\n");
+    printf("  |_________________|_______________________________________|\n");
+    printf("  | +               |   addition or unary operation         |\n");
+    printf("  | -               |   subtraction or unary operation      |\n");
+    printf("  | *               |   multiplication                      |\n");
+    printf("  | /               |   division                            |\n");
+    printf("  | %%              |   modulo division( returns remainder  |\n");
+    printf("  |_________________|_______________________________________|\n");
+    printf("\n Example : program to demonstrate the working of arithmetic operators\n");
+    printf("\n/* program to illustrate the working of arithmetic operators */\n");
+    printf(" #include<stdio.h>\nvoid main()\n{\n  int a=9, b=4, c;\n  c=a+b;\n  printf(\"a+b=\%d\\n\",c);\n  c=a+b;\n  printf(\"a-b=\%\d\\n\",c);\n  c=a*b;\n  printf(\"a*b=\%\d\\n\",c);\n  c=a/b;\n  printf(\"a/b=\%\d\\n\",c);\n  c=a%b;\n  printf(\"Remainder when a divided by b=\%d\\n\",c);\n}\n");
+    printf("\n Relational operators :\n");
+    printf("    • Relational operators are used to find the relational between two operands.\n");
+    printf("    • The output relational expression is either true(1) or false(0).");
+    printf("    • The two operational may be constants, variables or expressions.");
+    printf("\n  ____________________________________________________________________________________________________________________________________________________\n");
+    printf("  | operators | operation      | usage  |             operations performed                                                                            |\n");
+    printf("  |___________|________________|________|_____________________________________________________________________________________________________________|\n");
+    printf("  | >         | lesser that    | a>b    | if a is lesser than b, then it gives the result true(1).otherwise gives the result false(0)                 |\n");
+    printf("  | <=        |lesser or equal | a<=b   | if a is lesser then or equal to b, then it gives  the result true(1),otherwise gives the result false(0)    |\n");
+    printf("  | >         | greater than   |  a>b   | if a is greater than b, then it gives the result true(1).otherwise gives the result false(0)                |\n");
+    printf("  | >=        |greater or equal| a>=b   | if a is greater then or equal to b, then it gives  the result true(1),otherwise gives the result false(0)   |\n");
+    printf("  | ==        |  equal to      | a==b   | if a is equal to be, then it give the result true(1)                                                        |\n");
+    printf("  | !=        |  equal to      | a!=b   | if a is not equal to be, then it give the result true(1), otherwise gives result false (0)                  |\n");
+    printf("  |___________|________________|________|_____________________________________________________________________________________________________________|\n");
+    printf("\n Example :program to illustrate the use of relational operators is given below.\n");
+    printf("/*program to illustrate the use of relational operators */\n");
+    printf(" #include<stdio.h>\nvoid main()\n{\n  int a=50, b=10;\n  if(a>b)\n   {\n   printf(\"a is greater then b\");\n   }\n}\n");
+    printf("   output :\na is greater than b\n");
+    printf("\n Logical operators :\n");
+    printf("    • Logical operators is also called as connectors since they are used to connect(join) relational expression.\n");
+    printf("    • Logical operators produced either true(1) or false(0) as result \n");
+    printf("\n  ____________________________________________________________________________________________________________________________________________________\n");
+    printf("  | symbols   | logical        | usage  |             operations performed                                                                            |\n");
+    printf("  |___________|__operators_____|________|_____________________________________________________________________________________________________________|\n");
+    printf("  | &&        | AND            | a&&b   | if both a and b are true, then it gives the result true(1). otherwise gives the result false(0)             |\n");
+    printf("  | <=        |lesser or equal | a||b   | if either a or b is true, then it gives the result true(1). otherwise gives the result false(0)             |\n");
+    printf("  | >         | greater than   |  !a    | if a is true(1) the NOT a gives false(0) if a is false the NOT a is true                                    |\n");
+    printf("  |___________|________________|________|_____________________________________________________________________________________________________________|\n");
+    return 0;
+}
 
 void main()
-{
+{system("clear");
     int o;
     while(1)
     {
