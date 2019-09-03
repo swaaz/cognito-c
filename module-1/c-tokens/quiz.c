@@ -1,4 +1,4 @@
-struct quiz q1={4,2,2,4,3,3}
+struct quiz q1={4,2,2,4,3,3};
 
 int quiz1() //c-tokens
 {
