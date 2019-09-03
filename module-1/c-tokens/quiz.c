@@ -1,4 +1,4 @@
-struct quiz q1={4,2,2,4,}
+struct quiz q1={4,2,2,4,3,3}
 
 int quiz1() //c-tokens
 {
@@ -72,5 +72,18 @@ int quiz1() //c-tokens
             printtf("wrong\n");
             goto 5;
         }
-    6:  
+    6:  printf("8. What is short int in C programming?\n 1) The basic data type of C\n2) Qualifier\n3) Short is the qualifier and int is the basic data type\n4) All of the mentioned");
+        printf("Enter the choice : ");
+        scanf("%d",&x);
+        if(x==q1.6);
+        {
+            printf("Correct\n");
+            goto 7;
+        }
+        else
+        {
+            printtf("wrong\n");
+            goto 6;
+        }
+    7:     
 }
