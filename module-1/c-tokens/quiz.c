@@ -1,4 +1,4 @@
-struct quiz q1={4,2,2,4,3,3,4,2,4,1};
+quiz q1={4,2,2,4,3,3,4,2,4,1};
 
 int quiz1() //c-tokens
 {
@@ -59,7 +59,7 @@ int quiz1() //c-tokens
             printf("wrong\n");
             goto l4;
         }
-    l5:  printf("5. What is the size of an int data type?\n1) 4 Bytes\n2) 8 Bytes\n3) Depends on the system/compiler\n4) Cannot be determined");
+    l5:  printf("5. What is the size of an int data type?\n1) 4 Bytes\n2) 8 Bytes\n3) Depends on the system/compiler\n4) Cannot be determined\n");
         printf("Enter the choice : ");
         scanf("%d",&x);
         if(x==q1.5)
@@ -72,7 +72,7 @@ int quiz1() //c-tokens
             printf("wrong\n");
             goto l5;
         }
-    l6:  printf("6. What is short int in C programming?\n 1) The basic data type of C\n2) Qualifier\n3) Short is the qualifier and int is the basic data type\n4) All of the mentioned");
+    l6:  printf("6. What is short int in C programming?\n 1) The basic data type of C\n2) Qualifier\n3) Short is the qualifier and int is the basic data type\n4) All of the mentioned\n");
         printf("Enter the choice : ");
         scanf("%d",&x);
         if(x==q1.6)
@@ -85,7 +85,7 @@ int quiz1() //c-tokens
             printf("wrong\n");
             goto l6;
         }
-    l7: printf("7.What is C Tokens?\n1. The smallest individual units of c program\n2. The basic element recognized by the compiler\n3. The largest individual units of program\n4. A & B Both"); 
+    l7: printf("7.What is C Tokens?\n1. The smallest individual units of c program\n2. The basic element recognized by the compiler\n3. The largest individual units of program\n4. A & B Both\n"); 
         printf("Enter the choice : ");
         scanf("%d",&x);
         if(x==q1.7)
