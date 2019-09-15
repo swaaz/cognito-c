@@ -395,7 +395,7 @@ int learn5() //strings
 
 quiz q1={4,2,2,4,3,3,4,2,4,1}; //c-tokens
 quiz q2={4,4,4,3,2,3,4,4,3,4}; //variables
-
+quiz q3={4,2,2,4,3,3,4,2,4,1}; //constants
 int quiz1() //c-tokens
 {
     int x;
@@ -670,6 +670,8 @@ int quiz2() // variables
         }
 
 }
+int quiz3() //constants
+{
 
 
 
@@ -721,7 +723,7 @@ int constants()
     int o;
     while (1)
     {
-        printf("\n----------VARIABLES----------\n");
+        printf("\n----------CONSTANTS----------\n");
         printf("Do you want to\n1.Learn\n2.Quiz\n3.Back to previous menu\n4.exit\n");
         printf("Enter the option : ");
         scanf("%d",&o);
