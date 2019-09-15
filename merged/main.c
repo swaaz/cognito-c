@@ -395,7 +395,7 @@ int learn5() //strings
 
 quiz q1={4,2,2,4,3,3,4,2,4,1}; //c-tokens
 quiz q2={4,4,4,3,2,3,4,4,3,4}; //variables
-quiz q3={4,2,2,4,3,3,4,2,4,1}; //constants
+
 int quiz1() //c-tokens
 {
     int x;
@@ -669,9 +669,7 @@ int quiz2() // variables
             goto l2_10;
         }
 
-}
-int quiz3() //constants
-{
+
 
 
 
