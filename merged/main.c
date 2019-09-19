@@ -3,7 +3,6 @@
 //#include<ctype.h>
 #include<stdlib.h>
 //#include<string.h>
-
 //#include<conio.h>
 //#include<module-1.h>
 //#include<c-tokens.h>
@@ -17,9 +16,20 @@ typedef struct
 {
     int q[10];
 }quiz;
+int automat()
+{
+    int c;
+    printf("\nDo you want this module to be automatic?\n");
+    printf("1. YES\n2. NO\n");
+    printf("Enter the choice\n");
+    scanf("%d",&c);
+    if(c==1) return 1;
+    else if(c==2) return 2;
+    else return 0;
+}
 
 int learn1() //c-tokens
-{   system("clear");
+{
     printf("\n----------Learn----------\n");
     printf("C-Tokens and the smallesT individual Hits of a C-program. These are the basic building blocks in a C program that cannot be further broken down into elements\n");
     printf("There are mainly five C tokens namely\nKeywords\nIdentifiers (Variables)\nConstants\nStrings\nOperators\n");
@@ -27,7 +37,7 @@ int learn1() //c-tokens
 }
 
 int learn2() //variables
-{   system("clear");
+{
    printf("\n-------------------LEARN---------------------\n");
    printf("Variables :\n");
    printf("Identifiers are the names provided to the elements of a program such as variables,functions and array.Identifiers consist of letter, number or an under score.\n");
@@ -54,7 +64,7 @@ int learn2() //variables
 
 }
 int learn3() //constants
-{   system("clear");
+{
   printf("Constants :\n");
   printf("    \tConstants is a fixed value assigned to a variable which cannot be modified in a program. In C program constants is declared by using a keyword const.\n");
   printf("\nExamples :\n1.const int a=3.14, const char letter='N'.\n");
@@ -87,7 +97,7 @@ int learn3() //constants
   printf("Example :'a@34','745','sony' etc.\n");
 }
 int learn4() //operators
-{   system("clear");
+{
     printf(" Operators :\n");
     printf("\n  Operators in c are the symbols, which are used to perform operations i.e operators specify the operations to be performed.\n");
     printf("\n    • operands are the data upon which operators act.\n");
@@ -328,7 +338,7 @@ int learn4() //operators
     return 0;
 }
 int learn5() //strings
-{   system("clear");
+{
     printf("\n**********  STRING  **********                       \n");
     printf("\n•String is an array of character or a pointer to a portion of memory containing ASCII character\n ");
     printf("\n•String can also be defined as sequence of zero or more character followed by a NULL '\0'character. ");
@@ -1100,6 +1110,14 @@ int quiz5() // stringh
 int c_tokens()
 {   system("clear");
     int o;
+    if(automat()==1)
+    {
+        learn1();
+        //delay
+        quiz1();
+    }
+    else
+    {
     while (1)
     {
         printf("\n----------C-TOKENS----------\n");
@@ -1116,11 +1134,20 @@ int c_tokens()
 
         }
     }
+    }
     return 0;
 }
 int variables()
 {   system("clear");
     int o;
+    if(automat()==1)
+    {
+        learn2();
+        //delay
+        quiz2();
+    }
+    else
+    {
     while (1)
     {
         printf("\n----------VARIABLES----------\n");
@@ -1137,11 +1164,20 @@ int variables()
 
         }
     }
+    }
     return 0;
 }
 int constants()
 {   system("clear");
     int o;
+    if(automat()==1)
+    {
+        learn3();
+        //delay
+        quiz3();
+    }
+    else
+    {
     while (1)
     {
         printf("\n----------CONSTANTS----------\n");
@@ -1158,11 +1194,20 @@ int constants()
 
         }
     }
+    }
     return 0;
 }
 int operators()
 {   system("clear");
     int o;
+    if(automat()==1)
+    {
+        learn4();
+        //delay
+        quiz4();
+    }
+    else
+    {
     while (1)
     {
         printf("\n----------OPERATORS----------\n");
@@ -1179,11 +1224,20 @@ int operators()
 
         }
     }
+    }
     return 0;
 }
 int strings()
 {   system("clear");
     int o;
+    if(automat()==1)
+    {
+        learn5();
+        //delay
+        quiz5();
+    }
+    else
+    {
     while (1)
     {
         printf("\n----------STRINGS-----------\n");
@@ -1206,7 +1260,7 @@ int strings()
 
 
 int module_1()
-{   system("clear");
+{
     int o;
     while(1)
     {
@@ -1233,7 +1287,7 @@ int module_1()
 }
 
 void main()
-{   system("clear");
+{
     int o;
     while(1)
     {
