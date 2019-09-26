@@ -1,10 +1,8 @@
-
 #include<stdio.h>
 //#include<conio.h>
 //#include<ctype.h>
 #include<stdlib.h>
 //#include<string.h>
-
 //#include<conio.h>
 //#include<module-1.h>
 //#include<c-tokens.h>
@@ -18,6 +16,17 @@ typedef struct
 {
     int q[10];
 }quiz;
+int automat()
+{
+    int c;
+    printf("\nDo you want this module to be automatic?\n");
+    printf("1. YES\n2. NO\n");
+    printf("Enter the choice\n");
+    scanf("%d",&c);
+    if(c==1) return 1;
+    else if(c==2) return 2;
+    else return 0;
+}
 
 int learn1() //c-tokens
 {
@@ -124,7 +133,7 @@ int learn4() //operators
     printf("  | -               |   subtraction or unary operation      |\n");
     printf("  | *               |   multiplication                      |\n");
     printf("  | /               |   division                            |\n");
-    printf("  | %               |   modulo division( returns remainder  |\n");
+    printf("  | %%              |   modulo division( returns remainder  |\n");
     printf("  |_________________|_______________________________________|\n");
     printf("\n Example : program to demonstrate the working of arithmetic operators\n");
     printf("\n/* program to illustrate the working of arithmetic operators */\n");
@@ -193,7 +202,7 @@ int learn4() //operators
     printf("|  -=      | x-=100    |x=x-100    |x-100 is first completed and that result is assigned to x |\n");
     printf("|  *=      | x*=100    |x=x*100    |x*100 is first completed and that result is assigned to x |\n");
     printf("|  /=      | x/=100    |x=x/100    |x/100 is first completed and that result is assigned to x |\n");
-    printf("|  %=      | x%=y      |x=x%y      |x%y is first completed and that result is assigned to x   |\n");
+    printf("|  %%=     | x%%=y     |x=x%%y     |x%%y is first completed and that result is assigned to x  |\n");
     printf("|__________|___________|___________|__________________________________________________________|\n");
     printf("\n Increment /Decrement operator :\n");
     printf("     •Increment operator(++) is used to add 1 to its operand and decrement operator(--) is used to subtract 1 from its operand\n");
@@ -315,7 +324,7 @@ int learn4() //operators
     printf("  |_________________|_______________________________|______________|\n");
     printf("  | ( ) [ ]         |   innermost brackets          |left to right |\n");
     printf("  | unary operators |   ++,--,!,sizeof,~,+,-,&      |right to left |\n");
-    printf("  |arithmetic       |   +,/,*,/,%                   |left to right |\n");
+    printf("  |arithmetic       |   +,/,*,/,%%                  |left to right |\n");
     printf("  | shift operators |   <<,>>                       |left to right |\n");
     printf("  |relational       |   <,>,<=,>=                   |left to right |\n");
     printf("  |equal to !equal  |   =,!=                        |left to right |\n");
@@ -324,7 +333,7 @@ int learn4() //operators
     printf("  | bitwise XOR     |   ^                           |left to right |\n");
     printf("  | logical AND, OR |   ||,&&                       |left to right |\n");
     printf("  | conditional     |   ?                           |left to right |\n");
-    printf("  |assignment       | =,+=,-=,*=,/=,%=,&=,|=,<<=,>>=|left to right |\n");
+    printf("  |assignment       |=,+=,-=,*=,/=,%%=,&=,|=,<<=,>>=|left to right |\n");
     printf("  |_________________|_______________________________|______________|\n");
     return 0;
 }
@@ -393,22 +402,24 @@ int learn5() //strings
     printf("\n\n  This is a brif representation of string. \n");
 }
 
-
-
-quiz q1[10]={4,2,2,4,3,3,4,2,4,1}; //c-tokens
+quiz q1={4,2,2,4,3,3,4,2,4,1}; //c-tokens
+quiz q2={4,4,4,3,2,3,4,4,3,4}; //variables
+quiz q3={3,3,2,3,2,4,1,1,2,3}; //constants
+quiz q4={2,3,2,1,3,1,2,1,2,1}; //operators
+quiz q5={1,1,2,3,1,3,2,3,3,2}; //stringh
 
 int quiz1() //c-tokens
-{
+{   system("clear");
     int x;
 
-   l1_1:   printf("\n1.Which of the following is not a valid declaration in C? \n");
+   l1_1:printf("\n1. Which of the following is not a valid declaration in C? \n");
         printf("a.short int x;\nb.short int x;\nc.short x;\nd.unsigned short x;\n");
         printf("Options\n");
         printf("1.c & d\n2.b\n3.a\n4.all are valid\n");
         printf("Enter the choice : ");
         scanf("%d",&x);
 
-        if(x==q1[1])
+        if(x==q1.q[0])
         {
             printf("Correct\n");
             goto l1_2;
@@ -418,10 +429,10 @@ int quiz1() //c-tokens
             printf("Wrong\n");
             goto l1_1;
         }
-    l1_2:  printf("2. The format identifier ‘%i’ is also used for _____ data type.\n1) char\n2) int\n3) float\n4) double\n");
+    l1_2:  printf("\n\n2. The format identifier ‘%i’ is also used for _____ data type.\n1) char\n2) int\n3) float\n4) double\n");
         printf("Enter the choice : ");
         scanf("%d",&x);
-        if(x==q1[2])
+        if(x==q1.q[1])
         {
             printf("Correct\n");
             goto l1_3;
@@ -431,10 +442,10 @@ int quiz1() //c-tokens
             printf("wrong\n");
             goto l1_2;
         }
-    l1_3:  printf("3. Which data type is most suitable for storing a number 65000 in a 32-bit system?\n1) signed short\n2) unsigned short\n3) long\n4) int\n");
+    l1_3:  printf("\n\n3. Which data type is most suitable for storing a number 65000 in a 32-bit system?\n1) signed short\n2) unsigned short\n3) long\n4) int\n");
         printf("Enter the choice : ");
         scanf("%d",&x);
-        if(x==q1[3])
+        if(x==q1.q[2])
         {
             printf("Correct\n");
             goto l1_4;
@@ -444,10 +455,10 @@ int quiz1() //c-tokens
             printf("wrong\n");
             goto l1_3;
         }
-    l1_4:  printf("4. Which of the following is a User-defined data type?\n1) typedef int Boolean;\n2) typedef enum {Mon, Tue, Wed, Thu, Fri} Workdays;\n3) struct {char name[10], int age};\n4) all of the mentioned\n");
+    l1_4:  printf("\n\n4. Which of the following is a User-defined data type?\n1) typedef int Boolean;\n2) typedef enum {Mon, Tue, Wed, Thu, Fri} Workdays;\n3) struct {char name[10], int age};\n4) all of the mentioned\n");
         printf("Enter the choice : ");
         scanf("%d",&x);
-        if(x==q1[4])
+        if(x==q1.q[3])
         {
             printf("Correct\n");
             goto l1_5;
@@ -457,10 +468,10 @@ int quiz1() //c-tokens
             printf("wrong\n");
             goto l1_4;
         }
-    l1_5:  printf("5. What is the size of an int data type?\n1) 4 Bytes\n2) 8 Bytes\n3) Depends on the system/compiler\n4) Cannot be determined\n");
+    l1_5:  printf("\n\n5. What is the size of an int data type?\n1) 4 Bytes\n2) 8 Bytes\n3) Depends on the system/compiler\n4) Cannot be determined\n");
         printf("Enter the choice : ");
         scanf("%d",&x);
-        if(x==q1[5])
+        if(x==q1.q[4])
         {
             printf("Correct\n");
             goto l1_6;
@@ -470,10 +481,10 @@ int quiz1() //c-tokens
             printf("wrong\n");
             goto l1_5;
         }
-    l1_6:  printf("6. What is short int in C programming?\n 1) The basic data type of C\n2) Qualifier\n3) Short is the qualifier and int is the basic data type\n4) All of the mentioned\n");
+    l1_6:  printf("\n\n6. What is short int in C programming?\n 1) The basic data type of C\n2) Qualifier\n3) Short is the qualifier and int is the basic data type\n4) All of the mentioned\n");
         printf("Enter the choice : ");
         scanf("%d",&x);
-        if(x==q1[6])
+        if(x==q1.q[5])
         {
             printf("Correct\n");
             goto l1_7;
@@ -483,10 +494,10 @@ int quiz1() //c-tokens
             printf("wrong\n");
             goto l1_6;
         }
-    l1_7: printf("7.What is C Tokens?\n1. The smallest individual units of c program\n2. The basic element recognized by the compiler\n3. The largest individual units of program\n4. A & B Both\n");
+    l1_7: printf("\n\n7. What is C Tokens?\n1. The smallest individual units of c program\n2. The basic element recognized by the compiler\n3. The largest individual units of program\n4. A & B Both\n");
         printf("Enter the choice : ");
         scanf("%d",&x);
-        if(x==q1[7])
+        if(x==q1.q[6])
         {
             printf("Correct\n");
             goto l1_8;
@@ -496,10 +507,10 @@ int quiz1() //c-tokens
             printf("wrong\n");
             goto l1_7;
         }
-    l1_8: printf("8. If 'a' is an integer variable, then a=5/2 will return a value\n1. 2.5\n2. 2\n3. 2.000000\n4. 2.500000\n");
+    l1_8: printf("\n\n8. If 'a' is an integer variable, then a=5/2 will return a value\n1. 2.5\n2. 2\n3. 2.000000\n4. 2.500000\n");
         printf("Enter the choice : ");
         scanf("%d",&x);
-        if(x==q1[8])
+        if(x==q1.q[7])
         {
             printf("Correct\n");
             goto l1_9;
@@ -509,10 +520,10 @@ int quiz1() //c-tokens
             printf("wrong\n");
             goto l1_8;
         }
-    l1_9:  printf("9. The words if, else, auto, float etc. hasve predefined meaning and users cannot use them as variables. These words are called\n1. constant\n2. identifier\n3. data types\n4. keywords\n");
+    l1_9:  printf("\n\n9. The words if, else, auto, float etc. hasve predefined meaning and users cannot use them as variables. These words are called\n1. constant\n2. identifier\n3. data types\n4. keywords\n");
         printf("Enter the choice : ");
         scanf("%d",&x);
-        if(x==q1[9])
+        if(x==q1.q[8])
         {
             printf("Correct\n");
             goto l1_10;
@@ -522,10 +533,10 @@ int quiz1() //c-tokens
             printf("wrong\n");
             goto l1_9;
         }
-    l1_10: printf("10 .By default a real number is treated as a\n1. float\n2. double\n3. long double\n4. integer\n");
+    l1_10: printf("\n\n10. By default a real number is treated as a\n1. float\n2. double\n3. long double\n4. integer\n");
         printf("Enter the choice : ");
         scanf("%d",&x);
-        if(x==q1[10])
+        if(x==q1.q[9])
         {
             printf("Correct\n");
             c_tokens();
@@ -536,15 +547,13 @@ int quiz1() //c-tokens
             goto l1_10;
         }
 }
-quiz q2[10]={4,4,4,3,2,3,4,4,3,4}; //variables
-
 int quiz2() // variables
-{
+{   system("clear");
      int x;
-     l2_1:   printf("\n1. A C variable cannot start with ? \n1. An alphabet\n2.. A number\n3. A special symbol other that underscore\n4. Both B and C\n");
+     l2_1:   printf("\n\n1. A C variable cannot start with ? \n1. An alphabet\n2.. A number\n3. A special symbol other that underscore\n4. Both B and C\n");
          printf("Enter the choice : ");
         scanf("%d",&x);
-        if(x==q2[1])
+        if(x==q2.q[0])
         {
             printf("Correct\n");
             goto l2_2;
@@ -554,10 +563,10 @@ int quiz2() // variables
             printf("Wrong\n");
             goto l2_1;
         }
-    l2_2:  printf("2. A name having a few letters, numbers and special character _(underscore) is called\n1. keywords\n2. reserved keyword\n3. tokens\n4. identifiers\n");
+    l2_2:  printf("\n\n2. A name having a few letters, numbers and special character _(underscore) is called\n1. keywords\n2. reserved keyword\n3. tokens\n4. identifiers\n");
         printf("Enter the choice : ");
         scanf("%d",&x);
-        if(x==q2[2]
+        if(x==q2.q[1])
         {
             printf("Correct\n");
             goto l2_3;
@@ -567,10 +576,10 @@ int quiz2() // variables
             printf("wrong\n");
             goto l2_2;
         }
-    l2.3:  printf("3. What is the scope of an external variable?\n1. Whole source file in which it is defined\n2. From the point of declaration to the end of the file in which it is defined\n3. Any source file in a program\n4. From the point of declaration to the end of the file being compiled\n");
+    l2_3:  printf("\n\n3. What is the scope of an external variable?\n1. Whole source file in which it is defined\n2. From the point of declaration to the end of the file in which it is defined\n3. Any source file in a program\n4. From the point of declaration to the end of the file being compiled\n");
         printf("Enter the choice : ");
         scanf("%d",&x);
-        if(x==q2[3]
+        if(x==q2.q[2])
         {
             printf("Correct\n");
             goto l2_4;
@@ -580,10 +589,10 @@ int quiz2() // variables
             printf("wrong\n");
             goto l2_3;
         }
-    l2_4:  printf("4. Variable names beginning with underscore is not encouraged. Why? \n1. It is not standardized\n2. To avoid conflicts since assemblers and loaders use such names\n3. To avoid conflicts since library routines use such names\n4. To avoid conflicts with environment variables of an operating system\n");
+    l2_4:  printf("\n\n4. Variable names beginning with underscore is not encouraged. Why? \n1. It is not standardized\n2. To avoid conflicts since assemblers and loaders use such names\n3. To avoid conflicts since library routines use such names\n4. To avoid conflicts with environment variables of an operating system\n");
         printf("Enter the choice : ");
         scanf("%d",&x);
-        if(x==q2[4]
+        if(x==q2.q[3])
         {
             printf("Correct\n");
             goto l2_5;
@@ -591,12 +600,12 @@ int quiz2() // variables
         else
         {
             printf("wrong\n");
-            goto l2.4;
+            goto l2_4;
         }
-    l2_5:  printf("5. In an assignment statement a=b; which of the following statement is true ?\n1. The variable a and the variable b are same.\n2. The value of b is assigned to variable a but if b changes later, it will not effect the value of variable a.\n3. The value of b is assigned to variable a but if b changes later, it will effect the value of variable\n4. The value of variable a is assigned to variable b, and the value of variable b is asssigned to variable a.\n");
+    l2_5:  printf("\n\n5. In an assignment statement a=b; which of the following statement is true ?\n1. The variable a and the variable b are same.\n2. The value of b is assigned to variable a but if b changes later, it will not effect the value of variable a.\n3. The value of b is assigned to variable a but if b changes later, it will effect the value of variable\n4. The value of variable a is assigned to variable b, and the value of variable b is asssigned to variable a.\n");
         printf("Enter the choice : ");
         scanf("%d",&x);
-        if(x==q2[5]
+        if(x==q2.q[4])
         {
             printf("Correct\n");
             goto l2_6;
@@ -606,10 +615,10 @@ int quiz2() // variables
             printf("wrong\n");
             goto l2_5;
         }
-    l2_6:  printf("6. Which is an incorrect variable name?\n1. Id_No\n2. ID_NO\n3. IdNo\n4. Id No\n");
+    l2_6:  printf("\n\n6. Which is an incorrect variable name?\n1. Id_No\n2. ID_NO\n3. IdNo\n4. Id No\n");
         printf("Enter the choice : ");
         scanf("%d",&x);
-        if(x==q2[6])
+        if(x==q2.q[5])
         {
             printf("Correct\n");
             goto l2_7;
@@ -619,10 +628,10 @@ int quiz2() // variables
             printf("wrong\n");
             goto l2_6;
         }
-    l2_7: printf("7.Which of the following is not valid variable names in 'C'?\n1. float_int, keyword, A1\n2. ANSI, ascii, cpu\n3. valid, variable, name\n4 None of these\n");
+    l2_7: printf("\n\n7. Which of the following is not valid variable names in 'C'?\n1. float_int, keyword, A1\n2. ANSI, ascii, cpu\n3. valid, variable, name\n4 None of these\n");
         printf("Enter the choice : ");
         scanf("%d",&x);
-        if(x==q2[7])
+        if(x==q2.q[6])
         {
             printf("Correct\n");
             goto l2_8;
@@ -632,10 +641,10 @@ int quiz2() // variables
             printf("wrong\n");
             goto l2_7;
         }
-    l2_8: printf("8. Which of the following cannot be used as identifiers?\n1. Letters\n2. Digits\n3. Underscores\n4. Spaces\n");
+    l2_8: printf("\n\n8. Which of the following cannot be used as identifiers?\n1. Letters\n2. Digits\n3. Underscores\n4. Spaces\n");
         printf("Enter the choice : ");
         scanf("%d",&x);
-        if(x==q2[8] )
+        if(x==q2.q[7] )
         {
             printf("Correct\n");
             goto l2_9;
@@ -645,10 +654,10 @@ int quiz2() // variables
             printf("wrong\n");
             goto l2_8;
        }
-    l2_9:  printf("9. Variable names beginning with underscore is not encouraged. Why?\n1. It is not standard form\n2. To avoid conflicts since assemblers and loaders use such names\n3. To avoid conflicts since library routines use such names\n4. To avoid conflicts with environment variables of an operating system\n");
+    l2_9:  printf("\n\n9. Variable names beginning with underscore is not encouraged. Why?\n1. It is not standard form\n2. To avoid conflicts since assemblers and loaders use such names\n3. To avoid conflicts since library routines use such names\n4. To avoid conflicts with environment variables of an operating system\n");
         printf("Enter the choice : ");
         scanf("%d",&x);
-        if(x==q2[9]
+        if(x==q2.q[8])
         {
             printf("Correct\n");
             goto l2_10;
@@ -658,10 +667,10 @@ int quiz2() // variables
             printf("wrong\n");
             goto l2_9;
         }
-    l2_10: printf("10 Which of the following is not a valid variable name declaration?\n1. float PI = 3.14;\n2. double PI = 3.14;\n3. int PI = 3.14;\n4. #define PI 3.14\n");
+    l2_10: printf("\n\n10 Which of the following is not a valid variable name declaration?\n1. float PI = 3.14;\n2. double PI = 3.14;\n3. int PI = 3.14;\n4. #define PI 3.14\n");
         printf("Enter the choice : ");
         scanf("%d",&x);
-        if(x==q2[10]
+        if(x==q2.q[9])
         {
             printf("Correct\n");
             variables();
@@ -671,171 +680,162 @@ int quiz2() // variables
             printf("wrong\n");
             goto l2_10;
         }
-
 }
-quiz q3[10]={4,2,2,4,3,3,4,2,4,1}; //constants
+
+
 
 int quiz3() //constants
-{
-    int x;
+{   system("clear");
+        int x;
 
-   l3_1:   printf("\n1.Which of the following is not a valid declaration in C? \n");
-        printf("a.short int x;\nb.short int x;\nc.short x;\nd.unsigned short x;\n");
-        printf("Options\n");
-        printf("1.c & d\n2.b\n3.a\n4.all are valid\n");
+   l3_1: printf("\n\n1. What is the output of this C code?\n1. #include\n2. int main()\n3. {\n4. enum {ORANGE = 5, MANGO, BANANA = 4, PEACH};\n5. printf(\"PEACH=%d\",PEACH)\;\n6. }\n");
+        printf("options\n1. PEACH = 3\n2. PEACH = 4\n3. PEACH = 5\n4. PEACH = 6 \n");
         printf("Enter the choice : ");
         scanf("%d",&x);
-        if(x==q1.1)
+        if(x==q3.q[0])
         {
             printf("Correct\n");
-            goto l1_2;
+            goto l3_2;
         }
         else
         {
             printf("Wrong\n");
-            goto l1_1;
+            goto l3_1;
         }
-    l3_2:  printf("2. The format identifier ‘%i’ is also used for _____ data type.\n1) char\n2) int\n3) float\n4) double\n");
+    l3_2:  printf("\n\n2. What is the output of this C code?\n1. #include\n2. int main() \n3. { \n4. printf(\"C programming %%s\", \"Class by %%s Sanfoundry\",\"WOW\")\;\n5. }  \n\nOptions\n1. C programming Class by WOW Sanfoundry \n2. C programming Class by %%s Sanfoundry\n3. C programming Class by %%s Sanfoundry\n4. Compilation error \n");
         printf("Enter the choice : ");
         scanf("%d",&x);
-        if3(x==q1.2)
+        if(x==q3.q[1])
         {
             printf("Correct\n");
-            goto l1_3;
+            goto l3_3;
         }
         else
         {
             printf("wrong\n");
-            goto l1_2;
+            goto l3_2;
         }
-    l3_3_:  printf("3. Which data type is most suitable for storing a number 65000 in a 32-bit system?\n1) signed short\n2) unsigned short\n3) long\n4) int\n");
+    l3_3:  printf("\n\n3. For the following code snippet:\nchar *str = \“Sanfoundry.com\\0\” \“training classes\”\; \nThe character pointer str holds reference to string: \n");
+           printf("options \n1. Sanfoundry.com\n2. Sanfoundry.com\0training classes\n3. Sanfoundry.comtraining classes\n4. Invalid declaration\n");
         printf("Enter the choice : ");
         scanf("%d",&x);
-        if(x==q1.3)
+        if(x==q3.q[2])
         {
             printf("Correct\n");
-            goto l1_4;
+            goto l3_4;
         }
         else
         {
             printf("wrong\n");
-            goto l1_3;
+            goto l3_3;
         }
-    l3_4:  printf("4. Which of the following is a User-defined data type?\n1) typedef int Boolean;\n2) typedef enum {Mon, Tue, Wed, Thu, Fri} Workdays;\n3) struct {char name[10], int age};\n4) all of the mentioned\n");
+    l3_4:  printf("\n\n4. What is the output of this C code?\n1. #include\n2. #define a 10\n3. int main()\n4. {\n5. const int a = 5;\n6. printf(\"a = %d\", a)\;\n7. }\n ");
+            printf("options\n1. a = 5\n2. a = 10\n3. Compilation error\n4. Runtime error\n");
         printf("Enter the choice : ");
         scanf("%d",&x);
-        if(x==q1.4)
+        if(x==q3.q[3])
         {
             printf("Correct\n");
-            goto l1_5;
+            goto l3_5;
         }
         else
         {
             printf("wrong\n");
-            goto l1_4;
+            goto l3_4;
         }
-    l3_5:  printf("5. What is the size of an int data type?\n1) 4 Bytes\n2) 8 Bytes\n3) Depends on the system/compiler\n4) Cannot be determined\n");
+    l3_5:  printf("\n\n5. What is the output of this C code?\n1. #include\n2. int main()\n3. {\n4. int var = 010;\n5. printf(\"%d\", var)\;\n6. }\n");
+            printf("options\n1. 2\n2. 8\n3. 9 \n4. 10\n");
         printf("Enter the choice : ");
         scanf("%d",&x);
-        if(x==q1.5)
+        if(x==q3.q[4])
         {
             printf("Correct\n");
-            goto l1.6;
+            goto l3_6;
         }
         else
         {
             printf("wrong\n");
-            goto l1.5;
+            goto l3_5;
         }
-    l3.6:  printf("6. What is short int in C programming?\n 1) The basic data type of C\n2) Qualifier\n3) Short is the qualifier and int is the basic data type\n4) All of the mentioned\n");
+    l3_6:  printf("\n\n6. What is the output of this C code?\n1. #include\n2. enum birds {SPARROW, PEACOCK, PARROT};\n3. enum animals {TIGER = 8, LION, RABBIT, ZEBRA};\n4. int main()\n5. {\n6. enum birds m = TIGER;\n7. int k;\n8. k = m;\n9. printf(\"%d\", k)\;\n10. return 0;\n11. }\n ");
+            printf("options\n1. 0\n2. Compile time error\n3. 1 \n4. 8\n");
         printf("Enter the choice : ");
         scanf("%d",&x);
-        if(x==q1.6)
+        if(x==q3.q[5])
         {
             printf("Correct\n");
-            goto l1.7;
+            goto l3_7;
         }
         else
         {
             printf("wrong\n");
-            goto l1.6;
+            goto l3_6;
         }
-    l3.7: printf("7.What is C Tokens?\n1. The smallest individual units of c program\n2. The basic element recognized by the compiler\n3. The largest individual units of program\n4. A & B Both\n");
+    l3_7: printf("\n\n7. enum types are processed by\n1. Compiler\n2. Preprocessor\n3. Linker\n4. Assembler\n");
         printf("Enter the choice : ");
         scanf("%d",&x);
-        if(x==q1.7)
+        if(x==q3.q[6])
         {
             printf("Correct\n");
-            goto l1.8;
+            goto l3_8;
         }
         else
         {
             printf("wrong\n");
-            goto l1.7;
+            goto l3_7;
         }
-    l3.8: printf("8. If 'a' is an integer variable, then a=5/2 will return a value\n1. 2.5\n2. 2\n3. 2.000000\n4. 2.500000\n");
+    l3_8: printf("\n\n8. Which is false?\n");
+            printf("options\n1. Constant variables need not be defined as they are declared and can be defined later\n2. Global constant variables are initialised to zero\n3. const keyword is used to define constant values\n4. You cannot reassign a value to a constant variable\n");
         printf("Enter the choice : ");
         scanf("%d",&x);
-        if(x==q1.8)
+        if(x==q3.q[7])
         {
             printf("Correct\n");
-            goto l1.9;
+            goto l3_9;
         }
         else
         {
             printf("wrong\n");
-            goto l1.8;
+            goto l3_8;
         }
-    l3.9:  printf("9. The words if, else, auto, float etc. hasve predefined meaning and users cannot use them as variables. These words are called\n1. constant\n2. identifier\n3. data types\n4. keywords\n");
+    l3_9:  printf("\n\n9. Comment on the output of this C code?\n1. #include\n2. int const print()\n3. {\n4. printf(\"Sanfoundry.com\")\;\n5. return 0;\n6. }\n7. void main()\n8. {\n9. print();\n10. }\n");
+            printf("options\n1. Error because function name cannot be preceded by const \n2. Sanfoundry.com  \n3. Sanfoundry.com is printed infinite times \n4. Blank screen, no output\n");
         printf("Enter the choice : ");
         scanf("%d",&x);
-        if(x==q1.9)
+        if(x==q3.q[8])
         {
             printf("Correct\n");
-            goto l1.10;
+            goto l3_10;
         }
         else
         {
             printf("wrong\n");
-            goto l1.9;
+            goto l3_9;
         }
-    l3.10: printf("10 .By default a real number is treated as a\n1. float\n2. double\n3. long double\n4. integer\n");
+    l3_10: printf("\n\n10. Comment on the output of this C code?\n1. #include\n2. void main()\n3. {\n4. int const k = 5;\n5. k++;\n6. printf(\"k is %d\", k)\;\n7. }\n");
+            printf("options\n1. k is 6\n2. Error due to const succeeding int \n3. Error, because a constant variable can be changed only twice \n4. Error, because a constant variable cannot be changed\n");
         printf("Enter the choice : ");
         scanf("%d",&x);
-        if(x==q1.10)
+        if(x==q3.q[9])
         {
             printf("Correct\n");
-            c_tokens();
+            constants();
         }
         else
         {
             printf("wrong\n");
-            goto l1.10;
+            goto l3_10;
         }
 }
-quiz q4[10]={2,3,2,1,3,1,2,1,2,1}; //operators
+
+
 
 int quiz4() // operators
-{
+{   system("clear");
 
     int x;
 
-   l4_1:   printf("\n1. #include "stdio.h"\n
-        int main()\n
-        {\n
-        int x, y = 5, z = 5;\n
-        x = y == z;\n
-        printf("%d", x);\n
-        \n
-        getchar();\n
-        return 0;\n
-        }\n
-        \n
-        options\n
-        1.0\n
-        2.1 \n
-        3.5\n
-        4. error\n");
+   l4_1: printf("\n\n1. #include \"stdio.h\"\nint main()\n{\nint x, y = 5, z = 5;\nx = y == z;\nprintf(\"%d\", x)\;\ngetchar();\nreturn 0;\n}\n\noptions\n1.0\n2.1 \n3.5\n4. error\n");
          printf("Enter the choice : ");
         scanf("%d",&x);
         if(x==q4.q[0])
@@ -848,21 +848,7 @@ int quiz4() // operators
             printf("Wrong\n");
             goto l4_1;
         }
-    l4_2:  printf("2. #include <stdio.h>\n
-
-            int main()\n
-            {\n
-                int i = 1, 2, 3;\n
-
-                printf("%d", i);\n
-
-                return 0;\n
-            }\n
-            \n
-            options\n
-            1.1\n
-            2.3\n
-            3.compiler error \n");
+    l4_2:  printf("\n\n2. #include <stdio.h>\nint main()\n{\nint i = 1, 2, 3;\nprintf(\"%d\", i)\;\nreturn 0;\n}\n\noptions\n1.1\n2. 3\n3.compiler error \n");
             printf("Enter the choice : ");
             scanf("%d",&x);
             if(x==q4.q[1])
@@ -875,20 +861,7 @@ int quiz4() // operators
                 printf("wrong\n");
                 goto l4_2;
             }
-    l4_3:  printf("3.#include <stdio.h>\n
-
-                int main()\n
-                {\n
-                    int i = (1, 2, 3);\n
-
-                    printf("%d", i);\n
-
-                    return 0;\n
-                }\n
-                \n
-                1. 1\n
-                2. 3\n
-                3. Garbage value\n");
+    l4_3:  printf("\n\n3. #include <stdio.h>\nint main()\n{\nint i = (1, 2, 3);\nprintf(\"%d\", i)\;\nreturn 0;\n}\n\nOptions\n1. 1\n2. 3\n3. Garbage value\n");
                 printf("Enter the choice : ");
                 scanf("%d",&x);
                 if(x==q4.q[2])
@@ -901,21 +874,7 @@ int quiz4() // operators
                     printf("wrong\n");
                     goto l4_3;
                 }
-    l4_4:  printf("4. #include <stdio.h>\n
-
-                int main()\n
-                {\n
-                    int i;\n
-
-                    i = 1, 2, 3;\n
-                    printf("%d", i);\n
-
-                    return 0;\n
-                }\n
-                \n
-                1. 1\n
-                2. 3\n
-                3. garbage value\n");
+    l4_4:  printf("\n\n4. #include <stdio.h>\nint main()\n{\nint i;\ni = 1, 2, 3;\nprintf(\"%d\", i)\;\nreturn 0;\n}\n\noptions\n1. 1\n2. 3\n3. garbage value\n");
                 printf("Enter the choice : ");
                 scanf("%d",&x);
                 if(x==q4.q[3])
@@ -928,17 +887,7 @@ int quiz4() // operators
                     printf("wrong\n");
                     goto l4_4;
                 }
-    l4_5:  printf("5. #include <stdio.h>\n
-            int main()\n
-            {\n
-                int i = 3;\n
-                printf("%d", (++i)++);\n
-                return 0;\n
-            }\n
-            \n
-            1. 3\n
-            2. 4\n
-            3. compiler error\n");
+    l4_5:  printf("\n\n5. #include <stdio.h>\nint main()\n{\nint i = 3;\nprintf(\"%d\", (++i)++)\;\nreturn 0;\n}\n\noptions\n2. 4\n3. compiler error\n");
             printf("Enter the choice : ");
             scanf("%d",&x);
             if(x==q4.q[4])
@@ -951,25 +900,7 @@ int quiz4() // operators
                 printf("wrong\n");
                 goto l4_5;
             }
-    l4_6:  printf("6. #include <stdio.h>\n
-            int foo(int* a, int* b)\n
-            {\n
-                int sum = *a + *b;\n
-                *b = *a;\n
-                return *a = sum - *b;\n
-            }\n
-            int main()\n
-            {\n
-                int i = 0, j = 1, k = 2, l;\n
-                l = i++ || foo(&j, &k);\n
-                printf("%d %d %d %d", i, j, k, l);\n
-                return 0;\n
-            }\n
-            \n
-
-            1. 1 2 1 1 \n
-            2. 1 1 2 1\n
-            3. 1 2 2 2\n");
+    l4_6:  printf("\n\n6. #include <stdio.h>\nint foo(int* a, int* b)\n{\nint sum = *a + *b;\n*b = *a;\nreturn *a = sum - *b;\n}\nint main()\n{\nint i = 0, j = 1, k = 2, l;\nl = i++ || foo(&j, &k);\nprintf(\"%d %d %d %d\", i, j, k, l)\;\nreturn 0;\n}\n\noptions\n1. 1 2 1 1 \n2. 1 1 2 1\n3. 1 2 2 2\n");
             printf("Enter the choice : ");
             scanf("%d",&x);
             if(x==q4.q[5])
@@ -982,18 +913,7 @@ int quiz4() // operators
                 printf("wrong\n");
                 goto l4_6;
             }
-    l4_7: printf("7. #include <stdio.h>\n
-            int main()\n
-            {\n
-                int i = 5, j = 10, k = 15;\n
-                printf("%d ", sizeof(k /= i + j));\n
-                printf("%d", k);\n
-                return 0;\n
-            }\n
-            \n
-            1. 4 1\n
-            2. 4 15\n
-            3. 2 1\n");
+    l4_7: printf("\n\n7. #include <stdio.h>\nint main()\n{\nint i = 5, j = 10, k = 15;\nprintf(\"%d \", sizeof(k /= i + j))\;\nprintf(\"%d\", k)\;\nreturn 0;\n}\n\noptions\n1. 4 1\n2. 4 15\n3. 2 1\n");
             printf("Enter the choice : ");
             scanf("%d",&x);
             if(x==q4.q[6])
@@ -1006,18 +926,7 @@ int quiz4() // operators
                 printf("wrong\n");
                 goto l4_7;
             }
-    l4_8: printf("8. #include <stdio.h>\n
-            int main()\n
-            {\n
-                //Assume sizeof character is 1 byte and sizeof integer is 4 bytes\n
-                printf("%d", sizeof(printf("GeeksQuiz")));\n
-                return 0;\n
-            }\n
-            \n
-
-            1. 4\n
-            2. GeeksQuiz4\n
-            3. compiler time error\n");
+    l4_8: printf("\n\n8. #include <stdio.h>\nint main()\n{\n//Assume sizeof character is 1 byte and sizeof integer is 4 bytes\nprintf(\"%d\", sizeof(printf(\"GeeksQuiz\")))\;\nreturn 0;\n}\n\noptions\n1. 4\n2. GeeksQuiz4\n3. compiler time error\n");
             printf("Enter the choice : ");
             scanf("%d",&x);
             if(x==q4.q[7])
@@ -1030,19 +939,7 @@ int quiz4() // operators
                 printf("wrong\n");
                 goto l4_8;
             }
-    l4_9:  printf("9. #include <stdio.h>\n
-            int f1() { printf ("Geeks"); return 1;}\n
-            int f2() { printf ("Quiz"); return 1;}\n
-            \n
-            int main()\n
-            {\n
-            int p = f1() + f2();\n
-            return 0;\n
-            }\n
-            \n
-            1. compiler error\n
-            2. compiler dependent \n
-                3. GeeksQuiz\n");
+    l4_9:  printf("\n\n9. #include <stdio.h>\nint f1() { printf (\"Geeks\")\; return 1\;}\nint f2() { printf (\"Quiz\")\; return 1\;}\n\nint main()\n{\nint p = f1() + f2();\nreturn 0;\n}\n\noptions\n1. compiler error\n2. compiler dependent \n3. GeeksQuiz\n");
             printf("Enter the choice : ");
             scanf("%d",&x);
             if(x==q4.q[8])
@@ -1055,22 +952,13 @@ int quiz4() // operators
                 printf("wrong\n");
                 goto l4_9;
             }
-    l4_10: printf("10 #include <stdio.h>\n
-            int main()\n
-            {\n
-                printf("%d", 1 << 2 + 3 << 4);\n
-                return 0;\n
-            }\n
-            \n
-            1. 512\n
-            2. 0\n
-            3. 52\n");
+    l4_10: printf("\n\n10 #include <stdio.h>\nint main()\n{\nprintf(\"%d\", 1 << 2 + 3 << 4)\;\nreturn 0;\n}\n\noptions\n1. 512\n2. 0\n3. 52\n");
             printf("Enter the choice : ");
             scanf("%d",&x);
             if(x==q4.q[9])
             {
                 printf("Correct\n");
-                variables();
+                operators();
             }
             else
             {
@@ -1079,295 +967,157 @@ int quiz4() // operators
             }
 
 }
-quiz q5[10]={1,1,2,3,4,2,3,2,3,3,2}; //string
 
-int quiz5() // strings
-{
+
+int quiz5() // stringh
+{   system("clear");
     int x;
 
-   l1.1:   printf("\n1.include <stdio.h>\n
-            #include <stdlib.h>\n
-
-            int main()\n
-            {\n
-            char str1[] = "GeeksQuiz";\n
-            char str2[] = {'G', 'e', 'e', 'k', 's', 'Q', 'u', 'i', 'z'};\n
-            int n1 = sizeof(str1)/sizeof(str1[0]);\n
-            int n2 = sizeof(str2)/sizeof(str2[0]);\n
-            printf("n1 = %d, n2 = %d", n1, n2);\n
-            return 0;\n
-            }\n
-
-            options\n
-            1. n1=10,n2=9 \n
-            2. n1=10,n2=10\n
-            3. n1=9,n2=10\n
-            4. n1=9,n2=9\n");
-            printf("a.short int x;\nb.short int x;\nc.short x;\nd.unsigned short x;\n");
-            printf("Options\n");
-            printf("1.c & d\n2.b\n3.a\n4.all are valid\n");
+   l5_1:   printf("\n\n1.include <stdio.h>\n#include <stdlib.h>\nint main()\n{\nchar str1[] = \"GeeksQuiz\";\nchar str2[] = {'G', 'e', 'e', 'k', 's', 'Q', 'u', 'i', 'z'};\nint n1 = sizeof(str1)/sizeof(str1[0]);\nint n2 = sizeof(str2)/sizeof(str2[0]);\nprintf(\"n1 = %d, n2 = %d\", n1, n2)\;\nreturn 0;\n}\nOptions\n1. n1=10,n2=9 \n2. n1=10,n2=10\n3. n1=9,n2=10\n4. n1=9,n2=9\n");
             printf("Enter the choice : ");
             scanf("%d",&x);
-            if(x==q1.1)
+            if(x==q5.q[0])
             {
                 printf("Correct\n");
-                goto l1.2;
+                goto l5_2;
             }
             else
             {
                 printf("Wrong\n");
-                goto l1.1;
+                goto l5_1;
             }
-    l1.2:  printf("2. #include<stdio.h>\n
-            void swap(char *str1, char *str2)\n
-            {\n
-            char *temp = str1;\n
-            str1 = str2;\n
-            str2 = temp;\n
-            }\n
-            \n
-            int main()\n
-            {\n
-            char *str1 = "Geeks";\n
-            char *str2 = "Quiz";\n
-            swap(str1, str2);\n
-            printf("str1 is %s, str2 is %s", str1, str2);\n
-            return 0;\n
-            }\n
-
-            options\n
-            1.srt1 is Geeks, str2 is Quiz \n
-            2.srt1 is quiz, str2 is Geeks\n
-            3.str1 is Geeks,str2 is Geeks\n
-            4.str1 is quiz,str2 is quiz\n");
+    l5_2:  printf("\n\n2. #include<stdio.h> \nvoid swap(char *str1, char *str2) \n{\nchar *temp = str1;\nstr1 = str2;\nstr2 = temp;\n} \n \nint main() \n{ \nchar *str1 = \"Geeks\";\nchar *str2 = \"Quiz\";\n  swap(str1, str2);\nprintf(\"str1 is %%s, str2 is %%s\", str1, str2)\;\nreturn 0;\n} \n");
+            printf("Options\n1.srt1 is Geeks, str2 is Quiz\n2.srt1 is quiz, str2 is Geeks \n3.str1 is Geeks,str2 is Geeks \n4.str1 is quiz,str2 is quiz\n");
             printf("Enter the choice : ");
             scanf("%d",&x);
-            if(x==q1.2)
+            if(x==q5.q[1])
             {
                 printf("Correct\n");
-                goto l1.3;
+                goto l5_3;
             }
             else
             {
                 printf("wrong\n");
-                goto l1.2;
+                goto l5_2;
             }
-    l1.3:  printf("3. #include <stdio.h>\n
-            int fun(char *str1)\n
-            {\n
-            char *str2 = str1;\n
-            while(*++str1);\n
-            return (str1-str2);\n
-            }\n
-
-            int main()\n
-            {\n
-            char *str = "GeeksQuiz";\n
-            printf("%d", fun(str));\n
-            return 0;\n
-            }\n
-
-            options\n
-            1.10\n
-            2.9 \n
-            3.8\n
-                4.random numbers\n");
+    l5_3:  printf("\n\n3. #include <stdio.h>\nint fun(char *str1)\n{\nchar *str2 = str1;\nwhile(*++str1);\nreturn (str1-str2);\n}\nint main()\n{\nchar *str = \"GeeksQuiz\";\nprintf(\"%d\", fun(str));\nreturn 0;\n}\noptions\n1.10\n2.9 \n3.8\n4.random numbers\n");
             printf("Enter the choice : ");
             scanf("%d",&x);
-            if(x==q1.3)
+            if(x==q5.q[2])
             {
                 printf("Correct\n");
-                goto l1.4;
+                goto l5_4;
             }
             else
             {
                 printf("wrong\n");
-                goto l1.3;
+                goto l5_3;
             }
-    l1.4:  printf("4. char c[] = "GATE2011";\n
-            char *p =c;\n
-            printf("%s", p + p[3] - p[1]) ;\n
-
-            options\n
-            1.GATE2011\n
-            2.E2011\n
-            3.2011\n
-            4.011\n");
+    l5_4:  printf("\n\n4. Number of string built-in function \noptions\n1. 4\n2. 5\n3. 6\n4. 7\n");
             printf("Enter the choice : ");
             scanf("%d",&x);
-            if(x==q1.4)
+            if(x==q5.q[3])
             {
                 printf("Correct\n");
-                goto l1.5;
+                goto l5_5;
             }
             else
             {
                 printf("wrong\n");
-                goto l1.4;
+                goto l5_4;
             }
-    l1.5:  printf("5. #include<stdio.h>\n
-            int main()\n
-            {\n
-                char str[] = "GeeksQuiz";\n
-                printf("%s %s %sn", &str[5], &5[str], str+5);\n
-                printf("%c %c %cn", *(str+6), str[6], 6[str]);\n
-                return 0;\n
-            }\n
-
-            options\n
-            1.RUNTIME ERROR\n
-            2.COMPILER error\n
-            3.uiz uiz uiz u u u\n
-            4.Quiz Quiz Quiz u u u \n");
+    l5_5:  printf("\n\n5. To compare string ,which following function is used:\n1. strcmp\n2. strcom\n3. strcomp\n4.strcompare \n");
             printf("Enter the choice : ");
             scanf("%d",&x);
-            if(x==q1.5)
+            if(x==q5.q[4])
             {
                 printf("Correct\n");
-                goto l1.6;
+                goto l5_6;
             }
             else
             {
                 printf("wrong\n");
-                goto l1.5;
+                goto l5_5;
             }
-    l1.6:  printf("6. #include <stdio.h>\n
-            int main()\n
-            {\n
-            char arr[] = "GeeksQuiz";\n
-            printf("%s", ?);\n
-            return 0;\n
-            }\n
-
-            options\n
-            1.arr\n
-            2.(arr+5) \n
-            3.(arr+4)\n
-            4.Notpossible\n");
+    l5_6:  printf("\n\n6. Which built-in string function used to find the string length\n1. strln\n2. strle\n3. strlen\n4. strlength\n");
             printf("Enter the choice : ");
             scanf("%d",&x);
-            if(x==q1.6)
+            if(x==q5.q[5])
             {
                 printf("Correct\n");
-                goto l1.7;
+                goto l5_7;
             }
             else
             {
                 printf("wrong\n");
-                goto l1.6;
+                goto l5_6;
             }
-    l1.7: printf("7. #include<stdio.h>\n
-            int main()\n
-            {\n
-                char a[2][3][3] = {'g','e','e','k','s','q','u','i','z'};\n
-                printf("%s ", **a);\n
-                return 0;\n
-            }\n
-
-            options\n
-            1.compiler error_category\n
-            2.geeksquiz \n
-                3.runtime error\n");
+    l5_7: printf("\n\n7. #include<stdio.h>\nint main()\n{\nchar a[2][3][3] = {'g','e','e','k','s','q','u','i','z'}\;\nprintf(\"%%s \", **a)\;\nreturn 0\;\n}\noptions\n1.compiler error_category\n2.geeksquiz \n3.runtime error\n");
             printf("Enter the choice : ");
             scanf("%d",&x);
-            if(x==q1.7)
+            if(x==q5.q[6])
             {
                 printf("Correct\n");
-                goto l1.8;
+                goto l5_8;
             }
             else
             {
                 printf("wrong\n");
-                goto l1.7;
+                goto l5_7;
             }
-    l1.8: printf("8. #include <stdio.h>\n
-
-            void my_toUpper(char* str, int index)\n
-            {\n
-                *(str + index) &= ~32;\n
-            }\n
-
-            int main()\n
-            {\n
-                char* arr = "geeksquiz";\n
-                my_toUpper(arr, 0);\n
-                my_toUpper(arr, 5);\n
-                printf("%s", arr);\n
-                return 0;\n
-            }\n
-
-            options\n
-            1.Geeksquiz\n
-            2.geeksquiz\n
-            3.compiler dependent \n");
+    l5_8: printf("\n\n8. #include <stdio.h>\nvoid my_toUpper(char* str, int index)\n{\n*(str + index) &= ~32\;\n}\nint main()\n{\nchar* arr = \"geeksquiz\"\;\nmy_toUpper(arr, 0)\;\nmy_toUpper(arr, 5)\;\nprintf(\"%%s\", arr)\;\nreturn 0\s;\n}\noptions\n1.Geeksquiz\n2.geeksquiz\n3.compiler dependent \n");
             printf("Enter the choice : ");
             scanf("%d",&x);
-            if(x==q1.8)
+            if(x==q5.q[7])
             {
                 printf("Correct\n");
-                goto l1.9;
+                goto l5_9;
             }
             else
             {
                 printf("wrong\n");
-                goto l1.8;
+                goto l5_8;
             }
-    l1.9:  printf("9. #include <stdio.h>\n
-            int main()\n
-            {\n
-                char str[] = "%d %c", arr[] = "GeeksQuiz";\n
-                printf(str, 0[arr], 2[arr + 3]);\n
-                return 0;\n
-            }\n
-
-            options\n
-            1. G Q\n
-            2.71 81\n
-            3.71 Q \n
-            4.compiler time error\n");
+    l5_9:  printf("\n\n9. #include <stdio.h>\nint main()\n{\nchar str[] = \"%d %c\", arr[] = \"GeeksQuiz\";\nprintf(str, 0[arr], 2[arr + 3]);\nreturn 0;\n}\noptions\n1. G Q\n2.71 81\n3.71 Q \n4.compiler time error\n");
             printf("Enter the choice : ");
             scanf("%d",&x);
-            if(x==q1.9)
+            if(x==q5.q[8])
             {
                 printf("Correct\n");
-                goto l1.10;
+                goto l5_10;
             }
             else
             {
                 printf("wrong\n");
-                goto l1.9;
+                goto l5_9;
             }
-    l1.10: printf("10 .#include<stdio.h>\n
-            int main()\n
-            {\n
-                char str[20] = "GeeksQuiz";\n
-                printf ("%d", sizeof(str));\n
-                return 0;\n
-            }\n
-
-            options\n
-            1.10\n
-            2.20 \n
-                3.Garbage value\n");
+    l5_10: printf("\n\n10. #include<stdio.h>\nint main()\n{\nchar str[20] = \"GeeksQuiz\";\nprintf (\"%d\", sizeof(str));\nreturn 0;\n}\noptions\n1.10\n2.20 \n3.Garbage value\n");
             printf("Enter the choice : ");
             scanf("%d",&x);
-            if(x==q1.10)
+            if(x==q5.q[9])
             {
                 printf("Correct\n");
-                c_tokens();
+                strings();
             }
             else
             {
                 printf("wrong\n");
-                goto l1.10;
+                goto l5_10;
             }
 }
 
 
-
 int c_tokens()
-{
+{   system("clear");
     int o;
+    if(automat()==1)
+    {
+        learn1();
+        //delay
+        quiz1();
+    }
+    else
+    {
     while (1)
     {
         printf("\n----------C-TOKENS----------\n");
@@ -1377,18 +1127,27 @@ int c_tokens()
         switch (o)
         {
             case 1:learn1();break;
-            case 2:quiz(); break;
+            case 2:quiz1(); break;
             case 3:return 0;
             case 4:exit(0);
             default:printf("Invalid option\n");
 
         }
     }
+    }
     return 0;
 }
 int variables()
-{
+{   system("clear");
     int o;
+    if(automat()==1)
+    {
+        learn2();
+        //delay
+        quiz2();
+    }
+    else
+    {
     while (1)
     {
         printf("\n----------VARIABLES----------\n");
@@ -1398,21 +1157,30 @@ int variables()
         switch (o)
         {
             case 1:learn2();break;
-            case 2:quiz(); break;
+            case 2:quiz2(); break;
             case 3:return 0;
             case 4:exit(0);
             default:printf("Invalid option\n");
 
         }
     }
+    }
     return 0;
 }
 int constants()
-{
+{   system("clear");
     int o;
+    if(automat()==1)
+    {
+        learn3();
+        //delay
+        quiz3();
+    }
+    else
+    {
     while (1)
     {
-        printf("\n----------VARIABLES----------\n");
+        printf("\n----------CONSTANTS----------\n");
         printf("Do you want to\n1.Learn\n2.Quiz\n3.Back to previous menu\n4.exit\n");
         printf("Enter the option : ");
         scanf("%d",&o);
@@ -1426,11 +1194,20 @@ int constants()
 
         }
     }
+    }
     return 0;
 }
 int operators()
-{
+{   system("clear");
     int o;
+    if(automat()==1)
+    {
+        learn4();
+        //delay
+        quiz4();
+    }
+    else
+    {
     while (1)
     {
         printf("\n----------OPERATORS----------\n");
@@ -1440,18 +1217,27 @@ int operators()
         switch (o)
         {
             case 1:learn4();break;
-            case 2:quiz(); break;
+            case 2:quiz4(); break;
             case 3:return 0;
             case 4:exit(0);
             default:printf("Invalid option\n");
 
         }
     }
+    }
     return 0;
 }
 int strings()
-{
+{   system("clear");
     int o;
+    if(automat()==1)
+    {
+        learn5();
+        //delay
+        quiz5();
+    }
+    else
+    {
     while (1)
     {
         printf("\n----------STRINGS-----------\n");
@@ -1460,9 +1246,9 @@ int strings()
         scanf("%d",&o);
         switch (o)
         {
-            case 1:learn();break;
-            case 2:quiz(); break;
-            case 3:z=0;
+            case 1:learn5();break;
+            case 2:quiz5(); break;
+            case 3:return 0;
             case 4:exit(0);
             default:printf("Invalid option\n");
 
@@ -1488,7 +1274,7 @@ int module_1()
             case 2:variables(); break;
             case 3:constants(); break;
             case 4:operators(); break;
-            case 5:string(); break;
+            case 5:strings(); break;
             case 6:return 0;
             case 7:exit(0);
 
@@ -1520,247 +1306,4 @@ void main()
             default:printf("OPss!!! You entered Invalid option\n");
         }
     }
-}
-
-
-
-quiz q3={3,3,2,3,2,4,1,1,2,3}; //constants
-
-int quiz3() //constants
-{
-int x;
-
-   l3_1:printf("\n1. 1. What is the output of this C code?\n
-            1. #include\n
-            2. int main()\n
-            3. {\n
-            4. enum {ORANGE = 5, MANGO, BANANA = 4, PEACH};\n
-            5. printf("PEACH=%d\n",PEACH);
-            6. }\n
-            printf("options")'
-            1. PEACH = 3\n
-            2. PEACH = 4\n
-            3. PEACH = 5\n
-            4. PEACH = 6 \n");
-        printf("Enter the choice : ");
-        scanf("%d",&x);
-        if(x==q1.q[0])
-        {
-            printf("Correct\n");
-            goto l3_2;
-        }
-        else
-        {
-            printf("Wrong\n");
-            goto l3_1;
-        }
-    l3_2:  printf("2. TWhat is the output of this C code?\n
-            1. #include\n
-            2. int main()\n
-            3. {\n
-            4. printf("C programming %s","Class by\n%s Sanfoundry","WOW");\n
-            5. }\n
-            printf("options");\n
-            1. C programming Class by WOW Sanfoundry\n
-            2. C programming Class by %s Sanfoundry\n
-            3. C programming Class by %s Sanfoundry\n
-            4. Compilation error\n");
-        printf("Enter the choice : ");
-        scanf("%d",&x);
-        if(x==q1.q[1])
-        {
-            printf("Correct\n");
-            goto l3_3;
-        }
-        else
-        {
-            printf("wrong\n");
-            goto l3_2;
-        }
-    l3_3:  printf("3. For the following code snippet:\n
-       char *str = “Sanfoundry.com\0” “training classes”;\n
-       The character pointer str holds reference to string:\n
-            1. Sanfoundry.com\n
-            2. Sanfoundry.com\0training classes\n
-            3. Sanfoundry.comtraining classes\n
-            4. Invalid declaration\n");
-        printf("Enter the choice : ");
-        scanf("%d",&x);
-        if(x==q1.q[2])
-        {
-            printf("Correct\n");
-            goto l3_4;
-        }
-        else
-        {
-            printf("wrong\n");
-            goto l3_3;
-        }
-    l3_4:  printf("4. What is the output of this C code?\n
-            1. #include\n
-            2. #define a 10\n
-            3. int main()\n
-            4. {\n
-            5. const int a = 5;\n
-            6. printf("a = %d\n", a);\n
-            7. }\n
-            printf("options);\n
-            1. a = 5\n
-            2. a = 10\n
-            3. Compilation error\n
-            4. Runtime error\n");
-        printf("Enter the choice : ");
-        scanf("%d",&x);
-        if(x==q1.q[3])
-        {
-            printf("Correct\n");
-            goto l3_5;
-        }
-        else
-        {
-            printf("wrong\n");
-            goto l3_4;
-        }
-    l3_5:  printf("5. What is the output of this C code?\n
-            1. #include\n
-            2. int main()\n
-            3. {\n
-            4. int var = 010;\n
-
-            5. printf("%d", var);\n
-            6. }\n
-            printf("options");\n
-            1. 2
-            2. 8
-            3. 9
-            4. 10\n");
-        printf("Enter the choice : ");
-        scanf("%d",&x);
-        if(x==q1.q[4])
-        {
-            printf("Correct\n");
-            goto l3_6;
-        }
-        else
-        {
-            printf("wrong\n");
-            goto l3_5;
-        }
-    l3_6:  printf("6. What is the output of this C code?\n
-            1. #include\n
-            2. enum birds {SPARROW, PEACOCK, PARROT};\n
-            3. enum animals {TIGER = 8, LION, RABBIT, ZEBRA};\n
-            4. int main()\n
-            5. {\n
-            6. enum birds m = TIGER;\n
-            7. int k;\n
-            8. k = m;\n
-            9. printf(="%d\n", k);\n
-            10. return 0;\n
-            11. }\n
-            printf("options");
-            1. 0
-            2. Compile time error
-            3. 1
-            4. 8\n");
-        printf("Enter the choice : ");
-        scanf("%d",&x);
-        if(x==q1.q[5])
-        {
-            printf("Correct\n");
-            goto l3_7;
-        }
-        else
-        {
-            printf("wrong\n");
-            goto l3_6;
-        }
-    l3_7: printf("7. enum types are processed by\n
-            1. Compiler\n
-            2. Preprocessor\n
-            3. Linker\n
-            4. Assembler\n");
-        printf("Enter the choice : ");
-        scanf("%d",&x);
-        if(x==q1.q[6])
-        {
-            printf("Correct\n");
-            goto l3_8;
-        }
-        else
-        {
-            printf("wrong\n");
-            goto l3_7;
-        }
-    l3_8: printf("8. Which is false?"\n);
-            printf("options\n
-            1. Constant variables need not be defined as they are declared and can be defined later\n
-            2. Global constant variables are initialised to zero\n
-            3. const keyword is used to define constant values\n
-            4. You cannot reassign a value to a constant variable\n");
-        printf("Enter the choice : ");
-        scanf("%d",&x);
-        if(x==q1.q[7])
-        {
-            printf("Correct\n");
-            goto l3_9;
-        }
-        else
-        {
-            printf("wrong\n");
-            goto l3_8;
-        }
-    l3_9:  printf("9. Comment on the output of this C code?\n
-            1. #include\n
-            2. int const print()\n
-            3. {\n
-            4. printf(&quot;Sanfoundry.com&quot;);\n
-            5. return 0;\n
-            6. }\n
-            7. void main()\n
-            8. {\n
-            9. print();\n
-            10. }\n");
-            printf("options\n)
-            1. Error because function name cannot be preceded by const
-            2. Sanfoundry.com
-            3. Sanfoundry.com is printed infinite times
-            4. Blank screen, no output\n");
-        printf("Enter the choice : ");
-        scanf("%d",&x);
-        if(x==q1.q[8])
-        {
-            printf("Correct\n");
-            goto l3_10;
-        }
-        else
-        {
-            printf("wrong\n");
-            goto l3_9;
-        }
-    l3_10: printf("10. Comment on the output of this C code?\n
-            1. #include\n
-            2. void main()\n
-            3. {\n
-            4. int const k = 5;\n
-            5. k++;\n
-            6. printf("k is %d", k);\n
-            7. }\n");
-            printf("options\n
-            1. k is 6
-            2. Error due to const succeeding int
-            3. Error, because a constant variable can be changed only twice
-            4. Error, because a constant variable cannot be changed\n");
-        printf("Enter the choice : ");
-        scanf("%d",&x);
-        if(x==q1.q[9])
-        {
-            printf("Correct\n");
-            c_tokens();
-        }
-        else
-        {
-            printf("wrong\n");
-            goto l3_10;
-        }
 }
