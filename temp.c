@@ -16,6 +16,7 @@ typedef struct
 {
     int q[10];
 }quiz;
+
 int automat()
 {
     int c;
@@ -26,6 +27,11 @@ int automat()
     if(c==1) return 1;
     else if(c==2) return 2;
     else return 0;
+}
+
+int delay()
+{
+
 }
 
 int learn1() //c-tokens
@@ -1113,7 +1119,7 @@ int c_tokens()
     if(automat()==1)
     {
         learn1();
-        //delay
+        delay();
         quiz1();
     }
     else
@@ -1255,6 +1261,7 @@ int strings()
         }
     }
     return 0;
+}
 }
 
 
