@@ -31,6 +31,10 @@ int automat()
 
 int delay()
 {
+    long int i,j;
+    for(j=0;j<3;j++)
+    for(i=0;i<999999999;i++);
+    return 0;
 
 }
 
@@ -487,7 +491,7 @@ int quiz1() //c-tokens
             printf("wrong\n");
             goto l1_5;
         }
-    l1_6:  printf("\n\n6. What is short int in C programming?\n 1) The basic data type of C\n2) Qualifier\n3) Short is the qualifier and int is the basic data type\n4) All of the mentioned\n");
+    l1_6:  printf("\n\n6. What is short int in C programming?\n1) The basic data type of C\n2) Qualifier\n3) Short is the qualifier and int is the basic data type\n4) All of the mentioned\n");
         printf("Enter the choice : ");
         scanf("%d",&x);
         if(x==q1.q[5])
@@ -545,12 +549,13 @@ int quiz1() //c-tokens
         if(x==q1.q[9])
         {
             printf("Correct\n");
-            c_tokens();
+             variables();
         }
         else
         {
             printf("wrong\n");
             goto l1_10;
+
         }
 }
 int quiz2() // variables
@@ -679,7 +684,7 @@ int quiz2() // variables
         if(x==q2.q[9])
         {
             printf("Correct\n");
-            variables();
+            constants();
         }
         else
         {
@@ -825,7 +830,7 @@ int quiz3() //constants
         if(x==q3.q[9])
         {
             printf("Correct\n");
-            constants();
+            operators();
         }
         else
         {
@@ -964,7 +969,7 @@ int quiz4() // operators
             if(x==q4.q[9])
             {
                 printf("Correct\n");
-                operators();
+                \string();
             }
             else
             {
@@ -1103,7 +1108,7 @@ int quiz5() // stringh
             if(x==q5.q[9])
             {
                 printf("Correct\n");
-                strings();
+                module_1();
             }
             else
             {
@@ -1239,7 +1244,7 @@ int strings()
     if(automat()==1)
     {
         learn5();
-        //delay
+      delay();
         quiz5();
     }
     else
