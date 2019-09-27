@@ -16,6 +16,7 @@ typedef struct
 {
     int q[10];
 }quiz;
+
 int automat()
 {
     int c;
@@ -26,6 +27,15 @@ int automat()
     if(c==1) return 1;
     else if(c==2) return 2;
     else return 0;
+}
+
+int delay()
+{
+    long int i;
+
+    for(i=0;i<999999999;i++);
+    return 0;
+
 }
 
 int learn1() //c-tokens
@@ -481,7 +491,7 @@ int quiz1() //c-tokens
             printf("wrong\n");
             goto l1_5;
         }
-    l1_6:  printf("\n\n6. What is short int in C programming?\n 1) The basic data type of C\n2) Qualifier\n3) Short is the qualifier and int is the basic data type\n4) All of the mentioned\n");
+    l1_6:  printf("\n\n6. What is short int in C programming?\n1) The basic data type of C\n2) Qualifier\n3) Short is the qualifier and int is the basic data type\n4) All of the mentioned\n");
         printf("Enter the choice : ");
         scanf("%d",&x);
         if(x==q1.q[5])
@@ -539,12 +549,13 @@ int quiz1() //c-tokens
         if(x==q1.q[9])
         {
             printf("Correct\n");
-            c_tokens();
+             variables();
         }
         else
         {
             printf("wrong\n");
             goto l1_10;
+
         }
 }
 int quiz2() // variables
@@ -673,7 +684,7 @@ int quiz2() // variables
         if(x==q2.q[9])
         {
             printf("Correct\n");
-            variables();
+            constants();
         }
         else
         {
@@ -819,7 +830,7 @@ int quiz3() //constants
         if(x==q3.q[9])
         {
             printf("Correct\n");
-            constants();
+            operators();
         }
         else
         {
@@ -958,7 +969,7 @@ int quiz4() // operators
             if(x==q4.q[9])
             {
                 printf("Correct\n");
-                operators();
+                strings();
             }
             else
             {
@@ -1097,7 +1108,7 @@ int quiz5() // stringh
             if(x==q5.q[9])
             {
                 printf("Correct\n");
-                strings();
+                module_1();
             }
             else
             {
@@ -1110,10 +1121,12 @@ int quiz5() // stringh
 int c_tokens()
 {   system("clear");
     int o;
+    int j;
     if(automat()==1)
     {
         learn1();
-        //delay
+        for(j=0;j<25;j++)  //delay in sec
+        delay();
         quiz1();
     }
     else
@@ -1140,10 +1153,12 @@ int c_tokens()
 int variables()
 {   system("clear");
     int o;
+    int j;
     if(automat()==1)
     {
         learn2();
-        //delay
+        for(j=0;j<40;j++)         //delay in sec
+            delay();
         quiz2();
     }
     else
@@ -1170,10 +1185,12 @@ int variables()
 int constants()
 {   system("clear");
     int o;
+    int j;
     if(automat()==1)
     {
         learn3();
-        //delay
+        for(j=0;j<40;j++)  //delay  in sec
+        delay();
         quiz3();
     }
     else
@@ -1200,10 +1217,12 @@ int constants()
 int operators()
 {   system("clear");
     int o;
+    int j;
     if(automat()==1)
     {
         learn4();
-        //delay
+        for(j=0;j<200;j++)  //delay  in sec
+        delay();
         quiz4();
     }
     else
@@ -1230,10 +1249,12 @@ int operators()
 int strings()
 {   system("clear");
     int o;
+    int j;
     if(automat()==1)
     {
         learn5();
-        //delay
+        for(j=0;j<150;j++)  //delay  in sec
+        delay();
         quiz5();
     }
     else
@@ -1256,6 +1277,7 @@ int strings()
     }
     return 0;
 }
+}
 
 
 
@@ -1277,8 +1299,6 @@ int module_1()
             case 5:strings(); break;
             case 6:return 0;
             case 7:exit(0);
-
-
             default:printf("Sorry!! It's an invalid option\n");
 
         }
