@@ -31,8 +31,8 @@ int automat()
 
 int delay()
 {
-    long int i,j;
-    for(j=0;j<3;j++)
+    long int i;
+
     for(i=0;i<999999999;i++);
     return 0;
 
@@ -969,7 +969,7 @@ int quiz4() // operators
             if(x==q4.q[9])
             {
                 printf("Correct\n");
-                \string();
+                strings();
             }
             else
             {
@@ -1121,9 +1121,11 @@ int quiz5() // stringh
 int c_tokens()
 {   system("clear");
     int o;
+    int j;
     if(automat()==1)
     {
         learn1();
+        for(j=0;j<25;j++)  //delay in sec
         delay();
         quiz1();
     }
@@ -1151,10 +1153,12 @@ int c_tokens()
 int variables()
 {   system("clear");
     int o;
+    int j;
     if(automat()==1)
     {
         learn2();
-        //delay
+        for(j=0;j<40;j++)         //delay in sec
+            delay();
         quiz2();
     }
     else
@@ -1181,10 +1185,12 @@ int variables()
 int constants()
 {   system("clear");
     int o;
+    int j;
     if(automat()==1)
     {
         learn3();
-        //delay
+        for(j=0;j<40;j++)  //delay  in sec
+        delay();
         quiz3();
     }
     else
@@ -1211,10 +1217,12 @@ int constants()
 int operators()
 {   system("clear");
     int o;
+    int j;
     if(automat()==1)
     {
         learn4();
-        //delay
+        for(j=0;j<200;j++)  //delay  in sec
+        delay();
         quiz4();
     }
     else
@@ -1241,10 +1249,12 @@ int operators()
 int strings()
 {   system("clear");
     int o;
+    int j;
     if(automat()==1)
     {
         learn5();
-      delay();
+        for(j=0;j<150;j++)  //delay  in sec
+        delay();
         quiz5();
     }
     else
@@ -1289,8 +1299,6 @@ int module_1()
             case 5:strings(); break;
             case 6:return 0;
             case 7:exit(0);
-
-
             default:printf("Sorry!! It's an invalid option\n");
 
         }
