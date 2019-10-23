@@ -1,4 +1,4 @@
-int main()
+learn1()
 {
     printf("if-else contrd construct :\n");
     printf("• Is used to execute one set of statement if the condition is true and another set of statement if the condition is false.\n");
