@@ -63,7 +63,7 @@ int learn6() //Branching and looping
   printf("                         \\    /                          |\n");
   printf("                          \\  /                           |\n");
   printf("                           \\/                            |\n");
-  printf("                           |                              |\n");
+  printf("                            |                             |\n");
    printf("                           |                             |\n");
   printf("                           /\\                            |\n");
   printf("                          /  \\                           |\n");
@@ -73,10 +73,10 @@ int learn6() //Branching and looping
   printf("                         \\    /                          |\n");
   printf("                          \\  /                           |\n");
   printf("                           \\/                            |\n");
-  printf("                           |                              |\n");
-  printf("                           *                              *\n") ;
-  printf("                           *                              *\n");
-  printf("                           *                              *\n");
+  printf("                            |                             |\n");
+  printf("                            *                             *\n") ;
+  printf("                            *                             *\n");
+  printf("                            *                             *\n");
    printf("                           |                             |\n");
   printf("                           /\\                            |\n");
   printf("                          /  \\                           |\n");
@@ -86,7 +86,7 @@ int learn6() //Branching and looping
   printf("                         \\    /                          |\n");
   printf("                          \\  /                           |\n");
   printf("                           \\/                            |\n");
-  printf("                    _______|_______                       |\n");
+  printf("                    ________|_______                      |\n");
   printf("                    | default stat|                       |\n");
   printf("                    |_____________|                       |\n");
   printf("                           |                              |\n");
@@ -106,8 +106,8 @@ int learn6() //Branching and looping
   printf("printf\"c is largest\"                                              \\    /      | \n");
   printf("step 3:[finished]                                                     \\  /      |\n");
   printf("stop                                                                   \\/       |\n");
-  printf("                                                                         |-------| \n");
-  printf("                                                                       | \n");
+  printf("                                                                        |--------| \n");
+  printf("                                                                        | \n");
   printf("                                                                       /\\              \n");
   printf("                                                                      /  \\             \n");
   printf("                                                              true   /    \\ false\n");
@@ -118,8 +118,8 @@ int learn6() //Branching and looping
   printf("                                                             |         \\/          |\n");
   printf("                                                             |                      |\n");
   printf("                                                          ___|_________      _______|______\n");
-  printf("                                                           | statement.a |    |  statement.b |\n ");
-  printf("                                                           |_____________|    |______________|\n");
+  printf("                                                         | statement.a |    |  statement.b |\n ");
+  printf("                                                         |_____________|    |______________|\n");
   printf("                                                             |_____________________|\n ");
   printf("                                                                        |\n ");
   printf("                                                                        O \n");
