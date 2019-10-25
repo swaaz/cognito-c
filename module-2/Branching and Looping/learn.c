@@ -1,4 +1,4 @@
-learn1()
+int learn6() //Branching and looping
 {
     printf("if-else contrd construct :\n");
     printf("• Is used to execute one set of statement if the condition is true and another set of statement if the condition is false.\n");
@@ -13,11 +13,11 @@ learn1()
     printf("        |       \\    /        |\n");
     printf("        |        \\  /         |\n");
     printf("        |         \\/          |\n");
-    printf("        |                     |\n");
-    printf("      __|___________      ____|_________\n");
-  printf("      |statement.a |      |statement.b |\n ");
-  printf("     |____________|      |____________|\n");
-  printf("        |_____________________|\n ");
+    printf("        |                      |\n");
+    printf("    ____|_________         ____|_________\n");
+  printf("      |statement.a |         |statement.b |\n ");
+  printf("      |____________|         |____________|\n");
+  printf("        |__________________________|\n ");
   printf("                    |\n ");
   printf("                    O \n");
   printf("example program to check if the given number is even or odd.\n ");
@@ -37,11 +37,11 @@ learn1()
   printf("                         \\    /        |\n");
   printf("                          \\  /         |\n");
   printf("                           \\/          |\n");
-  printf("                            |          |\n");
-  printf("                      ______|_______   | \n" );
-  printf("                      /printf\"even\"/   |  \n ");
-  printf("                    /__number____/    |\n");
-  printf("                            |<---------|\n ");
+  printf("                            |           |\n");
+  printf("                      ______|_______    | \n" );
+  printf("                     /printf\"even\"/   |  \n");
+  printf("                    /__number______/    |\n");
+  printf("                            |<----------|\n ");
   printf("                     _______|_____\n ");
   printf("                    (______stop___)\n\n");
   printf("/* program to check even number */ \n");
@@ -93,21 +93,21 @@ learn1()
   printf("                           |----------->o<---------------|\n");
   printf("                                        |                 \n");
   printf("\nexample:program to find the biggest of three numbers \n");
-  printf("Algorithm to find the largest of three numbers                     ____________      \n ");
+  printf("Algorithm to find the largest of three numbers                    ____________      \n ");
   printf("step 1:[read 3 different number]                                 (____start___)   \n");
-  printf("          input a,b,c                                            ______|_______\n");
+  printf("          input a,b,c                                             _____|_______\n");
   printf("[find the largest of three numbers]                              /__input n___/ \n ");
-  printf("if (a>b&&a>c)                                                         |\n");
+  printf("if (a>b&&a>c)                                                          |\n");
   printf("{                                                                      /\\\n");
-  printf("printf\"a is largest\" ;  }                                             /  \\\n");
+  printf("printf\"a is largest\" ;  }                                           /  \\\n");
   printf("else if(b>a&&b>c)                                                    / if \\ false\n");
-  printf(" printf(\"b is largest\");                                            /cond:n\\----|\n ");
-  printf("else                                                               \\  ?   /    |\n");
-  printf("printf\"c is largest\"                                                 \\    /     | \n");
+  printf(" printf(\"b is largest\");                                          /cond:n\\----|\n ");
+  printf("else                                                               \\  ?   /     |\n");
+  printf("printf\"c is largest\"                                              \\    /      | \n");
   printf("step 3:[finished]                                                     \\  /      |\n");
   printf("stop                                                                   \\/       |\n");
-  printf("                                                                        |-------| \n");
-    printf("                                                                        | \n");
+  printf("                                                                         |-------| \n");
+    printf("                                                                       | \n");
     printf("                                                                       /\\              \n");
     printf("                                                                      /  \\             \n");
     printf("                                                              true   /    \\ false\n");
