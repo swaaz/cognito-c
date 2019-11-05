@@ -9,7 +9,7 @@ int module_2()
         scanf("%d",&o);
         switch (o)
         {
-            case 1: break;
+            case 1:learn6(); break;
             case 2: break;
             case 3: break;
             case 4:return 0;
