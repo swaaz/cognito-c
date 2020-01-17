@@ -127,7 +127,7 @@ int quiz5() // stringhs
             if(x==q5.q[9])
             {
                 printf("Correct\n");
-                c_tokens();
+                module_1();
             }
             else
             {
