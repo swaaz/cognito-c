@@ -1,7 +1,5 @@
-#include <stdio.h>
-#include <stdlib.h>
 
-int main()
+int preprocessor_directives()
 {
     printf("\n*********** Preprocessor Directive *************\n\n\n");
     printf(" Preprocessor is a program which in invoked by compiler before the compilation of user written program. The declaration of processors statements always begin with (#),usually these are placed before the main() function.\n\n");
