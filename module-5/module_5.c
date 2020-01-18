@@ -12,6 +12,7 @@ int module_1()
         {
             case 1:structure(); break;
             case 2:pointer(); break;
+            case 3:preprocessor_directives(); break;
             case 4:return 0;
             case 5:exit(0);
 
