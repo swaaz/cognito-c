@@ -1,7 +1,5 @@
-#include <stdio.h>
-#include <stdlib.h>
 
-int main()
+int pointer()
 {
     printf("\n ********** pointer **********\n\n");
     printf(" Pointer Definition: Pointer is a variable that holds the address of another variable.\n");
