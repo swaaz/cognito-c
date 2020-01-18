@@ -1,14 +1,14 @@
-quiz q6[10]={};
+quiz q6[10]={1,3,3,4,2,4,4,4,3,4};
 
 int quiz6() // Branching and looping
 {
 
     int x;
 
-   l6.1:   printf("\n1. Assume that i,j and k are integer variables and their values are 8, 5 and 0 respectively. What will be the values of variables i and k after executing the following expression? \n");
-            printf("k=(j>5)?(i<5)?i-j:j-i:k-j;\n i-=(k)?(i)?(j)?:(i):(k);\nWhat will be the result of execution?");
-            printf("1. -3 and 3\n2. 3 and -5\n 3. 3 and -3\n 4. -5 and 3\n");
-         printf("Enter the choice : ");
+   l6.1:  printf("\n1. Assume that i,j and k are integer variables and their values are 8, 5 and 0 respectively. What will be the values of variables i and k after executing the following expression? \n");
+        printf("k=(j>5)?(i<5)?i-j:j-i:k-j;\n i-=(k)?(i)?(j)?:(i):(k);\nWhat will be the result of execution?");
+        printf("1. -3 and 3\n2. 3 and -5\n 3. 3 and -3\n 4. -5 and 3\n");
+        printf("Enter the choice : ");
         scanf("%d",&x);
         if(x==q6.1) 
         {
