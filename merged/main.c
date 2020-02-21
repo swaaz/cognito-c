@@ -424,31 +424,32 @@ quiz q5={1,1,2,3,1,3,2,3,3,2}; //stringh
 
 /*Quiz*/
 
+quiz q1={4,2,2,4,3,3,4,2,4,1};
+
 int quiz1() //c-tokens
-{   system("clear");
+{
     int x;
 
-   l1_1:printf("\n1. Which of the following is not a valid declaration in C? \n");
+   l1_1:   printf("\n1.Which of the following is not a valid declaration in C? \n");
         printf("a.short int x;\nb.short int x;\nc.short x;\nd.unsigned short x;\n");
         printf("Options\n");
         printf("1.c & d\n2.b\n3.a\n4.all are valid\n");
         printf("Enter the choice : ");
         scanf("%d",&x);
-
-        if(x==q1.q[0])
+        if(x==q1.1) 
         {
             printf("Correct\n");
             goto l1_2;
         }
-        else
+        else 
         {
             printf("Wrong\n");
-            goto l1_1;
+            goto l1_1_
         }
-    l1_2:  printf("\n\n2. The format identifier ‘%i’ is also used for _____ data type.\n1) char\n2) int\n3) float\n4) double\n");
+    l1_2:  printf("2. The format identifier ‘%i’ is also used for _____ data type.\n1) char\n2) int\n3) float\n4) double\n");
         printf("Enter the choice : ");
         scanf("%d",&x);
-        if(x==q1.q[1])
+        if(x==q1.2)
         {
             printf("Correct\n");
             goto l1_3;
@@ -458,10 +459,10 @@ int quiz1() //c-tokens
             printf("wrong\n");
             goto l1_2;
         }
-    l1_3:  printf("\n\n3. Which data type is most suitable for storing a number 65000 in a 32-bit system?\n1) signed short\n2) unsigned short\n3) long\n4) int\n");
+    l1_3:  printf("3. Which data type is most suitable for storing a number 65000 in a 32-bit system?\n1) signed short\n2) unsigned short\n3) long\n4) int\n");
         printf("Enter the choice : ");
         scanf("%d",&x);
-        if(x==q1.q[2])
+        if(x==q1.3)
         {
             printf("Correct\n");
             goto l1_4;
@@ -471,10 +472,10 @@ int quiz1() //c-tokens
             printf("wrong\n");
             goto l1_3;
         }
-    l1_4:  printf("\n\n4. Which of the following is a User-defined data type?\n1) typedef int Boolean;\n2) typedef enum {Mon, Tue, Wed, Thu, Fri} Workdays;\n3) struct {char name[10], int age};\n4) all of the mentioned\n");
+    l1_4:  printf("4. Which of the following is a User-defined data type?\n1) typedef int Boolean;\n2) typedef enum {Mon, Tue, Wed, Thu, Fri} Workdays;\n3) struct {char name[10], int age};\n4) all of the mentioned\n");
         printf("Enter the choice : ");
         scanf("%d",&x);
-        if(x==q1.q[3])
+        if(x==q1.4)
         {
             printf("Correct\n");
             goto l1_5;
@@ -484,10 +485,10 @@ int quiz1() //c-tokens
             printf("wrong\n");
             goto l1_4;
         }
-    l1_5:  printf("\n\n5. What is the size of an int data type?\n1) 4 Bytes\n2) 8 Bytes\n3) Depends on the system/compiler\n4) Cannot be determined\n");
+    l1_5:  printf("5. What is the size of an int data type?\n1) 4 Bytes\n2) 8 Bytes\n3) Depends on the system/compiler\n4) Cannot be determined\n");
         printf("Enter the choice : ");
         scanf("%d",&x);
-        if(x==q1.q[4])
+        if(x==q1.5)
         {
             printf("Correct\n");
             goto l1_6;
@@ -497,10 +498,10 @@ int quiz1() //c-tokens
             printf("wrong\n");
             goto l1_5;
         }
-    l1_6:  printf("\n\n6. What is short int in C programming?\n1) The basic data type of C\n2) Qualifier\n3) Short is the qualifier and int is the basic data type\n4) All of the mentioned\n");
+    l1_:  printf("6. What is short int in C programming?\n 1) The basic data type of C\n2) Qualifier\n3) Short is the qualifier and int is the basic data type\n4) All of the mentioned\n");
         printf("Enter the choice : ");
         scanf("%d",&x);
-        if(x==q1.q[5])
+        if(x==q1.6)
         {
             printf("Correct\n");
             goto l1_7;
@@ -510,10 +511,10 @@ int quiz1() //c-tokens
             printf("wrong\n");
             goto l1_6;
         }
-    l1_7: printf("\n\n7. What is C Tokens?\n1. The smallest individual units of c program\n2. The basic element recognized by the compiler\n3. The largest individual units of program\n4. A & B Both\n");
+    l1_7: printf("7.What is C Tokens?\n1. The smallest individual units of c program\n2. The basic element recognized by the compiler\n3. The largest individual units of program\n4. A & B Both\n"); 
         printf("Enter the choice : ");
         scanf("%d",&x);
-        if(x==q1.q[6])
+        if(x==q1.7)
         {
             printf("Correct\n");
             goto l1_8;
@@ -522,11 +523,11 @@ int quiz1() //c-tokens
         {
             printf("wrong\n");
             goto l1_7;
-        }
-    l1_8: printf("\n\n8. If 'a' is an integer variable, then a=5/2 will return a value\n1. 2.5\n2. 2\n3. 2.000000\n4. 2.500000\n");
+        } 
+    l1_8: printf("8. If 'a' is an integer variable, then a=5/2 will return a value\n1. 2.5\n2. 2\n3. 2.000000\n4. 2.500000\n");
         printf("Enter the choice : ");
         scanf("%d",&x);
-        if(x==q1.q[7])
+        if(x==q1_8)
         {
             printf("Correct\n");
             goto l1_9;
@@ -536,55 +537,57 @@ int quiz1() //c-tokens
             printf("wrong\n");
             goto l1_8;
         }
-    l1_9:  printf("\n\n9. The words if, else, auto, float etc. hasve predefined meaning and users cannot use them as variables. These words are called\n1. constant\n2. identifier\n3. data types\n4. keywords\n");
+    l1_9:  printf("9. The words if, else, auto, float etc. hasve predefined meaning and users cannot use them as variables. These words are called\n1. constant\n2. identifier\n3. data types\n4. keywords\n");
         printf("Enter the choice : ");
         scanf("%d",&x);
-        if(x==q1.q[8])
+        if(x==q1.9)
         {
             printf("Correct\n");
-            goto l1_10;
+            goto l1_0;
         }
         else
         {
             printf("wrong\n");
             goto l1_9;
         }
-    l1_10: printf("\n\n10. By default a real number is treated as a\n1. float\n2. double\n3. long double\n4. integer\n");
+    l1_10: printf("10 .By default a real number is treated as a\n1. float\n2. double\n3. long double\n4. integer\n");
         printf("Enter the choice : ");
         scanf("%d",&x);
-        if(x==q1.q[9])
+        if(x==q1.10)
         {
             printf("Correct\n");
-             variables();
+            c_tokens();
         }
         else
         {
             printf("wrong\n");
             goto l1_10;
-
         }
 }
 
+
 int quiz2() // variables
-{   system("clear");
-     int x;
-     l2_1:   printf("\n\n1. A C variable cannot start with ? \n1. An alphabet\n2.. A number\n3. A special symbol other that underscore\n4. Both B and C\n");
+{
+
+    int x;
+
+   l2_1:   printf("\n1. A C variable cannot start with ? \n1. An alphabet\n2.. A number\n3. A special symbol other that underscore\n4. Both B and C\n");
          printf("Enter the choice : ");
         scanf("%d",&x);
-        if(x==q2.q[0])
+        if(x==q2.1) 
         {
             printf("Correct\n");
             goto l2_2;
         }
-        else
+        else 
         {
             printf("Wrong\n");
             goto l2_1;
         }
-    l2_2:  printf("\n\n2. A name having a few letters, numbers and special character _(underscore) is called\n1. keywords\n2. reserved keyword\n3. tokens\n4. identifiers\n");
+    l2_2:  printf("2. A name having a few letters, numbers and special character _(underscore) is called\n1. keywords\n2. reserved keyword\n3. tokens\n4. identifiers\n");
         printf("Enter the choice : ");
         scanf("%d",&x);
-        if(x==q2.q[1])
+        if(x==q2.2)
         {
             printf("Correct\n");
             goto l2_3;
@@ -594,10 +597,10 @@ int quiz2() // variables
             printf("wrong\n");
             goto l2_2;
         }
-    l2_3:  printf("\n\n3. What is the scope of an external variable?\n1. Whole source file in which it is defined\n2. From the point of declaration to the end of the file in which it is defined\n3. Any source file in a program\n4. From the point of declaration to the end of the file being compiled\n");
+    l2_3:  printf("3. What is the scope of an external variable?\n1. Whole source file in which it is defined\n2. From the point of declaration to the end of the file in which it is defined\n3. Any source file in a program\n4. From the point of declaration to the end of the file being compiled\n");
         printf("Enter the choice : ");
         scanf("%d",&x);
-        if(x==q2.q[2])
+        if(x==q2_3)
         {
             printf("Correct\n");
             goto l2_4;
@@ -607,10 +610,10 @@ int quiz2() // variables
             printf("wrong\n");
             goto l2_3;
         }
-    l2_4:  printf("\n\n4. Variable names beginning with underscore is not encouraged. Why? \n1. It is not standardized\n2. To avoid conflicts since assemblers and loaders use such names\n3. To avoid conflicts since library routines use such names\n4. To avoid conflicts with environment variables of an operating system\n");
+    l2_4:  printf("4. Variable names beginning with underscore is not encouraged. Why? \n1. It is not standardized\n2. To avoid conflicts since assemblers and loaders use such names\n3. To avoid conflicts since library routines use such names\n4. To avoid conflicts with environment variables of an operating system\n");
         printf("Enter the choice : ");
         scanf("%d",&x);
-        if(x==q2.q[3])
+        if(x==q2.4)
         {
             printf("Correct\n");
             goto l2_5;
@@ -620,10 +623,10 @@ int quiz2() // variables
             printf("wrong\n");
             goto l2_4;
         }
-    l2_5:  printf("\n\n5. In an assignment statement a=b; which of the following statement is true ?\n1. The variable a and the variable b are same.\n2. The value of b is assigned to variable a but if b changes later, it will not effect the value of variable a.\n3. The value of b is assigned to variable a but if b changes later, it will effect the value of variable\n4. The value of variable a is assigned to variable b, and the value of variable b is asssigned to variable a.\n");
+    l2_5:  printf("5. In an assignment statement a=b; which of the following statement is true ?\n1. The variable a and the variable b are same.\n2. The value of b is assigned to variable a but if b changes later, it will not effect the value of variable a.\n3. The value of b is assigned to variable a but if b changes later, it will effect the value of variable\n4. The value of variable a is assigned to variable b, and the value of variable b is asssigned to variable a.\n");
         printf("Enter the choice : ");
         scanf("%d",&x);
-        if(x==q2.q[4])
+        if(x==q2.5)
         {
             printf("Correct\n");
             goto l2_6;
@@ -633,10 +636,10 @@ int quiz2() // variables
             printf("wrong\n");
             goto l2_5;
         }
-    l2_6:  printf("\n\n6. Which is an incorrect variable name?\n1. Id_No\n2. ID_NO\n3. IdNo\n4. Id No\n");
+    l2_6:  printf("6. Which is an incorrect variable name?\n1. Id_No\n2. ID_NO\n3. IdNo\n4. Id No\n");
         printf("Enter the choice : ");
         scanf("%d",&x);
-        if(x==q2.q[5])
+        if(x==q2.6)
         {
             printf("Correct\n");
             goto l2_7;
@@ -646,10 +649,10 @@ int quiz2() // variables
             printf("wrong\n");
             goto l2_6;
         }
-    l2_7: printf("\n\n7. Which of the following is not valid variable names in 'C'?\n1. float_int, keyword, A1\n2. ANSI, ascii, cpu\n3. valid, variable, name\n4 None of these\n");
+    l2_7: printf("7.Which of the following is not valid variable names in 'C'?\n1. float_int, keyword, A1\n2. ANSI, ascii, cpu\n3. valid, variable, name\n4 None of these\n"); 
         printf("Enter the choice : ");
         scanf("%d",&x);
-        if(x==q2.q[6])
+        if(x==q2.7)
         {
             printf("Correct\n");
             goto l2_8;
@@ -658,11 +661,11 @@ int quiz2() // variables
         {
             printf("wrong\n");
             goto l2_7;
-        }
-    l2_8: printf("\n\n8. Which of the following cannot be used as identifiers?\n1. Letters\n2. Digits\n3. Underscores\n4. Spaces\n");
+        } 
+    l2_8: printf("8. Which of the following cannot be used as identifiers?\n1. Letters\n2. Digits\n3. Underscores\n4. Spaces\n");
         printf("Enter the choice : ");
         scanf("%d",&x);
-        if(x==q2.q[7] )
+        if(x==q2.8)
         {
             printf("Correct\n");
             goto l2_9;
@@ -672,10 +675,10 @@ int quiz2() // variables
             printf("wrong\n");
             goto l2_8;
        }
-    l2_9:  printf("\n\n9. Variable names beginning with underscore is not encouraged. Why?\n1. It is not standard form\n2. To avoid conflicts since assemblers and loaders use such names\n3. To avoid conflicts since library routines use such names\n4. To avoid conflicts with environment variables of an operating system\n");
+    l2_9:  printf("9. Variable names beginning with underscore is not encouraged. Why?\n1. It is not standard form\n2. To avoid conflicts since assemblers and loaders use such names\n3. To avoid conflicts since library routines use such names\n4. To avoid conflicts with environment variables of an operating system\n");
         printf("Enter the choice : ");
         scanf("%d",&x);
-        if(x==q2.q[8])
+        if(x==q2.9)
         {
             printf("Correct\n");
             goto l2_10;
@@ -685,19 +688,20 @@ int quiz2() // variables
             printf("wrong\n");
             goto l2_9;
         }
-    l2_10: printf("\n\n10 Which of the following is not a valid variable name declaration?\n1. float PI = 3.14;\n2. double PI = 3.14;\n3. int PI = 3.14;\n4. #define PI 3.14\n");
+    l2_10: printf("10 Which of the following is not a valid variable name declaration?\n1. float PI = 3.14;\n2. double PI = 3.14;\n3. int PI = 3.14;\n4. #define PI 3.14\n");
         printf("Enter the choice : ");
         scanf("%d",&x);
-        if(x==q2.q[9])
+        if(x==q2.10)
         {
             printf("Correct\n");
-            constants();
+            variables();
         }
         else
         {
             printf("wrong\n");
             goto l2_10;
         }
+
 }
 
 
@@ -1124,337 +1128,144 @@ int quiz5() // stringh
             }
 }
 
-int learn6() //Branching and looping
+int quiz6() // Branching and looping
 {
-    printf("if-else contrd construct :\n");
-    printf("• Is used to execute one set of statement if the condition is true and another set of statement if the condition is false.\n");
-    printf("syntax :\nif(condition)\n{\n statement a;\n}\nelse\n{\n statement b;\n}\n");
 
-    printf("                  | \n");
-    printf("                  /\\              \n");
-    printf("                 /  \\             \n");
-    printf("         true   /    \\ false\n");
-    printf("        _______/condi \\________\n");
-    printf("        |      \\  ?   /       | \n");
-    printf("        |       \\    /        |\n");
-    printf("        |        \\  /         |\n");
-    printf("        |         \\/          |\n");
-    printf("        |                      |\n");
-    printf("    ____|_________         ____|_________\n");
-  printf("      |statement.a |         |statement.b |\n ");
-  printf("      |____________|         |____________|\n");
-  printf("        |__________________________|\n ");
-  printf("                    |\n ");
-  printf("                    O \n");
-  printf("example program to check if the given number is even or odd.\n ");
-  printf("algorithm : to check even or odd\n");
-  printf("step 1:[read the number]\n       input n \nstep 2:[check if the number is even or odd]\n     if(n%2==0)\n       {\n      output\"even number\"\n       }\nstep 3:[finished]\n      stop\n");
-  printf("flow chart:\n");
-  printf("                    ____________      \n   ");
-  printf("                   (____start___)   \n");
-  printf("                     ______|_____\n");
-  printf("                    /__input n__/ \n  ");
-  printf("                           |\n");
-  printf("                           /\\              \n");
-  printf("                          /  \\             \n");
-  printf("                         / if \\ false\n");
-  printf("                        /n%%2==0\\________\n");
-  printf("                        \\  ?   /       | \n");
-  printf("                         \\    /        |\n");
-  printf("                          \\  /         |\n");
-  printf("                           \\/          |\n");
-  printf("                            |           |\n");
-  printf("                      ______|_______    | \n" );
-  printf("                     /printf\"even\"/   |  \n");
-  printf("                    /__number______/    |\n");
-  printf("                            |<----------|\n ");
-  printf("                     _______|_____\n ");
-  printf("                    (______stop___)\n\n");
-  printf("/* program to check even number */ \n");
-  printf("#include<stdio.h>\nvoid main()\n{\n int n;\n clrscr();\n printf(\"enter the number\");\n scanf(\"%%d\",&n);\n if(n%2==0)\n {\n printf(\"even number\");\n }\ngetch();\n}\n\n");
-  printf("the output1 :\t\t\tthe output2:\nenter the number:10\t\tenter the number\neven number\n\n");
-  printf(" Program to find biggest of three numbers\nAlgorithm : To find the largest number\n");
-  printf("step1:[read 3 different number as input]\n    input a,b,c\nstep2:[find the largest of 3 numbers]\n    if(a>b)\n   {\n\n     if(a>c)\n     {\n     printf \"a largest\"\n      }\n     else\n      {\n     if(b>c)\n       }\n     else\n      printf\"c largest\"\n     }\nstep3:[finished]\n       stop\n" );
-  printf("\nProgram to find the largest of three numbers\n");
-  printf("\n #include<stdio.h>\nvoid main()\n{\n int a,b,c; clrscr(); printf(\"enter 3 different numbers\"\n scanf(\"%d%d%d\",&a,&b,&c);\n if(a>b&&a>c)  {\n   printf(\"a number is largest\");\n else if(b>a&&b>c)\n  {\n   printf(\"b is largest\");\n  else\n  {\n  printf(\"cis largest\");\n  }\ngetch();\n}\n");
-  printf("\nnested if else control construct:\n");
-  printf("• is used to execute one set of many sets of statements depending upon the outcome of the condition\nit consist if if else control condtruct with in another if or else control construct and hence the\n");
-  printf("syntax:\nif(condition 1)\n{\n statement a;\n}\nelse if(condition 2)\n {\n statement b;\n }\n .\n .\n .\nelse if(condition n)\n{\n statement n;\n}\nelse\n{\n default statement;\n}\n");
-   printf("                           |\n");
-  printf("                           /\\              \n");
-  printf("                          /  \\             \n");
-  printf("                         / if \\ false   ______________\n");
-  printf("                        /cond:1\\------->|statement a |---|\n");
-  printf("                        \\  ?   /        |____________|   |\n");
-  printf("                         \\    /                          |\n");
-  printf("                          \\  /                           |\n");
-  printf("                           \\/                            |\n");
-  printf("                            |                             |\n");
-   printf("                           |                             |\n");
-  printf("                           /\\                            |\n");
-  printf("                          /  \\                           |\n");
-  printf("                         / if \\ false    ____________    |\n");
-  printf("                        /cond:2\\-------->|statement b|-->o\n");
-  printf("                        \\  ?   /         |___________|   |\n");
-  printf("                         \\    /                          |\n");
-  printf("                          \\  /                           |\n");
-  printf("                           \\/                            |\n");
-  printf("                            |                             |\n");
-  printf("                            *                             *\n") ;
-  printf("                            *                             *\n");
-  printf("                            *                             *\n");
-   printf("                           |                             |\n");
-  printf("                           /\\                            |\n");
-  printf("                          /  \\                           |\n");
-  printf("                         / if \\ false    ____________    |\n");
-  printf("                        /cond:n\\-------->|statement b|-->o\n");
-  printf("                        \\  ?   /         |___________|   |\n");
-  printf("                         \\    /                          |\n");
-  printf("                          \\  /                           |\n");
-  printf("                           \\/                            |\n");
-  printf("                    ________|_______                      |\n");
-  printf("                    | default stat|                       |\n");
-  printf("                    |_____________|                       |\n");
-  printf("                           |                              |\n");
-  printf("                           |----------->o<----------------|\n");
-  printf("                                        |                 \n");
-  printf("\nexample:program to find the biggest of three numbers \n");
-  printf("Algorithm to find the largest of three numbers                    ____________      \n ");
-  printf("step 1:[read 3 different number]                                 (____start___)   \n");
-  printf("          input a,b,c                                             _____|_______\n");
-  printf("[find the largest of three numbers]                              /__input n___/ \n ");
-  printf("if (a>b&&a>c)                                                          |\n");
-  printf("{                                                                      /\\\n");
-  printf("printf\"a is largest\" ;  }                                           /  \\\n");
-  printf("else if(b>a&&b>c)                                                    / if \\ false\n");
-  printf(" printf(\"b is largest\");                                          /cond:n\\----|\n ");
-  printf("else                                                               \\  ?   /     |\n");
-  printf("printf\"c is largest\"                                              \\    /      | \n");
-  printf("step 3:[finished]                                                     \\  /      |\n");
-  printf("stop                                                                   \\/       |\n");
-  printf("                                                                        |--------| \n");
-  printf("                                                                        | \n");
-  printf("                                                                       /\\              \n");
-  printf("                                                                      /  \\             \n");
-  printf("                                                              true   /    \\ false\n");
-  printf("                                                             _______/condi \\________\n");
-  printf("                                                             |      \\  ?   /       | \n");
-  printf("                                                             |       \\    /        |\n");
-  printf("                                                             |        \\  /         |\n");
-  printf("                                                             |         \\/          |\n");
-  printf("                                                             |                      |\n");
-  printf("                                                          ___|_________      _______|______\n");
-  printf("                                                         | statement.a |    |  statement.b |\n ");
-  printf("                                                         |_____________|    |______________|\n");
-  printf("                                                             |_____________________|\n ");
-  printf("                                                                        |\n ");
-  printf("                                                                        O \n");
-  printf("\nSwitch pictorial representation :\n");
-    printf("                  ____________      \n   ");
-  printf("                   (____start___)   \n");
-  printf("                           |\n");
-  printf("                           /\\              \n");
-  printf("                          /  \\             \n");
-  printf("                         /    \\ \n");
-  printf("                        /expres\\\n");
-  printf("                        \\  ?   /        \n");
-  printf("                         \\    /        \n");
-  printf("                          \\  /         \n");
-  printf("                           \\/          \n");
-  printf("                            |         \n");
-  printf("          __________________|__________________\n");
-  printf("     _____|___   _____|____   ______|___   ___|_____\n");
-  printf("     |state 1|   |state 2 |   |state 3 |   |default|\n");
-  printf("     |_______|   |________|   |________|   |_______|\n");
-  printf("          |___________|_____________|_________|\n");
-  printf("                     _______|_______\n ");
-  printf("                    (______stop_____)\n\n");
- printf("\n ___________________________                ___________________________\n");
-  printf(" | if else control construct|               | switch control construct |\n");
-  printf(" |__________________________|               |__________________________|\n");
-  printf("      ------------------                          ---------------\n");
-  printf("      ------------------                          ---------------\n");
-  printf("      ------------------                          ---------------\n");
-  printf("      ------------------                          ----------------\n");
-  printf("             /\\                                 (an integer exp)\n");
-  printf("         ___/? \\___                               ----------------\n");
-  printf("          | \\  /  |                               |   |   |  |...|\n");
-  printf("          |  \\/   |                               |   |   |  |...|\n");
-  printf("         ---      ---                            --- --- --- -- ---\n");
-  printf("         ---2 path---                            --- --- --- -- ---\n");
-  printf("         ---      ---                            --- --- --- -- ---\n");
-  printf("          |________|                              |___|___|___|__|\n");
-  printf("              |                                           |\n");
-  printf("          ----------                              ------------------\n");
-  printf("          ----------                              ------------------\n");
-  printf("          ----------                              ------------------\n");
-  printf("\nWhen the use the various type of if control constructs ?\n");
-  printf("• if the statements present in a program are to be executed one after the other (sequential),without skipping any statements then there is no need of a control construct.\n");
-  printf("The if-else control construct is used when one route has to be selected out of two possible routs (alternatives).\n");
-  printf("The nested if-else control construct or the else if ladder must be used if one rout has to be selected out of many possible routes (alternatives).\n");
-  printf("switch control construct must be used if one route has to be selected out of many possible routes (alternatives).\n");
-  printf("\n SWITCH CONTROL CONSTRUCT:\n• switch is a control construct which allows us to make a decision out of many differences\n");
-  printf("Syntax :  __________________________________________\n");
-  printf("          |          switch(an integer expression) |\n");
-  printf("          |           case value1: statement 1;    |\n");
-  printf("          |                        break;          |\n");
-  printf("          |           case value2: statement 2;    |\n");
-  printf("          |                        break;          |\n");
-  printf("          |           case value3: statement 3;    |\n");
-  printf("          |                        break;          |\n");
-  printf("          |           case value4: statement 4;    |\n");
-  printf("          |                        break;          |\n");
-  printf("          |           default    : statement 5;    |\n");
-  printf("          |________________________________________|\n");
-  printf("\n/*program to find the largest of three numbers*/\n");
-  printf("#include<stdio.h>\nvoid main()\n{\n int a,b,c;\n clrscr()\n printf(\"enter 3 different no.\\n\");\n scanf(\"%d%d%d\",&a,&b,&c);\n if(a>b){\n if(a>c){\n  printf(\"a is largest\");}\n else{\n  printf(\"c is largest\");}\n }\n else{\n  if(b>c){\n  printf(\"bis largest\");}\n else{\n  printf(\"c is largest\");}\n}\n");
-  printf("\n Unconditional statements :\n");
-  printf("• An unconditional control construct is a control statement which alters the sequential control flow without checking any condition\n");
-  printf("                                     _______________________\n");
-  printf("                                     |unconditional control|\n");
-  printf("                                     |_____________________|\n");
-  printf("                   _____________________________|_____________________________\n");
-  printf("         __________|______            __________|_________           _________|____________\n");
-  printf("        (_goto statement__)           (__break_statement__)          (_construct_statement_)\n\n");
-  printf("i) goto control construct :\n• the goto control construct us used to transfer control from one point in the program to another point with checking any condition\n");
-  printf("syntax : goto label;\n     goto label;--|\n    statement 1;--|\n    statement 2;--|\n    statement 3;--|\nlabel:statement;<-|\n\n");
-  printf("label:statement;<-|\n     goto label;--|\n    statement 1;--|\n    statement 2;--|\n    statement 3;--|\n");
-  printf("\nexample :program illustrate use of goto statement\n");
-  printf("#include<stdio.h>\nvoid main()\n{\n int i=1; clrscr();\n back: printf(\"PCD\\n\");\n if(i!=5){\n i++;\n goto back;}\n}\n");
-  printf("output:\n PCD\n PCD\n PCD\n PCD\n PCD\n \n");
-  printf("\nLooping and Repetition :\n");
-  printf("\n• The looping control construct are the control constructs which enable us to perform an activity more than :once fill the condition is true ,ie as long as the condition holds good, the activity is repeatedly executed. once the condition fails, the control flows to the statements outside the body.\n");
-  printf("\n• c language has 3 looping control constructs namely:\n i) for loop\n ii) while loop\n iii) do while loop\n");
-  printf("\n• for loop\n");
-  printf("\n->for loop is entry controlled loop that provides programmer with more concise loop structure.\n");
-  printf("syntax:                                                               |\n");
-  printf("for(initialization ;testing ;increment/decrement)  ___________________|__________________\n");
-  printf(" {                                             |->/__initialization___|      condition   \\-| \n");
-  printf(" body of the loop                              |  \\__updation________|___________________/ |   \n");
-  printf(" }                                             |                      |                     |  \n ");
-  printf("                                               |             _________|________             |\n")
-  printf("                                               |             | body of loop   |             |\n");
-  printf("                                               |             |________________|             |\n");
-  printf("                                               |______________________|                     |\n");
-  printf("                                                                      |_____________________|\n");
-  printf("                                                                      |\n");
-  printf("\n-> Initialization :\n the loop variable is initialized with value when the control enters the for loop.\n");
-  printf("\n-> condition :\n it is generally relational expression ,the for loop is executed as long as the test condition is true.\n");
-  printf("\n Ternary operator :\n• ternary operator is a combination of ? and : and takes three operands.\n");
-  printf("syntax:\n conditional expression ? statement 1: statement 2 ;\n");
-  printf("• the conditional expression is evaluated first. if the result is true then statement 1 is executed else statement 2 is executed.\n");
-  printf("\nexample :/*program to illustrate ternary /conditional operator */\n");
-  printf("#include<stdio.h>\n#include<conio.h>\nvoid main()\n{\n int x,flag;\n clrscr();\n printf(\"enter the value of x\\n\");\n scanf(\"%%d\",&x);\n flag=(x<0)?0:1;\n printf(\"flag value is %%d\\n\",flag);\n getch();\n}\n");
-  printf(" output :\n enter value of x\n  9\n flag value is 1\n");
-  printf("\nDisadvantage of goto control construct:\n");
-  printf("• usage of goto heads to unstructured programming .Hence  a good programming practice.\n• goto is difficult to read and understand\n • indifferent code will be generated by  the compiler\n");
-  printf("\nii) break control construct :\n");
-  printf("• The break control construct is used basically at 2 places\n-> Inside the body of the switch\n-> Inside the body of a looping control construct,in both cases, the break control construct would take the control out of the respective bodies\n");
-  printf("\niii) Continue control construct :\n");
-  printf("\n• During execution of the loop it may be necessary to help a part of loop based on some condition ,continue statement id used in such cases.\n");
-  printf("• continue statement when used in loop,terminate the current iteration.\nNote: continue can be used only in loops.\n");
-  printf("\n• while loop:                                                 flowchart          \n");
-  printf("syntax :                                                      ________|________\n");
-  printf("statement x;                                                  | statement x   |\n");
-  printf("while(test_condition)                                         |_______________|\n");
-  printf("   {                                                                  |\n");
-  printf("    statements block;                                                / \\     \n");
-  printf(" }                                                                  /   \\    \n");
-  printf("statement y;                                           ----------->/condi\\false__\n");
-  printf("                                                       |          \\      /      |\n");
-  printf("                                                       |           \\    /       |\n");
-  printf("                                          _____________|________    \\  /        |\n");
-  printf("                                          |update condit expres|     \\/         |\n");
-  printf("                                          |____________________|      |          |\n");
-  printf("                                                      |      _________|________  |\n");
-  printf("                                                      |<-----|statement block |  |\n");
-  printf("                                                             |________________|  |\n");
-  printf("                                                                       __________|\n");
-  printf("                                                           ____________|_________\n");
-  printf("                                                           |   statement y      |\n");
-  printf("                                                           |____________________|\n");
-  printf("\n-> upon entry of control into while test expression is evaluated.\n");
-  printf("-> if expression is true (non-zero), statement under while is executed.\n");
-  printf("-> the while loop executes the as long as the expression in while statement is true.\n");
-  printf("-> body of while loop will not be executed at all if the expression is false at the time of entry itself.\n");
-  printf("-> while loop is know as pretest structure because the expression is tested before the body of the loop is executed.\n");
-  printf("->a while loop is also referred as top-checking loop since the control condition is placed at the beginning of the loop.\n");
-  printf("->the initialization statements is not compulsory. But semicolon must precede the test expression.\n");
-  printf("\n/* program to illustrate while loop */\n");
-  printf("#include<stdio.h>\n#include<conio.h>\nmain()\n{\n int i;\n clrscr();\n i=0;\n while(i<=5)\n {\n  printf(\"pcd\");\n  i++;\n }\n printf(\"c programming\");\ngetch();\n}\n");
-  printf("\noutput:\n pcd\n pcd\n pcd\n pcd\n pcd\n c programming language\n");
-  printf("\n do-while loop\n");
-  printf("example:\n int i=0;\n for(;i<=5;i++)\n {\n    .\n    .\n    .\n }\n");
-  printf("-> more than one variable can be initialized in for statement \n example:\n int i,j;\n");
-  printf(" for(i=0;j=1;i<=5;i++)\n          //comma operator is used to separate initialization statements\n");
-  printf("-> 2 loop variables can be simultaneously can be updated in for \n example\n int i,j;\n for(i=0,j=0;i<=5;i++,j--)   //two updation simultaneously\n");
-  printf("{\n}\n");
-  printf("-> only 1 test variable is permitted.\n");
-  printf("-> empty for loop with 2 remainder is permitted but executes infinity times \n                ex: for( ; ; )\n");
-  printf("counter controlled loop \n");
-  printf("-> The body of loop is executed of times\n");
-  printf("-> The following procedure is followed for such a loop\n i) counter must be initialized\n ii) test the counter\n iii) update the counter\n");
-  printf("-> generally for-loop is used in counter control loops.\n");
-  printf("Break and Continue :\n");
-  printf("-> break and continue are two unidirectional control contents.\n");
-  printf("-> they are called as the undirectional control constructs since they are the sequentially flow without checking any condition.\n");
-  printf("-> break control constructs sends the control out of the loop.\n");
-  printf("-> continue control construct sends the control to the beginning of the loop.\n");
-  printf("-> break control construct send the control out of the loop where as continue control construct sends the control to the beginning of the loop.\n");
-  printf("\n  /* Loop without break and continue*/  || /*Loop with break*/          ||  /* Loop with continue*/           \n");
-  printf("  #include<stdio.h>                       ||  #include<stdio.h>           ||  #include<stdio.h>                 \n");
-  printf("  #include<conio.h>                       ||  #include<conio.h>           ||  #include<conio.h>                 \n");
-  printf("  main()                                  ||  main()                      ||  main()                            \n");
-  printf("  {                                       ||  {                           ||  {                                 \n");
-  printf("  int i;                                  ||  int i;                      ||  int i;                            \n");
-  printf("  clrscr()                                ||  clrscr()                    ||  clrscr()                          \n");
-  printf("  for(i=0;i<=3;i++){                      ||  for(i=0;i<=3;i++){          ||  for(i=0;i<=3;i++){                \n");
-  printf("   printf(\"ram\");                       ||   printf(\"ram\");break;     ||   printf(\"ram\"); continue;       \n");
-  printf("   printf(\"sham\");                      ||   printf(\"sham\");          ||   printf(\"sham\");                \n");
-  printf("  }                                       ||  }                           ||  }                                 \n");
-  printf("  getch();                                ||  getch();                    ||  getch();                          \n");
-  printf("  }                                       ||  }                           ||  }                                 \n");
-  printf("  output:                                 ||  output:                     ||  output:                           \n\n\n");
-  printf("  ram sham                                ||  ram                         ||  ram                               \n");
-  printf("  ram sham                                ||                              ||  ram                               \n");
-  printf("  ram sham                                ||                              ||  ram                               \n");
-  printf("\n Nesting Loops :\n");
-  printf("-> there is no restriction with respect to loops that can be nested.\n");
-  printf("-> index value of loops should be different.\n");
-  printf("-> inner loop should be enclosed completely within outer loop.\n");
-  printf("example: for(i=1;i<=;i++){\n          for(j=1;j<=m;j++){\n         .\n         .\n         .\n           }\n         }\n\n");
-  printf("updation :it updates the value of the loop variable after each execution of the body of the loop\n");
-  printf("\n/* program to illustrate for statements */\n");
-  printf("#include<stdio.h>\n#include<stdlib.h>\nmain()\n{\n int i;\n clrscr();\n for(i=1;i<=5;i++)\n {\n  printf(\"%d\n\",i);\n }\n printf(\"thank you\");\n getch();\n}");
-  printf("output:\n   1\n   2\n   3\n   4\n   5\n thank you\n");
-  printf("*  variations in for statements\n");
-  printf("-> loop variable be a type of int,float,char etc\nexample\n");
-  printf("  int i;                    float x;\n  for(i=0;i<=5;i++)         for(x=0;x<=5;x++)\n   {                        {\n   .                        .\n   .                        .\n   .                        .\n   }                        }\n\n");
-  printf("Loop control statements are classified based on\n");
-  printf("i) pre testing loops and post testing loops \nii) event controlled loops \n");
-  printf("Pre-test and Post-test loop:\n");
-  printf("*  pre-test loop :in a looping construct,if  the condition is checked before each iteration of the loop, the loop is called pre-test loop\n-> the expression is evaluate to true/false at the beginning.\n");
-  printf("flow char\n");
-  printf("                   | \n");
-  printf("                  /\\                                                     |                      \n");
-  printf("                 /  \\                                 ___________________|__________________    \n");
-  printf("                /    \\ false                      |->/__initialization___|      condition   \\--|\n");
-  printf("        _______/condi \\________                   |  \\__updation_________|___________________/ |\n");
-  printf("        |      \\  ?   /       |                   |                      |                      |\n");
-  printf("        |       \\    /        |                   |             _________|________              |\n");
-  printf("        |        \\  /         |                   |             | body of loop   |              |\n");
-  printf("        |         \\/          |                   |             |________________|              |\n");
-  printf("        |         |            |                   |______________________|                      |\n");
-  printf("        |   ______|_______     |                                           ______________________|\n");
-  printf("        |   |statement.a |     |                                           |\n");
-  printf("        |   |____________|     |\n");
-  printf("        |_________|  __________|\n");
-  printf("                     |\n ");
-  printf("                       \n");
-  printf("\n-> if the condition is false,the loop is terminated\n-> it is also known as entry controlled loop\n example: for loop and while loop\n");
-  
+    int x;
 
-    return 0;
+   l6_1:  printf("\n1. Assume that i,j and k are integer variables and their values are 8, 5 and 0 respectively. What will be the values of variables i and k after executing the following expression? \n");
+        printf("k=(j>5)?(i<5)?i-j:j-i:k-j;\n i-=(k)?(i)?(j)?:(i):(k);\nWhat will be the result of execution?");
+        printf("1. -3 and 3\n2. 3 and -5\n 3. 3 and -3\n 4. -5 and 3\n");
+        printf("Enter the choice : ");
+        scanf("%d",&x);
+        if(x==q6.1) 
+        {
+            printf("Correct\n");
+            goto l6_2;
+        }
+        else 
+        {
+            printf("Wrong\n");
+            goto l6_1;
+        }
+    l6_2:  printf("2. A name having a few letters, numbers and special character _(underscore) is called\n1. keywords\n2. reserved keyword\n3. tokens\n4. identifiers\n");
+        printf("Enter the choice : ");
+        scanf("%d",&x);
+        if(x==q6.2)
+        {
+            printf("Correct\n");
+            goto l6_3;
+        }
+        else
+        {
+            printf("wrong\n");
+            goto l6_2;
+        }
+    l6_3:  printf("3. What is the scope of an external variable?\n1. Whole source file in which it is defined\n2. From the point of declaration to the end of the file in which it is defined\n3. Any source file in a program\n4. From the point of declaration to the end of the file being compiled\n");
+        printf("Enter the choice : ");
+        scanf("%d",&x);
+        if(x==q6.3)
+        {
+            printf("Correct\n");
+            goto l6_4;
+        }
+        else
+        {
+            printf("wrong\n");
+            goto l6_3;
+        }
+    l6_4:  printf("4. Variable names beginning with underscore is not encouraged. Why? \n1. It is not standardized\n2. To avoid conflicts since assemblers and loaders use such names\n3. To avoid conflicts since library routines use such names\n4. To avoid conflicts with environment variables of an operating system\n");
+        printf("Enter the choice : ");
+        scanf("%d",&x);
+        if(x==q6.4)
+        {
+            printf("Correct\n");
+            goto l6_5;
+        }
+        else
+        {
+            printf("wrong\n");
+            goto l6_4;
+        }
+    l6_5:  printf("5. In an assignment statement a=b; which of the following statement is true ?\n1. The variable a and the variable b are same.\n2. The value of b is assigned to variable a but if b changes later, it will not effect the value of variable a.\n3. The value of b is assigned to variable a but if b changes later, it will effect the value of variable\n4. The value of variable a is assigned to variable b, and the value of variable b is asssigned to variable a.\n");
+        printf("Enter the choice : ");
+        scanf("%d",&x);
+        if(x==q6.5)
+        {
+            printf("Correct\n");
+            goto l6_6;
+        }
+        else
+        {
+            printf("wrong\n");
+            goto l6_5;
+        }
+    l6_6:  printf("6. Which is an incorrect variable name?\n1. Id_No\n2. ID_NO\n3. IdNo\n4. Id No\n");
+        printf("Enter the choice : ");
+        scanf("%d",&x);
+        if(x==q6.6)
+        {
+            printf("Correct\n");
+            goto l6_7;
+        }
+        else
+        {
+            printf("wrong\n");
+            goto l6_6;
+        }
+    l6_7: printf("7.Which of the following is not valid variable names in 'C'?\n1. float_int, keyword, A1\n2. ANSI, ascii, cpu\n3. valid, variable, name\n4 None of these\n"); 
+        printf("Enter the choice : ");
+        scanf("%d",&x);
+        if(x==q6.7)
+        {
+            printf("Correct\n");
+            goto l6_8;
+        }
+        else
+        {
+            printf("wrong\n");
+            goto l6_7;
+        } 
+    l6_8: printf("8. Which of the following cannot be used as identifiers?\n1. Letters\n2. Digits\n3. Underscores\n4. Spaces\n");
+        printf("Enter the choice : ");
+        scanf("%d",&x);
+        if(x==q6.8)
+        {
+            printf("Correct\n");
+            goto l6_9;
+        }
+        else
+        {
+            printf("wrong\n");
+            goto l6_8;
+       }
+    l6_9:  printf("9. Variable names beginning with underscore is not encouraged. Why?\n1. It is not standard form\n2. To avoid conflicts since assemblers and loaders use such names\n3. To avoid conflicts since library routines use such names\n4. To avoid conflicts with environment variables of an operating system\n");
+        printf("Enter the choice : ");
+        scanf("%d",&x);
+        if(x==q6.9)
+        {
+            printf("Correct\n");
+            goto l6_10;
+        }
+        else
+        {
+            printf("wrong\n");
+            goto l6_9;
+        }
+    l6_10: printf("10 Which of the following is not a valid variable name declaration?\n1. float PI = 3.14;\n2. double PI = 3.14;\n3. int PI = 3.14;\n4. #define PI 3.14\n");
+        printf("Enter the choice : ");
+        scanf("%d",&x);
+        if(x==q6.10)
+        {
+            printf("Correct\n");
+            module_2();
+        }
+        else
+        {
+            printf("wrong\n");
+            goto l6_10;
+        }
+
 }
 
 /* Topics*/
