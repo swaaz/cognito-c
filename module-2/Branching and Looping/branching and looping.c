@@ -1,4 +1,4 @@
-int array_and_string()
+int branching_and_looping()
 {   system("clear");
     int o;
     int j;
@@ -13,7 +13,7 @@ int array_and_string()
     {
     while (1)
     {
-        printf("\n----------ARRAY & STRING-----------\n");
+        printf("\n----------BRANCHING & LOOPING-----------\n");
         printf("Do you want to\n1.Learn\n2.Quiz\n3.Back to previous menu4.exit\n");
         printf("Enter the option\n");
         scanf("%d",&o);
