@@ -1,5 +1,5 @@
 
-int structure()
+int learn10()
 {
     printf("\n\n ********** STRUCTURE ************\n\n");
     printf(" • Structure is a collection of one or more variable or different data types grouped together under a single easy handling.\n");

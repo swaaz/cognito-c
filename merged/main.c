@@ -1062,6 +1062,333 @@ int learn6() //Branching and looping
    printf("  •function_name is the actual name of the function\n");
 }
 
+int learn9()
+{
+    printf("\n ********** pointer **********\n\n");
+    printf(" Pointer Definition: Pointer is a variable that holds the address of another variable.\n");
+    printf("\n Declaration and Initialization of Pointer\n\n");
+    printf(" The operators used to represent pointer are :\n • Address operator(&)\n • Indirection operator(*)\n");
+    printf(" syntax :\n ptr_data_type *ptr_variable_name\n ptr_variable_name =& variable_name \n");
+    printf(" where variable_name is variable whose address has to be stored in pointer.\n");
+    printf(" example :\n int a=10;\n int *ptr;\n then   ptr =&a;\n      *ptr =a;\n that is ptr is a pointer holding address of variable 'a' and *ptr holds the value of a.\n");
+    printf("\n example program:\n #include<stdio.h>\n #include<conio.h>\n void main()\n {\n  int a=10;\n  int *ptr;\n  ptr=&a;\n  printf(\"%%d\\n\",a);\n  printf(\"%%d\\n\",&a);\n  printf(\"%%d\\n\",ptr);\n  printf(\"%%d\\n\",*ptr);\n  getch();\n }\n");
+    printf(" output :\n 10\n  2056\n 2056\n 10\n\n");
+    printf(" Pointers and Function ( call by reference):\n\n");
+    printf(" Call by reference method involves use of address of variables as actual parameter in calling function and pointer variable with (*) indirection operator is used at called function to perform required operation that is formal parameters\n\n");
+    printf(" /* consider an example of swapping two numbers using call by reference or using pointers*/\n\n");
+    printf(" #include<stdio.h>\n #include<conio.h>\n void main()\n {\n  int x=10, y=20;\n  swap( &x,&y);\n  printf(\"after swapping :\\n=%%d\\ny=%%d\",x,y);\n  getch();\n }\n");
+    printf(" void swap(int *a,int *b)\n {\n  int temp;\n  temp= *a;\n  *a=*b;  *b=temp;\n }\n\n output :\n  after swapping :\n  x=20\n  y=10\n\n");
+    printf("\n Pointers and Array :\n\n");
+    printf(" The operations performed using array concept can also be done using pointers.\n");
+    printf(" Syntax:\n  data_type *ptr_name;\n  ptr_name = &array_name or ptr_name =array_name;\n\n");
+    printf(" Here pointers dose not point to all the element of array,instead initially it points to the first example of an array later which is increment to get other elements\n\n");
+    printf("example\n int a[10]={11,12,13,14};\n int *ptr;\n ptr =&a or ptr=a; here ptr is a pointer pointing to 11 initially.\n it can be explained using program below.\n\n");
+    printf(" /*program to demonstrate pointers to arrays concept */\n");
+    printf(" #include<stdio.h>\n #include<conio.h>\n void main()\n {\n  int a[10]={11,12,13,14};\n  int *ptr;\n  ptr=a;  /* initially pointing to first element 11 */\n");
+    printf("  for(i=0;i<4 ;i++)  /*four elements */\n  {\n   printf(\"%%d\\t\",a[i]);\n   printf(\"%%d\\n\",&a[i]);\n   printf(\"%%d\\t\",*ptr);\n   printf(\"%%d\\t\",ptr);\n   ptr++;\n   /*making ptr to point next value by doing ptr=ptr+1*/\n  }\n getch();\n }\n");
+    printf("output:\n 11 2056 /*value a[0] pointed by ptr at first iteration and address where that value is stored */\n");
+    printf(" 11 2056 /*value *ptr pointed by ptr at first iteration and address where that value is stored */\n");
+    printf(" 12 2058 /*value a[1] pointed by ptr at second iteration and address where that value is stored */\n");
+    printf(" 12 2058 /*value *ptr pointed by ptr at first iteration and address where that value is stored */\n");
+    printf(" 13 2060 /*value a[2] pointed by ptr at third iteration and address where that value is stored */\n");
+    printf(" 13 2060 /*value *ptr pointed by ptr at first iteration and address where that value is stored */\n");
+    printf(" 14 2062 /*value a[3] pointed by ptr at fourth iteration and address where that value is stored */\n");
+    printf(" 15 2062 /*value *ptr pointed by ptr at first iteration and address where that value is stored */\n");
+    printf(" _____________________\n");
+    printf(" |11  |12  |13  |14  |      since integer type occupies 2 bytes for each element\n");
+    printf(" |____|____|____|____|      If it reserves 2056 for first element as starting address 2056+2 =2058 as\n");
+    printf(" |2056|2058|2060|2062|      second element's starting address 2058+2=2060 for third elements and so on.\n");
+    printf(" |____|____|____|____|\n\n");
+    printf("position    0   1     2    3\n");
+    printf("         _____________________\n");
+    printf("values   |11  |12  |13  |14  |\n");
+    printf("         |____|____|____|____|\n");
+    printf("address  |2056|2058|2060|2062|\n");
+    printf("         |____|____|____|____|\n");
+    printf("            |ptr\n");
+    printf(" at i=0 a[0]=11,&a[0]=2056\n  *ptr=11,ptr=2056\n  i++,ptr++\n  i=1,ptr=2058\n\n");
+    printf("position    0   1     2    3\n");
+    printf("         _____________________\n");
+    printf("values   |11  |12  |13  |14  |\n");
+    printf("         |____|____|____|____|\n");
+    printf("address  |2056|2058|2060|2062|\n");
+    printf("         |____|____|____|____|\n");
+    printf("                |ptr\n");
+    printf(" at i=1 a[1]=12,&a[1]=2058\n  *ptr=12,ptr=2058\n  i++,ptr++\n  i=2,ptr=2060\n\n");
+    printf("position    0   1     2    3\n");
+    printf("         _____________________\n");
+    printf("values   |11  |12  |13  |14  |\n");
+    printf("         |____|____|____|____|\n");
+    printf("address  |2056|2058|2060|2062|\n");
+    printf("         |____|____|____|____|\n");
+    printf("                      |ptr\n");
+    printf(" at i=2 a[2]=13,&a[2]=2060\n  *ptr=13,ptr=2060\n  i++,ptr++\n  i=3,ptr=2062\n\n");
+    printf("position    0   1     2    3\n");
+    printf("         _____________________\n");
+    printf("values   |11  |12  |13  |14  |\n");
+    printf("         |____|____|____|____|\n");
+    printf("address  |2056|2058|2060|2062|\n");
+    printf("         |____|____|____|____|\n");
+    printf("                          |ptr\n");
+    printf(" at i=3 a[3]=14,&a[3]=2056\n  *ptr=14,ptr=2062\n  i++,ptr++\n  i=4,ptr=2064\n\n");
+    printf("\n\n  Character Pointer and Function or Pointer To Strings\n\n");
+    printf(" Strings are array of characters instead of integer values of array, here pointer pointers to the character present in string represented as an array.\n");
+    printf(" Syntax :\n Data_type &ptr_name ;\n ptr_name = string_name;\n example\n char str[20]=\"america\";\n char *ptr;\n ptr=str;\n\n");
+    printf(" Here pointer dose not point to all the character of string, instead of initially it points to all first elements or first character of a string later which is incremented to get other elements it can be explained using below program\n");
+    printf("\n /* string copy using pointer to string concept (using single pointer)\n*/\n\n");
+    printf(" #include<stdio.h>\n #include<conio.h>\n void main()\n {\n  int i;\n  int str1[10]=\"sanju\";\n  int str2[10];\n  int *ptr;\n  ptr=str1;\n  for(i=0;str1[i]!='\\0';i++)\n  {\n   str2[i]=*ptr;\n   ptr++;\n  }\n  str2[i]='\\0';\n  printf(\"strings2 after coping is %%s\",str2);\n  getch();\n }\n");
+    printf("output:\n strings after coping is nanju\n");
+    printf("position    0   1     2    3\n");
+    printf("         _______________________________\n");
+    printf("character|s   |a   |n   |j   |u   |\\0  |    since integer type occupies 1 bytes for each element\n");
+    printf("         |____|____|____|____|____|____|    If it reserves 2051 for first element as starting address 2051+1 =2052 as\n");
+    printf("address  |2051|2052|2053|2054|2055|2056|    second element's starting address 2052+1=2053 for third elements and so on.\n");
+    printf("         |____|____|____|____|____|____|\n");
+    printf("            |ptr\n\n\n");
+    printf("         _______________________________\n");
+    printf("character|s   |a   |n   |j   |u   |\\0  |\n");
+    printf("         |____|____|____|____|____|____|\n");
+    printf("address  |2051|2052|2053|2054|2055|2056|\n");
+    printf("         |____|____|____|____|____|____|\n");
+    printf("            |ptr\n");
+    printf(" at i=0 str1[0]!='\\0'\n str2[0]=*ptr=s\n i++=1,ptr++=2052\n\n");
+    printf("         _______________________________\n");
+    printf("character|s   |a   |n   |j   |u   |\\0  |\n");
+    printf("         |____|____|____|____|____|____|\n");
+    printf("address  |2051|2052|2053|2054|2055|2056|\n");
+    printf("         |____|____|____|____|____|____|\n");
+    printf("                |ptr\n");
+    printf(" at i=1 str1[1]!='\\0'\n str2[1]=*ptr=a\n i++=2,ptr++=2053\n\n");
+    printf("         _______________________________\n");
+    printf("character|s   |a   |n   |j   |u   |\\0  |\n");
+    printf("         |____|____|____|____|____|____|\n");
+    printf("address  |2051|2052|2053|2054|2055|2056|\n");
+    printf("         |____|____|____|____|____|____|\n");
+    printf("                     |ptr\n");
+    printf(" at i=2 str1[2]!='\\0'\n str2[2]=*ptr=n\n i++=3,ptr++=2054\n\n");
+    printf("         _______________________________\n");
+    printf("character|s   |a   |n   |j   |u   |\\0  |\n");
+    printf("         |____|____|____|____|____|____|\n");
+    printf("address  |2051|2052|2053|2054|2055|2056|\n");
+    printf("         |____|____|____|____|____|____|\n");
+    printf("                           |ptr\n");
+    printf(" at i=3 str1[3]!='\\0'\n str2[3]=*ptr=j\n i++=4,ptr++=2055\n\n");
+    printf("         _______________________________\n");
+    printf("character|s   |a   |n   |j   |u   |\\0  |\n");
+    printf("         |____|____|____|____|____|____|\n");
+    printf("address  |2051|2052|2053|2054|2055|2056|\n");
+    printf("         |____|____|____|____|____|____|\n");
+    printf("                                |ptr\n");
+    printf(" at i=4 str1[4]!='\\0'\n str2[4]=*ptr=u\n i++=5,ptr++=2056\n\n");
+    printf("         _______________________________\n");
+    printf("character|s   |a   |n   |j   |u   |\\0  |\n");
+    printf("         |____|____|____|____|____|____|\n");
+    printf("address  |2051|2052|2053|2054|2055|2056|\n");
+    printf("         |____|____|____|____|____|____|\n");
+    printf("                                    |ptr\n");
+    printf(" at i=5 str1[5]=='\\0'\n  so here iterations stops since while (str1[i]=='\\0'\n\n");
+    printf("\n Pointer To Pointer \n");
+    printf(" Pointer is a variable that stores the address of another variable.pointer storing the address of another pointer, that is pointer pointing to another pointer is called as pointer to pointer.\n declaration ;\n data_type **pointer_name;\n\n");
+    printf(" Initialization :\n  pointer_name = &another_pointer_name\n The below example demonstrate pointer to pointer concept\n");
+    printf(" int a=10;\n int *ptr1,**ptr2;\n ptr1=&a;\n ptr2=&ptr1; /*ptr2 is the pointer to the another pointer ptr1*/\n\n");
+    printf("                                  ptr2           ptr1            a\n");
+    printf("                                 ______         ______           ______\n");
+    printf("value stored in pointer          |1283|-------->|2056|---------->|10  |\n");
+    printf("                                 |____|         |____|           |____|\n");
+    printf("address where pointer             356           1283              2056\n");
+    printf(" value is stored        address of ptr2    address of ptr2    address of a\n\n");
+    printf(" #include<stdio.h>\n #include<conio.h>\n void main()\n {\n  int a=10;\n  int *ptr1,**ptr2;\n  ptr1=&a;\n  ptr2=&ptr1;\n  printf(\"%%d\\n\",a);------->10\n  printf(\"%%d\\n\",&a);------->2056\n  printf(\"%%d\\n\",ptr1);------->2056\n  printf(\"%%d\\n\",&ptr1);------->1283\n  printf(\"%%d\\n\",*ptr1);------->10\n  printf(\"%%d\\n\",ptr2);------->1283\n  printf(\"%%d\\n\",*ptr2);------->2056\n  printf(\"%%d\\n\",**ptr2);------->10\n  getch();\n }\n");
+    printf(" Address Arithmetic :\n 1.An integer value can be added or subtracted from a pointer. It can be incremented or incremented \n array\n");
+    printf("         _____________________\n");
+    printf("         |11  |12  |13  |14  |\n");
+    printf("         |____|____|____|____|\n");
+    printf("         |2050|2052|2064|2056|\n");
+    printf("         |____|____|____|____|\n");
+    printf(" #include<stdio.h>\n #include<conio.h>\n void main()\n {\n  int a[4]={11,9,8,14};\n  int *ptr;\n  ptr=&a;------->output\n  printf(\"%%d\\n\",ptr);------->2050\n  printf(\"%%d\\n\",*ptr);------->11\n  ptr++;/*incrementing*/\n  printf(\"%%d\\n\",ptr);------->2052\n  printf(\"%%d\\n\",* ptr);------->9\n  ptr--;/*decrementing*/\n  printf(\"%%d\\n\",ptr);------->2050\n  printf(\"%%d\\n\",*ptr);------->11\n  getch();\n }\n");
+    printf("\n\n Advantages and Disadvantage of pointer \n\n advantages\n • Pointer provide direct access to memory\n • pointer provide a way to return more than one value to the function\n • Reduces the storage space and complexity of program\n • Reduces the execution time of program\n");
+    printf(" • Provides an alternate way to access array elements\n • pointers can be used to pass information back and fourth between the calling function and called function.\n ");
+    printf("\n disadvantages\n • Uninitialized pointers might cause segmentation fault\n • Dynamically allocated block needs to be freed explicitly, Otherwise it would lead to memory leak\n • pointers are slower than normal variables\n");
+    printf(" • if pointer are updated with incorrect values, it might lead to memory corruption\n\n\n");
+    printf(" write a c program to read n elements to an array and print those elements using pointer to array\n");
+    printf(" #include<stdio.h>\n #include<conio.h>\n void main()\n {\n  int a[100],*ptr,i;\n  printf(\"enter number of elements\");\n  scanf(\"%%d\",&n);\n  ptr=a;\n  for(i=0;i<n;i++)\n  {\n   scanf(\"%%d\",ptr);\n   ptr++;\n  }\n  ptr=a;\n  printf(\"array elements are\");\n  for(i=0;i<n;i++)\n  {\n   printf(\"%%d\",ptr);\n   ptr++;\n  }\n  getch();\n }\n");
+    printf(" output :\n  enter the nu. of elements\n  5\n  11 12 13 14 15\n  array elements are\n  11 12 13 14 15\n\n\n");
+    printf(" Dynamic Memory Allocation\n\n");
+    printf(" The processor of allocation of memory size at is called as dynamic memory allocation.\n");
+    printf(" mainly there are four functions for memory management,namely:\n  • malloc()\n  • calloc()\n  • free()\n  • realloc()\n\n\n");
+    printf(" malloc() : It allocates memory from a freely available memory and returns a pointer to a block of contiguous memory of specific size.\n");
+    printf(" syntax : pointer_name =(data_type *)malloc(byte_size);\n example \n int *a;\n a=(int *)malloc(20);\n\n");
+    printf(" calloc() : It allocates memory for array elements and initialize them to zero and also returns a pointer to memory.\n");
+    printf(" syntax : pointer_name =(data_type *)calloc(n,size); where n is no. of memory blocks,size is the size of blocks to be allocated in bytes\n example \n int *a;\n a=(int *)calloc(5,2);\n\n");
+    printf(" free() :  free function is used to free the memory blocks allocated by malloc and calloc.\n");
+    printf(" syntax : free(pointer_name);\n example \n int *ptr;\n free(ptr);\n\n");
+    printf(" realloc() : It is used to modify the size of already allocated memory block.\n");
+    printf(" syntax : pointer_name =realloc(pointer_name,new_size);\n example \n int *ptr;\n a=(int *)realloc(ptr,4);\n\n");
+    printf(" Program to demonstrate allocating memory at runtime using malloc()\n");
+    printf(" here array of elements are stored in dynamically allocated memory without any static allocation of size.\n");
+    printf(" #include<stdio.h>\n #include<conio.h>\n void main()\n {\n  int *ptr,n,i;  printf(\"enter number of elements\");\n  scanf(\"%%d\",&n);\n  ptr= (int *)malloc(n*sizeof(int));\n  for(i=0;i<n;i++)\n  {\n   scanf(\"%%d\",ptr+i);\n  }\n  printf(\"array elements are\");\n  for(i=0;i<n;i++)\n  {\n   printf(\"%%d\",ptr);\n   ptr++;\n  }\n  getch();\n }\n\n");
+    printf(" output\n if we give n=2\n ptr=(int *)malloc(2*sizeof(int));/*allocate 4 bytes memory block */\n");
+    printf("        i=     0             1    \n");
+    printf("         ____________________________________\n");
+    printf("         |                  |               |\n");
+    printf("    |--> |__________________|_______________|\n");
+    printf("   ptr    2bytes(2056)       2bytes(2058)\n");
+    printf(" at i=0\n scanf(\"%%d\",ptr+i)\n stores now elements to ptr+i=2056+0=2056 location\n\n at i=1 scanf(\"%%d\",ptr+i)\n stores now elements to ptr+i=2056+1=2058 location\n similarly printing is done using *(ptr+1)\n\n\n");
+
+
+}
+
+int learn10()
+{
+    printf("\n\n ********** STRUCTURE ************\n\n");
+    printf(" • Structure is a collection of one or more variable or different data types grouped together under a single easy handling.\n");
+    printf(" • Structure is a user different data type that can related information about an entity. Structure is nothing regards about particular entity\n");
+    printf(" Structure Declaration :\n");
+    printf(" syntax:\n struct structure_name\n {\n  data_type member1\n  data_type member2\n  data_type member3\n  .\n  .\n  .\n  data_type member n\n\n");
+    printf(" example :\n  struct employee\n  {\n   int empnumber;\n    char empnames[25];\n   int empage;\n   float empsalary;\n  };\n");
+    printf("\n\n Declaring Structure Variables :\n\n");
+    printf(" • Structure variables are the variables using which members of structure accessed with the help of dot operator.\n");
+    printf(" • C allocates memory for structure variables.\n\n syntax\n   struct structure_name structure_variable_name;\n");
+    printf("\n example\n consider the structure employee defined earlier the variables for employee structure can be declared as,\n");
+    printf(" struct employee emp1;\n");
+    printf("                           ________ _______________\n");
+    printf("          memory to    <-- |      0 |_____________|\n");
+    printf("        stack operation<----_____ 1 |_____________|\n");
+    printf("                           |      2 |_____________|\n");
+    printf("                           |        |             |\n");
+    printf("                          /         |             |\n");
+    printf("    memory to store  <---/          |             |\n");
+    printf("                                    |             |\n");
+    printf("           empname   <---\\          |             |\n");
+    printf("                          \\         |             |\n");
+    printf("                           \\        |_____________|\n");
+    printf("                        ____\\___ 26 |_____________|\n");
+    printf("   memory to store ___ /         27 |_____________|\n");
+    printf("       empage          \\_________28 |_____________|\n");
+    printf("                       /         29 |_____________|\n");
+    printf("  memory to store ____/          30 |_____________|\n");
+    printf("  empsalary           \\          31 |_____________|\n");
+    printf("                       \\_________32 |_____________|\n\n\n");
+    printf(" /* Write a C program to read on employee number, name, age, salary and print details using structure */\n");
+    printf(" #include<stdio.h>\n #include<conio.h>\n struct employee\n {\n  int empnumber\n  char empname[25];\n  int empage;\n  float empsalary;\n };\n");
+    printf(" void main()\n {\n  struct employee emp1;\n  clrscr();\n  printf(\"enter the details\");\n  printf(\"enter the number\\n\");\n  scanf(\"%%d\",&emp.empnumber);\n  printf(\"enter the name\");\n");
+    printf("  scanf(\"%%s\",emp1.empname);\n  printf(\"enter the employee age\");\n  scanf(\"%%d\",&emp1.empage);\n  printf(\"enter the employee salary\");\n  scanf(\"%%f\",&emp1.empsalary);\n  printf(\"enter the details\");\n  printf(\"employee number is %%d\\n\",emp.empnumber);\n  printf(\"employee name is %%s\\n\",emp.empname);\n  printf(\"employee age is %%d\\n\",emp.empage);\n  printf(\"employee salary is %%d\\n\",emp.empsalary);\n }\n");
+    printf("\n\n\n Array of Structure :\n\n");
+    printf(" Considering the employee structure,\n • If we want to read more that one employee details using same structure, then structure variable name has to be declared as an array.\n");
+    printf(" i.e\n struct employee emp[25];\n now,\n  ->emp[0].empnumber ,emp[0].empname ,emp[0].empage ,emp[0].empsalary stores details of first employee.\n");
+    printf("  ->emp[1].empnumber ,emp[1].empname ,emp[1].empage ,emp[1].empsalary stores details of second employee.\n");
+    printf("  ->This reading and displaying details of each employee is done using for loop and generalized as emp[i];\n");
+    printf(" /* Write a C program to read n employee details and display using structure concept. */\n");
+    printf(" #include<stdio.h>\n #include<conio.h>\n struct employee\n {\n  int empnumber\n  char empname[25];\n  int empage;\n  float empsalary;\n };\n");
+    printf(" void main()\n {\n  struct employee emp[19];\n  int n,i;\n  printf(\"enter number of employees\");\n  scanf(\"%%d\",&n);\n  printf(\"enter %%d employee details\\n\",n);\n  for(i=0;i<n;i++)\n  {\n   printf(\"enter %%d employee details\\n\",i+1);\n   printf(\"enter the number\\n\");\n");
+    printf("   scanf(\"%%d\",&emp[i].empnumber);\n   printf(\"enter the name\");\n   scanf(\"%%s\",emp[i].empname);\n   printf(\"enter the employee age\");\n   scanf(\"%%d\",&emp[i].empage);\n   printf(\"enter the employee salary\");\n   scanf(\"%%f\",&emp[i].empsalary);\n  }\n");
+    printf("  printf(\"employee details are\\n\");\n  for(i=0;i<n;i++)\n  {\n  printf(\"details of employee %%d are \\n\",i+1);\n  printf(\"employee number is %%d\\n\",emp.empnumber);\n  printf(\"employee name is %%s\\n\",emp.empname);\n  printf(\"employee age is %%d\\n\",emp.empage);\n  printf(\"employee salary is %%d\\n\",emp.empsalary);\n  }\n");
+    printf("  printf(\"enter the date of birth \\n\");\n  scanf(\"%%d%%d%%d%%s\",&empdob.dd,&empdob.mm,&empdob.yy,empdob.dy);\n  printf(\"employee details are\\n\");\n  printf(\"employee number is %%d\\n\",emp.empnumber);\n  printf(\"employee name is %%s\\n\",emp.empname);\n  printf(\"employee age is %%d\\n\",emp.empage);\n  printf(\"employee salary is %%d\\n\",emp.empsalary);\n  getch();\n }\n");
+    printf("\n Output :\n  enter employee number\n  19\n  enter employee name\n  vikhayth\n  enter employee age\n  24\n  enter employee salary\n  39700.700\n  enter date of birth\n  9 9 1991 monday\n\n  employee details are\n  employee number is 19\n  employee name is vikhyath\n  employee age is 24\n  employee salary is 39700.700\n  employee date of birth is  is 9/9/1991 monday\n\n");
+    printf("\n /* program to illustrate nested structures there are two ways*/\n");
+    printf("\n1)\n #include<stdio.h>\n #include<conio.h>\n struct dob\n {\n  int dd,mm,yy;\n  char dy[25];\n };\n struct employee\n  {\n  int empnum;\n  char empname[25];\n  int empage;  float salary;  struct dob dob;\n };\n");
+    printf(" void main()\n {\n  struct employee emp;\n  printf(\"enter the details\");\n  printf(\"enter the number\\n\");\n  scanf(\"%%d\",&emp.empnumber);\n  printf(\"enter the name\");\n");
+    printf("  scanf(\"%%s\",emp1.empname);\n  printf(\"enter the employee age\");\n  scanf(\"%%d\",&emp1.empage);\n  printf(\"enter the employee salary\");\n  scanf(\"%%f\",&emp1.empsalary);\n }\n");
+    printf("\n\n2)\n #include<stdio.h>\n #include<conio.h>\n struct employee\n {\n  int empnum;\n  char empname[25];\n  int empage;  float empsalary;\n  struct dob\n  {\n   int dd,mm,yy;\n   char dy[25];\n  }dob;\n };\n");
+    printf(" void main()\n {\n  struct employee emp;\n  printf(\"enter the details\");\n  printf(\"enter the number\\n\");\n  scanf(\"%%d\",&emp.empnumber);\n  printf(\"enter the name\");\n");
+    printf("  scanf(\"%%s\",emp1.empname);\n  printf(\"enter the employee age\");\n  scanf(\"%%d\",&emp1.empage);\n  printf(\"enter the employee salary\");\n  scanf(\"%%f\",&emp1.empsalary);\n }\n");
+    printf(" Two ways of creating nested structures\n\n");
+    printf("  1) Declaring structure variable as data member in another structure here the object of date of birth structure is defined in employee structure.\n\n");
+    printf("  2) Defining structure inside another structure here the child structure dob is defined inside employee structure.\n\n");
+    printf("struct structure1\n{\n data_type structure1_member_name;\n .\n .\n .\n};\n\n\nstruct structure2\n{\n data_type structure2_member_name;\n .\n .\n .\n};");
+    printf("\n\n Structure and Functions :\n");
+    printf(" • Structure can be passed to function and returned from it. Function can access members of structure in three ways, that is, passing structure to function can be done in following three ways,\n");
+    printf(" -> Passing individual members.\n -> Passing entire structure or structure variable.\n -> passing address of structure.\n\n");
+    printf(" Passing Individual Members :\n • While calling a function from main,in the place of actual parameters we can use or pass structure member as\n structure_variable_name.structure_member_name\n\n");
+    printf(" /* program to illustrate structure with functions (by passing individual members)*/\n\n");
+    printf(" #include<stdio.h>\n void display(char n[],int en);\n struct employee\n {\n  char empname[25];\n  int empnumber;\n };\n void main()\n {\n  struct employee e;\n  printf(\"enter employee name and number\");\n  scanf(\"%%s%%d\",e.empname,&e.empnumber);\n  display(e.empname,e.empnumber);\n }\n\n void display(char n[21],int en)\n {\n  printf(\"employee details are\\n\");\n  printf(\"employee name is %%s\\t employee number is %%d\\n\",n,en);\n }\n");
+    printf(" output\n enter employee name and number\n vikhyath 19\n employee details are\n employee name is vikhyath  employee number is 19\n\n\n");
+    printf(" Passing the entire structure Or structure variable : \n");
+    printf(" • Instead of passing individual members of structure, entire structure is passed as actual parameter while calling a function. Here the variable of structure is passed to the function.\n");
+    printf("\n /* program to illustrate structure with(passing the structure variable)*/\n\n");
+    printf(" #include<stdio.h>\n struct employee\n {\n  char empname[25];\n  int empnumber;\n };\n void main()\n {\n  struct employee e;\n  printf(\"enter employee name and number\");\n  scanf(\"%%s%%d\",e.empname,&e.empnumber);\n  display(e);\n }\n void display(struct employee e)\n {\n  printf(\"employee details are\\n\");\n  printf(\"employee name is %%s\\t employee number is %%d\\n\",n,en);\n }\n");
+    printf(" output\n enter employee name and number\n vikhyath 19\n employee details are\n employee name is vikhyath  employee number is 19\n\n\n");
+    printf("\n Type definition\n\n • The C programming language provides typedef keyword which allows the user to create a new data type. typedef dose not occupy memory\n");
+    printf(" syntax :\n typedef existing_data_type new_data_type;\n");
+    printf("\n -> Now instead of int a=10; we can declare as integer a=10; which is perform same as int.\n\n\n similarly we can apply for structure as shown below\n\n");
+    printf(" ____________________________________________________________\n");
+    printf(" |/* without typedef */         | /*with typedef */         |\n");
+    printf(" | struct employee              | typedef struct employee   |\n");
+    printf(" | {                            | {                         |\n");
+    printf(" |  char empname[10];           |  char empname[10];        |\n");
+    printf(" |  int empnumber;              |  int empnumber;           |\n");
+    printf(" |  int empage;                 |  int empage;              |\n");
+    printf(" |  float empsalary;            |  float empsalary;         |\n");
+    printf(" |  };                          |  };                       |\n");
+    printf(" |  struct employee emp;        |  employee emp;            |\n");
+    printf(" |                              |/*here employee itself act |\n");
+    printf(" |                              |as data_type which is the  |\n");
+    printf(" |                              |structure  type declare usi|\n");
+    printf(" |                              |ng typedef. Hence, no need |\n");
+    printf(" |                              |of writing struct while    |\n");
+    printf(" |                              | structure variable emp */ |\n");
+    printf(" |______________________________|___________________________|\n\n\n");
+    printf(" Passing Structure through Pointers :\n");
+    printf(" • Structure can be passed to function using pointers.\n");
+    printf("   syntax :\n       struct structure_name structure_variable, *structure_pointer_name;\n        structure_pointer_name = &structure_variable;\n");
+    printf("\n /* program illustrate passing of structures through pointers */\n");
+    printf(" #include<stdio.h>\n #include<conio.h>\n struct employee\n {\n  int empnumber;\n  char empname[25];\n  int empage;\n  float empsalary;\n };\n void display(struct employee *eptr);\n");
+    printf(" void main()\n {\n  struct employee emp;\n  printf(\"enter employee name\");\n  scanf(\"%%s\",emp.empname);\n  printf(\"enter employee number\");\n  scanf(\"%%d\",emp.empnumber);\n  printf(\"enter employee age\");\n  scanf(\"%%d\",emp.empage);\n  printf(\"enter employee salary\");\n  scanf(\"%%f\",emp.empsalary);\n  display(&emp);  getch();\n }\n");
+    printf(" void display(struct employee *eptr)\n {\n  printf(\"employee details are\");\n  printf(\"employee name is %%s\\n\",eptr->empname);\n  printf(\"employee number is %%d\\n\",eptr->empnumber);\n  printf(\"employee age is %%d\\n\",eptr->empage);\n  printf(\"employee salary is %%f\\n\",eptr->empsalary);\n }\n\n");
+}
+
+int learn11()
+{
+    printf("\n*********** Preprocessor Directive *************\n\n\n");
+    printf(" Preprocessor is a program which in invoked by compiler before the compilation of user written program. The declaration of processors statements always begin with (#),usually these are placed before the main() function.\n\n");
+    printf(" #include :Specifies the files to be included\n");
+    printf(" #define :defines a macro substitution\n");
+    printf(" #undef :undefining a macro\n");
+    printf(" #ifdef :verifies whether macro is define or not\n");
+    printf(" #ifndef :verifies whether macro is defined or not, if it is not defined, it assumes condition to be true\n");
+    printf(" #if :used to write generalized condition using relation operator\n");
+    printf(" #else :used as an alternative to #if\n");
+    printf(" #error :prints error message on stdrr\n");
+    printf(" #pragma :give special commands to compiler using standardized method\n");
+    printf(" #endif :ends the #if statements\n\n\n");
+    printf(" #include\n\n #include loads specified file before compilation of user written program.\n");
+    printf(" syntax:\n  #include<header_file_name.h> or  #include\"header_file_name.h\"\n example:\n #include<stdio.h> or #include\"stdio.h\"\n\n");
+    printf(" example program\n #include<stdio.h>\n #include<conio.h>\n void main()\n {\n  printf(\" hello world\");\n  getch();\n }\n\n\n");
+    printf(" #define\n\n #define defines a macro substitution.\n\n Macro definition : It allows to replace an identifier (variables,function names) in a program by a predefined string.\n\n");
+    printf(" syntax:\n  #define identifier string\n example:\n #define pi 3.142\n\n");
+    printf(" 1)simple example program\n #include<stdio.h>\n #define pi 3.142\n void main()\n {\n  float r=11.2,area;\n  area=pi*r*r;\n  printf(\" area is %%f\",area);\n  getch();\n }\n\n\n");
+    printf(" 2)calculation itself can be defined as macro\n #include<stdio.h>\n #define area(r) (r*r*3.142)\n void main()\n {\n  float x,r=11.2;\n  x=area(r)\n  printf(\" area is %%d\",x);\n  getch();\n }\n\n\n");
+    printf(" 3)looping and conditional statements\n #include<stdio.h>\n #define check(x) (if(x%2==0))\\n printf(\"even\");\\nelse\\n printf(\"odd\");\n void main()\n {\n  int x;\n  printf(\"enter the number\");\n  scanf(\"%%d\",&x);\n  check(x);\n  getch();\n }\n\n\n");
+    printf(" 4)nested macro can defined with another macro\n #include<stdio.h>\n #define square(a) (a*a)\n #define cube(a) (square(a)*a)\n void main()\n {\n  int a,z;\n  printf(\"enter the number\");\n  scanf(\"%%d\",&x);\n  z=cube(a);\n  printf(\" cube is %%d\",z);\n  getch();\n }\n\n\n");
+    printf(" #undef\n\n it undefines macro which is defines using #define.\n");
+    printf(" syntax:\n  #undef identifier (macro name)\n example:\n #undef pi\n\n");
+    printf(" example program\n #include<stdio.h>\n #define pi 3.142\n void main()\n {\n  float r=11.2,area;\n  #undef pi\n  area=pi*r*r;\n  printf(\" area is %%f\",area);\n  getch();\n }\n\n\n");
+    printf(" output :\n it gives an error as pi undefined symbol as it is undefined using #undef after its defination #define\n\n\n");
+    printf(" Compiler control directives \n\n");
+    printf(" #ifdef, #ifndef, #if,#else are the preprocessor directives which allows the programmer to include macro definition or header files based on condition specified. These are called as Compiler control directives\n");
+    printf(" #ifdef\n\n  #ifdef checks whether macro is defined or not.\n syntax: #ifdef identifier /*macro name*/\n ex : #ifdef pi\n\n");
+    printf(" example\n #include<stdio.h>\n #define pi 3.142\n void main()\n {\n  #ifdef pi\n    printf(\"area of circle can be calculated\");  #else\n   printf(\"area cannot be calculated as pi undefined\\n\");  #endif\n  getch();\n }\n output:area of circle can be calculated\n\n");
+    printf(" #include<stdio.h>\n void main()\n {\n  #ifdef pi\n    printf(\"area of circle can be calculated\");  #else\n   printf(\"area cannot be calculated as pi undefined\\n\");  #endif\n  getch();\n }\n output:area of circle cannot be calculated as pi is undefined\n\n");
+    printf(" In the first perform pi is defined hence it shows area of circle can be calculated,but in second program pi is undeclared so it shows are cannot be calculated\n\n\n");
+    printf(" #ifndef\n  #ifndef check whether macro is defined or not if it is not defined it assume it is true\n  syntax: #ifndef identifier\n #ifndef pi\n");
+    printf(" example\n #include<stdio.h>\n #define pi 3.142\n void main()\n {\n  #ifdef pi\n    printf(\"area of circle can be calculated\");  #else\n   printf(\"area cannot be calculated as pi undefined\\n\");  #endif\n  getch();\n }\n output:area of circle can be calculated\n\n");
+    printf(" #include<stdio.h>\n void main()\n {\n  #ifdef pi\n    printf(\"area of circle can be calculated\");  #else\n   printf(\"area cannot be calculated as pi undefined\\n\");  #endif\n  getch();\n }\n output:area of circle cannot be calculated as pi is undefined\n\n\n");
+    printf(" #error\n\n #error prints error message on std output display user defined error message\nsyntax : #error \"user error message.\n\"\n ex #error pi not defined\n\n");
+    printf(" #include<stdio.h>\n #include<conio.h>\n void main()\n {\n  #ifdef pi\n    printf(\"area of circle can be calculated\");  #else\n   #error \"pi not defined.\"  #endif\n  getch();\n }\n output:area of circle cannot be calculated as pi is undefined. error message stating pi is undefined\n\n");
+    printf(" #pragma\n\n #pragma gives special commands to compiler using standardized method. It is mainly used to on or off the warnings\n\n");
+    printf(" syntax :\n #pragma war +warning message notation\n #pragma warn -warning message notation.\n  +turns on warning\n  -turns off warning\n");
+    printf(" stu                :       undefined structure\n");
+    printf(" eff                :       code has no effect\n");
+    printf(" rch                :       unreachable code\n");
+    printf(" rvl                :       function should return a value\n");
+    printf(" voi                :       void function cannot return a value\n\n");
+    printf(" example :\n   #pragma warn +rch turns on unreachable code warning.\n   #pragma warn -rch turns off unreachable code warning.\n\n");
+
+
+}
+
+
+
+
 
 
 /*Quiz answers*/
@@ -2233,8 +2560,7 @@ int strings()
     return 0;
 }
  /*module-2*/
-
- int array_and_string()
+int branching_and_looping()
 {   system("clear");
     int o;
     int j;
@@ -2249,7 +2575,7 @@ int strings()
     {
     while (1)
     {
-        printf("\n----------ARRAY & STRING-----------\n");
+        printf("\n----------BRANCHING & LOOPING-----------\n");
         printf("Do you want to\n1.Learn\n2.Quiz\n3.Back to previous menu4.exit\n");
         printf("Enter the option\n");
         scanf("%d",&o);
@@ -2266,6 +2592,174 @@ int strings()
     }
     return 0;
 }
+
+
+int array_and_string()
+{   system("clear");
+    int o;
+    int j;
+    if(automat()==1)
+    {
+        learn7();
+        for(j=0;j<150;j++)  //delay  in sec
+        delay();
+        quiz7();
+    }
+    else
+    {
+    while (1)
+    {
+        printf("\n----------ARRAY AND STRING-----------\n");
+        printf("Do you want to\n1.Learn\n2.Quiz\n3.Back to previous menu4.exit\n");
+        printf("Enter the option\n");
+        scanf("%d",&o);
+        switch (o)
+        {
+            case 1:learn7();break;
+            case 2:quiz7(); break;
+            case 3:return 0;
+            case 4:exit(0);
+            default:printf("Invalid option\n");
+
+        }
+    }
+    }
+    return 0;
+}
+
+
+int functions()
+{   system("clear");
+    int o;
+    int j;
+    if(automat()==1)
+    {
+        learn8();
+        for(j=0;j<150;j++)  //delay  in sec
+        delay();
+        quiz8();
+    }
+    else
+    {
+    while (1)
+    {
+        printf("\n----------FUNCTIONS-----------\n");
+        printf("Do you want to\n1.Learn\n2.Quiz\n3.Back to previous menu4.exit\n");
+        printf("Enter the option\n");
+        scanf("%d",&o);
+        switch (o)
+        {
+            case 1:learn8();break;
+            case 2:quiz8(); break;
+            case 3:return 0;
+            case 4:exit(0);
+            default:printf("Invalid option\n");
+
+        }
+    }
+    }
+    return 0;
+}
+//MODULE-5
+int pointers()
+{   system("clear");
+    int o;
+    int j;
+    if(automat()==1)
+    {
+        learn9();
+        for(j=0;j<150;j++)  //delay  in sec
+        delay();
+        quiz9();
+    }
+    else
+    {
+    while (1)
+    {
+        printf("\n----------POINTERS-----------\n");
+        printf("Do you want to\n1.Learn\n2.Quiz\n3.Back to previous menu4.exit\n");
+        printf("Enter the option\n");
+        scanf("%d",&o);
+        switch (o)
+        {
+            case 1:learn9();break;
+            case 2:quiz9(); break;
+            case 3:return 0;
+            case 4:exit(0);
+            default:printf("Invalid option\n");
+
+        }
+    }
+    }
+    return 0;
+}
+int structure()
+{   system("clear");
+    int o;
+    int j;
+    if(automat()==1)
+    {
+        learn10();
+        for(j=0;j<150;j++)  //delay  in sec
+        delay();
+        quiz10();
+    }
+    else
+    {
+    while (1)
+    {
+        printf("\n----------STRUCTURE-----------\n");
+        printf("Do you want to\n1.Learn\n2.Quiz\n3.Back to previous menu4.exit\n");
+        printf("Enter the option\n");
+        scanf("%d",&o);
+        switch (o)
+        {
+            case 1:learn10();break;
+            case 2:quiz10(); break;
+            case 3:return 0;
+            case 4:exit(0);
+            default:printf("Invalid option\n");
+
+        }
+    }
+    }
+    return 0;
+}
+int preprocessor_directives()
+{   system("clear");
+    int o;
+    int j;
+    if(automat()==1)
+    {
+        learn11();
+        for(j=0;j<150;j++)  //delay  in sec
+        delay();
+        quiz11();
+    }
+    else
+    {
+    while (1)
+    {
+        printf("\n----------PREPROCESSOR DIRECTIVES-----------\n");
+        printf("Do you want to\n1.Learn\n2.Quiz\n3.Back to previous menu4.exit\n");
+        printf("Enter the option\n");
+        scanf("%d",&o);
+        switch (o)
+        {
+            case 1:learn11();break;
+            case 2:quiz11(); break;
+            case 3:return 0;
+            case 4:exit(0);
+            default:printf("Invalid option\n");
+
+        }
+    }
+    }
+    return 0;
+}
+
+
+
 
 
 /* Modules*/
@@ -2301,7 +2795,29 @@ int module_2()
     while(1)
     {
         printf("\n----------MODULE-2----------\n");
-        printf("1.ARRAY AND STRING\n2.BACK TO MAIN MENU\n3.EXIT\n");
+        printf("1. BRANCHING AND LOOPING\n2.BACK TO MAIN MENU\n3.EXIT\n");
+        printf("Enter the option : ");
+        scanf("%d",&o);
+        switch (o)
+        {
+            case 1:branching_and_looping(); break;
+            case 2:return 0;
+            case 3:exit(0);
+
+
+            default:printf("Sorry!! It's an invalid option\n");
+
+        }
+    }
+    return 0;
+}
+int module_3()
+{
+    int o;
+    while(1)
+    {
+        printf("\n----------MODULE-3----------\n");
+        printf("1.ARRAY AND STRINGS\n2.BACK TO MAIN MENU\n3.EXIT\n");
         printf("Enter the option : ");
         scanf("%d",&o);
         switch (o)
@@ -2309,6 +2825,49 @@ int module_2()
             case 1:array_and_string(); break;
             case 2:return 0;
             case 3:exit(0);
+            default:printf("Sorry!! It's an invalid option\n");
+
+        }
+    }
+    return 0;
+}
+int module_4()
+{
+    int o;
+    while(1)
+    {
+        printf("\n----------MODULE-4----------\n");
+        printf("1. FUNCTIONS\n2. BACK TO MAIN MENU\n3.EXIT\n");
+        printf("Enter the option : ");
+        scanf("%d",&o);
+        switch (o)
+        {
+            case 1:functions(); break;
+            case 2:return 0;
+            case 3:exit(0);
+            default:printf("Sorry!! It's an invalid option\n");
+
+        }
+    }
+    return 0;
+}
+
+int module_5()
+{
+    int o;
+    while(1)
+    {
+        printf("\n----------MODULE-5----------\n");
+        printf("1. POINTERS\n2. STRUCTURE\n3. PREPROCESSOR DIRECTIVES\n4.BACK TO MAIN MENU\n5.EXIT\n");
+        printf("Enter the option : ");
+        scanf("%d",&o);
+        switch (o)
+        {
+            case 1:pointer(); break;
+            case 2:structure(); break;
+            case 3:preprocessor_directives(); break;
+            case 4:return 0;
+            case 5:exit(0);
 
 
             default:printf("Sorry!! It's an invalid option\n");

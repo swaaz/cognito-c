@@ -1,5 +1,5 @@
 
-int pointer()
+int learn9()
 {
     printf("\n ********** pointer **********\n\n");
     printf(" Pointer Definition: Pointer is a variable that holds the address of another variable.\n");
