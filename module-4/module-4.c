@@ -1,9 +1,9 @@
-int module_5()
+int module_4()
 {
     int o;
     while(1)
     {
-        printf("\n----------MODULE-5----------\n");
+        printf("\n----------MODULE-4----------\n");
         printf("1. FUNCTIONS\n2. BACK TO MAIN MENU\n3.EXIT\n");
         printf("Enter the option : ");
         scanf("%d",&o);

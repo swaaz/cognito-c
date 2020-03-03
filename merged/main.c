@@ -414,17 +414,996 @@ int learn5() //strings
     printf("\n\n  This is a brif representation of string. \n");
 }
 
+int learn6() //Branching and looping
+{
+    printf("if-else contrd construct :\n");
+    printf("• Is used to execute one set of statement if the condition is true and another set of statement if the condition is false.\n");
+    printf("syntax :\nif(condition)\n{\n statement a;\n}\nelse\n{\n statement b;\n}\n");
+
+    printf("                  | \n");
+    printf("                  /\\              \n");
+    printf("                 /  \\             \n");
+    printf("         true   /    \\ false\n");
+    printf("        _______/condi \\________\n");
+    printf("        |      \\  ?   /       | \n");
+    printf("        |       \\    /        |\n");
+    printf("        |        \\  /         |\n");
+    printf("        |         \\/          |\n");
+    printf("        |                      |\n");
+    printf("    ____|_________         ____|_________\n");
+  printf("      |statement.a |         |statement.b |\n ");
+  printf("      |____________|         |____________|\n");
+  printf("        |__________________________|\n ");
+  printf("                    |\n ");
+  printf("                    O \n");
+  printf("example program to check if the given number is even or odd.\n ");
+  printf("algorithm : to check even or odd\n");
+  printf("step 1:[read the number]\n       input n \nstep 2:[check if the number is even or odd]\n     if(n%2==0)\n       {\n      output\"even number\"\n       }\nstep 3:[finished]\n      stop\n");
+  printf("flow chart:\n");
+  printf("                    ____________      \n   ");
+  printf("                   (____start___)   \n");
+  printf("                     ______|_____\n");
+  printf("                    /__input n__/ \n  ");
+  printf("                           |\n");
+  printf("                           /\\              \n");
+  printf("                          /  \\             \n");
+  printf("                         / if \\ false\n");
+  printf("                        /n%%2==0\\________\n");
+  printf("                        \\  ?   /       | \n");
+  printf("                         \\    /        |\n");
+  printf("                          \\  /         |\n");
+  printf("                           \\/          |\n");
+  printf("                            |           |\n");
+  printf("                      ______|_______    | \n" );
+  printf("                     /printf\"even\"/   |  \n");
+  printf("                    /__number______/    |\n");
+  printf("                            |<----------|\n ");
+  printf("                     _______|_____\n ");
+  printf("                    (______stop___)\n\n");
+  printf("/* program to check even number */ \n");
+  printf("#include<stdio.h>\nvoid main()\n{\n int n;\n clrscr();\n printf(\"enter the number\");\n scanf(\"%%d\",&n);\n if(n%2==0)\n {\n printf(\"even number\");\n }\ngetch();\n}\n\n");
+  printf("the output1 :\t\t\tthe output2:\nenter the number:10\t\tenter the number\neven number\n\n");
+  printf(" Program to find biggest of three numbers\nAlgorithm : To find the largest number\n");
+  printf("step1:[read 3 different number as input]\n    input a,b,c\nstep2:[find the largest of 3 numbers]\n    if(a>b)\n   {\n\n     if(a>c)\n     {\n     printf \"a largest\"\n      }\n     else\n      {\n     if(b>c)\n       }\n     else\n      printf\"c largest\"\n     }\nstep3:[finished]\n       stop\n" );
+  printf("\nProgram to find the largest of three numbers\n");
+  printf("\n #include<stdio.h>\nvoid main()\n{\n int a,b,c; clrscr(); printf(\"enter 3 different numbers\"\n scanf(\"%d%d%d\",&a,&b,&c);\n if(a>b&&a>c)  {\n   printf(\"a number is largest\");\n else if(b>a&&b>c)\n  {\n   printf(\"b is largest\");\n  else\n  {\n  printf(\"cis largest\");\n  }\ngetch();\n}\n");
+  printf("\nnested if else control construct:\n");
+  printf("• is used to execute one set of many sets of statements depending upon the outcome of the condition\nit consist if if else control condtruct with in another if or else control construct and hence the\n");
+  printf("syntax:\nif(condition 1)\n{\n statement a;\n}\nelse if(condition 2)\n {\n statement b;\n }\n .\n .\n .\nelse if(condition n)\n{\n statement n;\n}\nelse\n{\n default statement;\n}\n");
+   printf("                           |\n");
+  printf("                           /\\              \n");
+  printf("                          /  \\             \n");
+  printf("                         / if \\ false   ______________\n");
+  printf("                        /cond:1\\------->|statement a |---|\n");
+  printf("                        \\  ?   /        |____________|   |\n");
+  printf("                         \\    /                          |\n");
+  printf("                          \\  /                           |\n");
+  printf("                           \\/                            |\n");
+  printf("                            |                             |\n");
+   printf("                           |                             |\n");
+  printf("                           /\\                            |\n");
+  printf("                          /  \\                           |\n");
+  printf("                         / if \\ false    ____________    |\n");
+  printf("                        /cond:2\\-------->|statement b|-->o\n");
+  printf("                        \\  ?   /         |___________|   |\n");
+  printf("                         \\    /                          |\n");
+  printf("                          \\  /                           |\n");
+  printf("                           \\/                            |\n");
+  printf("                            |                             |\n");
+  printf("                            *                             *\n") ;
+  printf("                            *                             *\n");
+  printf("                            *                             *\n");
+   printf("                           |                             |\n");
+  printf("                           /\\                            |\n");
+  printf("                          /  \\                           |\n");
+  printf("                         / if \\ false    ____________    |\n");
+  printf("                        /cond:n\\-------->|statement b|-->o\n");
+  printf("                        \\  ?   /         |___________|   |\n");
+  printf("                         \\    /                          |\n");
+  printf("                          \\  /                           |\n");
+  printf("                           \\/                            |\n");
+  printf("                    ________|_______                      |\n");
+  printf("                    | default stat|                       |\n");
+  printf("                    |_____________|                       |\n");
+  printf("                           |                              |\n");
+  printf("                           |----------->o<----------------|\n");
+  printf("                                        |                 \n");
+  printf("\nexample:program to find the biggest of three numbers \n");
+  printf("Algorithm to find the largest of three numbers                    ____________      \n ");
+  printf("step 1:[read 3 different number]                                 (____start___)   \n");
+  printf("          input a,b,c                                             _____|_______\n");
+  printf("[find the largest of three numbers]                              /__input n___/ \n ");
+  printf("if (a>b&&a>c)                                                          |\n");
+  printf("{                                                                      /\\\n");
+  printf("printf\"a is largest\" ;  }                                           /  \\\n");
+  printf("else if(b>a&&b>c)                                                    / if \\ false\n");
+  printf(" printf(\"b is largest\");                                          /cond:n\\----|\n ");
+  printf("else                                                               \\  ?   /     |\n");
+  printf("printf\"c is largest\"                                              \\    /      | \n");
+  printf("step 3:[finished]                                                     \\  /      |\n");
+  printf("stop                                                                   \\/       |\n");
+  printf("                                                                        |--------| \n");
+  printf("                                                                        | \n");
+  printf("                                                                       /\\              \n");
+  printf("                                                                      /  \\             \n");
+  printf("                                                              true   /    \\ false\n");
+  printf("                                                             _______/condi \\________\n");
+  printf("                                                             |      \\  ?   /       | \n");
+  printf("                                                             |       \\    /        |\n");
+  printf("                                                             |        \\  /         |\n");
+  printf("                                                             |         \\/          |\n");
+  printf("                                                             |                      |\n");
+  printf("                                                          ___|_________      _______|______\n");
+  printf("                                                         | statement.a |    |  statement.b |\n ");
+  printf("                                                         |_____________|    |______________|\n");
+  printf("                                                             |_____________________|\n ");
+  printf("                                                                        |\n ");
+  printf("                                                                        O \n");
+  printf("\nSwitch pictorial representation :\n");
+    printf("                  ____________      \n   ");
+  printf("                   (____start___)   \n");
+  printf("                           |\n");
+  printf("                           /\\              \n");
+  printf("                          /  \\             \n");
+  printf("                         /    \\ \n");
+  printf("                        /expres\\\n");
+  printf("                        \\  ?   /        \n");
+  printf("                         \\    /        \n");
+  printf("                          \\  /         \n");
+  printf("                           \\/          \n");
+  printf("                            |         \n");
+  printf("          __________________|__________________\n");
+  printf("     _____|___   _____|____   ______|___   ___|_____\n");
+  printf("     |state 1|   |state 2 |   |state 3 |   |default|\n");
+  printf("     |_______|   |________|   |________|   |_______|\n");
+  printf("          |___________|_____________|_________|\n");
+  printf("                     _______|_______\n ");
+  printf("                    (______stop_____)\n\n");
+ printf("\n ___________________________                ___________________________\n");
+  printf(" | if else control construct|               | switch control construct |\n");
+  printf(" |__________________________|               |__________________________|\n");
+  printf("      ------------------                          ---------------\n");
+  printf("      ------------------                          ---------------\n");
+  printf("      ------------------                          ---------------\n");
+  printf("      ------------------                          ----------------\n");
+  printf("             /\\                                 (an integer exp)\n");
+  printf("         ___/? \\___                               ----------------\n");
+  printf("          | \\  /  |                               |   |   |  |...|\n");
+  printf("          |  \\/   |                               |   |   |  |...|\n");
+  printf("         ---      ---                            --- --- --- -- ---\n");
+  printf("         ---2 path---                            --- --- --- -- ---\n");
+  printf("         ---      ---                            --- --- --- -- ---\n");
+  printf("          |________|                              |___|___|___|__|\n");
+  printf("              |                                           |\n");
+  printf("          ----------                              ------------------\n");
+  printf("          ----------                              ------------------\n");
+  printf("          ----------                              ------------------\n");
+  printf("\nWhen the use the various type of if control constructs ?\n");
+  printf("• if the statements present in a program are to be executed one after the other (sequential),without skipping any statements then there is no need of a control construct.\n");
+  printf("The if-else control construct is used when one route has to be selected out of two possible routs (alternatives).\n");
+  printf("The nested if-else control construct or the else if ladder must be used if one rout has to be selected out of many possible routes (alternatives).\n");
+  printf("switch control construct must be used if one route has to be selected out of many possible routes (alternatives).\n");
+  printf("\n SWITCH CONTROL CONSTRUCT:\n• switch is a control construct which allows us to make a decision out of many differences\n");
+  printf("Syntax :  __________________________________________\n");
+  printf("          |          switch(an integer expression) |\n");
+  printf("          |           case value1: statement 1;    |\n");
+  printf("          |                        break;          |\n");
+  printf("          |           case value2: statement 2;    |\n");
+  printf("          |                        break;          |\n");
+  printf("          |           case value3: statement 3;    |\n");
+  printf("          |                        break;          |\n");
+  printf("          |           case value4: statement 4;    |\n");
+  printf("          |                        break;          |\n");
+  printf("          |           default    : statement 5;    |\n");
+  printf("          |________________________________________|\n");
+  printf("\n/*program to find the largest of three numbers*/\n");
+  printf("#include<stdio.h>\nvoid main()\n{\n int a,b,c;\n clrscr()\n printf(\"enter 3 different no.\\n\");\n scanf(\"%d%d%d\",&a,&b,&c);\n if(a>b){\n if(a>c){\n  printf(\"a is largest\");}\n else{\n  printf(\"c is largest\");}\n }\n else{\n  if(b>c){\n  printf(\"bis largest\");}\n else{\n  printf(\"c is largest\");}\n}\n");
+  printf("\n Unconditional statements :\n");
+  printf("• An unconditional control construct is a control statement which alters the sequential control flow without checking any condition\n");
+  printf("                                     _______________________\n");
+  printf("                                     |unconditional control|\n");
+  printf("                                     |_____________________|\n");
+  printf("                   _____________________________|_____________________________\n");
+  printf("         __________|______            __________|_________           _________|____________\n");
+  printf("        (_goto statement__)           (__break_statement__)          (_construct_statement_)\n\n");
+  printf("i) goto control construct :\n• the goto control construct us used to transfer control from one point in the program to another point with checking any condition\n");
+  printf("syntax : goto label;\n     goto label;--|\n    statement 1;--|\n    statement 2;--|\n    statement 3;--|\nlabel:statement;<-|\n\n");
+  printf("label:statement;<-|\n     goto label;--|\n    statement 1;--|\n    statement 2;--|\n    statement 3;--|\n");
+  printf("\nexample :program illustrate use of goto statement\n");
+  printf("#include<stdio.h>\nvoid main()\n{\n int i=1; clrscr();\n back: printf(\"PCD\\n\");\n if(i!=5){\n i++;\n goto back;}\n}\n");
+  printf("output:\n PCD\n PCD\n PCD\n PCD\n PCD\n \n");
+  printf("\nLooping and Repetition :\n");
+  printf("\n• The looping control construct are the control constructs which enable us to perform an activity more than :once fill the condition is true ,ie as long as the condition holds good, the activity is repeatedly executed. once the condition fails, the control flows to the statements outside the body.\n");
+  printf("\n• c language has 3 looping control constructs namely:\n i) for loop\n ii) while loop\n iii) do while loop\n");
+  printf("\n• for loop\n");
+  printf("\n->for loop is entry controlled loop that provides programmer with more concise loop structure.\n");
+  printf("syntax:                                                               |\n");
+  printf("for(initialization ;testing ;increment/decrement)  ___________________|__________________\n");
+  printf(" {                                             |->/__initialization___|      condition   \\-| \n");
+  printf(" body of the loop                              |  \\__updation________|___________________/ |   \n");
+  printf(" }                                             |                      |                     |  \n ");
+  printf("                                               |             _________|________             |\n")
+  printf("                                               |             | body of loop   |             |\n");
+  printf("                                               |             |________________|             |\n");
+  printf("                                               |______________________|                     |\n");
+  printf("                                                                      |_____________________|\n");
+  printf("                                                                      |\n");
+  printf("\n-> Initialization :\n the loop variable is initialized with value when the control enters the for loop.\n");
+  printf("\n-> condition :\n it is generally relational expression ,the for loop is executed as long as the test condition is true.\n");
+  printf("\n Ternary operator :\n• ternary operator is a combination of ? and : and takes three operands.\n");
+  printf("syntax:\n conditional expression ? statement 1: statement 2 ;\n");
+  printf("• the conditional expression is evaluated first. if the result is true then statement 1 is executed else statement 2 is executed.\n");
+  printf("\nexample :/*program to illustrate ternary /conditional operator */\n");
+  printf("#include<stdio.h>\n#include<conio.h>\nvoid main()\n{\n int x,flag;\n clrscr();\n printf(\"enter the value of x\\n\");\n scanf(\"%%d\",&x);\n flag=(x<0)?0:1;\n printf(\"flag value is %%d\\n\",flag);\n getch();\n}\n");
+  printf(" output :\n enter value of x\n  9\n flag value is 1\n");
+  printf("\nDisadvantage of goto control construct:\n");
+  printf("• usage of goto heads to unstructured programming .Hence  a good programming practice.\n• goto is difficult to read and understand\n • indifferent code will be generated by  the compiler\n");
+  printf("\nii) break control construct :\n");
+  printf("• The break control construct is used basically at 2 places\n-> Inside the body of the switch\n-> Inside the body of a looping control construct,in both cases, the break control construct would take the control out of the respective bodies\n");
+  printf("\niii) Continue control construct :\n");
+  printf("\n• During execution of the loop it may be necessary to help a part of loop based on some condition ,continue statement id used in such cases.\n");
+  printf("• continue statement when used in loop,terminate the current iteration.\nNote: continue can be used only in loops.\n");
+  printf("\n• while loop:                                                 flowchart          \n");
+  printf("syntax :                                                      ________|________\n");
+  printf("statement x;                                                  | statement x   |\n");
+  printf("while(test_condition)                                         |_______________|\n");
+  printf("   {                                                                  |\n");
+  printf("    statements block;                                                / \\     \n");
+  printf(" }                                                                  /   \\    \n");
+  printf("statement y;                                           ----------->/condi\\false__\n");
+  printf("                                                       |          \\      /      |\n");
+  printf("                                                       |           \\    /       |\n");
+  printf("                                          _____________|________    \\  /        |\n");
+  printf("                                          |update condit expres|     \\/         |\n");
+  printf("                                          |____________________|      |          |\n");
+  printf("                                                      |      _________|________  |\n");
+  printf("                                                      |<-----|statement block |  |\n");
+  printf("                                                             |________________|  |\n");
+  printf("                                                                       __________|\n");
+  printf("                                                           ____________|_________\n");
+  printf("                                                           |   statement y      |\n");
+  printf("                                                           |____________________|\n");
+  printf("\n-> upon entry of control into while test expression is evaluated.\n");
+  printf("-> if expression is true (non-zero), statement under while is executed.\n");
+  printf("-> the while loop executes the as long as the expression in while statement is true.\n");
+  printf("-> body of while loop will not be executed at all if the expression is false at the time of entry itself.\n");
+  printf("-> while loop is know as pretest structure because the expression is tested before the body of the loop is executed.\n");
+  printf("->a while loop is also referred as top-checking loop since the control condition is placed at the beginning of the loop.\n");
+  printf("->the initialization statements is not compulsory. But semicolon must precede the test expression.\n");
+  printf("\n/* program to illustrate while loop */\n");
+  printf("#include<stdio.h>\n#include<conio.h>\nmain()\n{\n int i;\n clrscr();\n i=0;\n while(i<=5)\n {\n  printf(\"pcd\");\n  i++;\n }\n printf(\"c programming\");\ngetch();\n}\n");
+  printf("\noutput:\n pcd\n pcd\n pcd\n pcd\n pcd\n c programming language\n");
+  printf("\n do-while loop\n");
+  printf("example:\n int i=0;\n for(;i<=5;i++)\n {\n    .\n    .\n    .\n }\n");
+  printf("-> more than one variable can be initialized in for statement \n example:\n int i,j;\n");
+  printf(" for(i=0;j=1;i<=5;i++)\n          //comma operator is used to separate initialization statements\n");
+  printf("-> 2 loop variables can be simultaneously can be updated in for \n example\n int i,j;\n for(i=0,j=0;i<=5;i++,j--)   //two updation simultaneously\n");
+  printf("{\n}\n");
+  printf("-> only 1 test variable is permitted.\n");
+  printf("-> empty for loop with 2 remainder is permitted but executes infinity times \n                ex: for( ; ; )\n");
+  printf("counter controlled loop \n");
+  printf("-> The body of loop is executed of times\n");
+  printf("-> The following procedure is followed for such a loop\n i) counter must be initialized\n ii) test the counter\n iii) update the counter\n");
+  printf("-> generally for-loop is used in counter control loops.\n");
+  printf("Break and Continue :\n");
+  printf("-> break and continue are two unidirectional control contents.\n");
+  printf("-> they are called as the undirectional control constructs since they are the sequentially flow without checking any condition.\n");
+  printf("-> break control constructs sends the control out of the loop.\n");
+  printf("-> continue control construct sends the control to the beginning of the loop.\n");
+  printf("-> break control construct send the control out of the loop where as continue control construct sends the control to the beginning of the loop.\n");
+  printf("\n  /* Loop without break and continue*/  || /*Loop with break*/          ||  /* Loop with continue*/           \n");
+  printf("  #include<stdio.h>                       ||  #include<stdio.h>           ||  #include<stdio.h>                 \n");
+  printf("  #include<conio.h>                       ||  #include<conio.h>           ||  #include<conio.h>                 \n");
+  printf("  main()                                  ||  main()                      ||  main()                            \n");
+  printf("  {                                       ||  {                           ||  {                                 \n");
+  printf("  int i;                                  ||  int i;                      ||  int i;                            \n");
+  printf("  clrscr()                                ||  clrscr()                    ||  clrscr()                          \n");
+  printf("  for(i=0;i<=3;i++){                      ||  for(i=0;i<=3;i++){          ||  for(i=0;i<=3;i++){                \n");
+  printf("   printf(\"ram\");                       ||   printf(\"ram\");break;     ||   printf(\"ram\"); continue;       \n");
+  printf("   printf(\"sham\");                      ||   printf(\"sham\");          ||   printf(\"sham\");                \n");
+  printf("  }                                       ||  }                           ||  }                                 \n");
+  printf("  getch();                                ||  getch();                    ||  getch();                          \n");
+  printf("  }                                       ||  }                           ||  }                                 \n");
+  printf("  output:                                 ||  output:                     ||  output:                           \n\n\n");
+  printf("  ram sham                                ||  ram                         ||  ram                               \n");
+  printf("  ram sham                                ||                              ||  ram                               \n");
+  printf("  ram sham                                ||                              ||  ram                               \n");
+  printf("\n Nesting Loops :\n");
+  printf("-> there is no restriction with respect to loops that can be nested.\n");
+  printf("-> index value of loops should be different.\n");
+  printf("-> inner loop should be enclosed completely within outer loop.\n");
+  printf("example: for(i=1;i<=;i++){\n          for(j=1;j<=m;j++){\n         .\n         .\n         .\n           }\n         }\n\n");
+  printf("updation :it updates the value of the loop variable after each execution of the body of the loop\n");
+  printf("\n/* program to illustrate for statements */\n");
+  printf("#include<stdio.h>\n#include<stdlib.h>\nmain()\n{\n int i;\n clrscr();\n for(i=1;i<=5;i++)\n {\n  printf(\"%d\n\",i);\n }\n printf(\"thank you\");\n getch();\n}");
+  printf("output:\n   1\n   2\n   3\n   4\n   5\n thank you\n");
+  printf("*  variations in for statements\n");
+  printf("-> loop variable be a type of int,float,char etc\nexample\n");
+  printf("  int i;                    float x;\n  for(i=0;i<=5;i++)         for(x=0;x<=5;x++)\n   {                        {\n   .                        .\n   .                        .\n   .                        .\n   }                        }\n\n");
+  printf("Loop control statements are classified based on\n");
+  printf("i) pre testing loops and post testing loops \nii) event controlled loops \n");
+  printf("Pre-test and Post-test loop:\n");
+  printf("*  pre-test loop :in a looping construct,if  the condition is checked before each iteration of the loop, the loop is called pre-test loop\n-> the expression is evaluate to true/false at the beginning.\n");
+  printf("flow char\n");
+  printf("                   | \n");
+  printf("                  /\\                                                     |                      \n");
+  printf("                 /  \\                                 ___________________|__________________    \n");
+  printf("                /    \\ false                      |->/__initialization___|      condition   \\--|\n");
+  printf("        _______/condi \\________                   |  \\__updation_________|___________________/ |\n");
+  printf("        |      \\  ?   /       |                   |                      |                      |\n");
+  printf("        |       \\    /        |                   |             _________|________              |\n");
+  printf("        |        \\  /         |                   |             | body of loop   |              |\n");
+  printf("        |         \\/          |                   |             |________________|              |\n");
+  printf("        |         |            |                   |______________________|                      |\n");
+  printf("        |   ______|_______     |                                           ______________________|\n");
+  printf("        |   |statement.a |     |                                           |\n");
+  printf("        |   |____________|     |\n");
+  printf("        |_________|  __________|\n");
+  printf("                     |\n ");
+  printf("                       \n");
+  printf("\n-> if the condition is false,the loop is terminated\n-> it is also known as entry controlled loop\n example: for loop and while loop\n");
+  
+
+    return 0;
+}
+
+ int learn8()
+{
+   printf("\n************     FUNCTIONS     ***************\n");
+   printf("\n\n Function is a group of statements that perform a specific task. the main objective is to avoid the repetition of codes in a program.\n It provides modularity code re-usability.\n");
+   printf("\n• A C program is a collection of one or more functions where one of the function must be main().\n");
+   printf("• Execution of program always starts and ends with main.\n");
+   printf("•  main can call other functions to do some part of the task.\n");
+   printf("     Advantages of Functions :\n");
+   printf("• Problems can be divided into understandable steps.\n");
+   printf("• They help in code reuse.\n");
+   printf(" ->for eg if average of numbers needs to be calculated 5 times in a program, with different data, instead of writing the same codes  5times in program, the cod can be called 5 times.\n");
+   printf("• C library provides standard functions that make programming easier.\n");
+   printf("• Functions can also be protected data by defining data as local data. This ensures that the data is available only to the function and cannot be manipulated outside the function.\n");
+   printf("\n Types of function :\n") ;
+   printf("Functions can be broadly classified into two types\n");
+   printf("• Built in function\n");
+   printf("• User defined function\n");
+   printf(" Built in function\n");
+   printf("         c language provides many built in functions few of them are listed below:\n");
+   printf("• Strings manipulation function(discussed in the section 2 of module).\n");
+   printf("• Character manipulation functions.\n");
+   printf("• Memory management functions(discussed in the section of the module 5).\n");
+   printf("• Mathematical function.\n");
+   printf("character management functions: This header file includes character manipulation functions is ctype.h(#include\"type.h\")");
+   printf("\n  ___________________________________________________________\n");
+   printf("  | functions       | Return true if ch is                  |\n");
+   printf("  |_________________|_______________________________________|\n");
+   printf("  | isalnum(ch)     |A letter of alphabet(upr or lwr)or num |\n");
+   printf("  | isalpha(ch)     |An upr or lwr case letter of alphabet  |\n");
+   printf("  | isascii(ch)     |An ASCII value in the range of 0 to 127|\n");
+   printf("  | isblanck(ch)    |A tab, space or another blank character|\n");
+   printf("  | islower(ch)     |A lowercase letter of alphabet,a to z  |\n");
+   printf("  | isupper(ch)     |A uppercase letter of alphabet,a to z  |\n");
+   printf("  |  Function       |         Return                        |\n");
+   printf("  | toascii(ch)     |An ASCII value in the range of 0 to 127|\n");
+   printf("  | tolower(ch)     |A lowercase of character ch            |\n");
+   printf("  | toupper(ch)     |A uppercase of character ch            |\n");
+   printf("  |_________________|_______________________________________|\n");
+   printf("\n\n Mathematical Functions :\n   The header file that includes mathematical functions is math .h (#include<math.h>)\n\n");
+   printf("\n  ___________________________________________________________\n");
+   printf("  | functions       | Return                                |\n");
+   printf("  |_________________|_______________________________________|\n");
+   printf("  | fabs(n)         |absolute value of floating point number|\n");
+   printf("  | ceil(n)         |smallest integer value is >= n         |\n");
+   printf("  | floor(n)        |largest integer value is <= n          |\n");
+   printf("  | exp(n)          |e raised to given power n              |\n");
+   printf("  | log(n)          |natural logarithm to base e            |\n");
+   printf("  | log10(n)        | common logarithm to base e            |\n");
+   printf("  | pow(x,n)        | x raised to the given power n         |\n");
+   printf("  | sqrt(n)         |square root of n                       |\n");
+   printf("  | cbrt(n)         |  cube root of n                       |\n");
+   printf("  |  sin(n)         | sine value of n                       |\n");
+   printf("  |  cos(n)         | cosine value of n                     |\n");
+   printf("  |  sinh(n)        | hyperbolic sine value of n            |\n");
+   printf("  |  cosh(n)        | hyperbolic cosine value of n          |\n");
+   printf("  |_________________|_______________________________________|\n");
+   printf(" The built function available in c are defined under the header files.\n\n");
+   printf(" Header file:\n  A header file containing c declaration and macro definitions to be to be shared between several source .We use header in program by including it, with c preprocessing directive '#include'\n\n\n");
+   printf("     stdio.h         input /output functions                                     \n");
+   printf("     math.h          mathematical  functions                                     \n");
+   printf("     string.h        string manipulation                                         \n");
+   printf("     stdlib.h        standard library functions                                  \n");
+   printf("     malloc.h        memory allocation/deal location function                    \n");
+   printf("     time.h          computing time  functions                                   \n");
+   printf("     stddef.h        common macro functions                                      \n");
+   printf("     float.h         allow to use constant related to floating point             \n");
+   printf("     ctype.h         allow to use functions of testing and mapping characters    \n");
+   printf("     conio.h         library function for performing console input and output    \n");
+   printf("     User defined functions :\n");
+   printf(" The built in functions provided by c are not sufficient for performing customized functions, hence c allows user to create their own functions to perform specific task these are called as user defined functions\n");
+   printf("In the below example without using functions ,addition  performed directly after reading inputs ,but in the example using functions,add(a,b) function is called which makes the control to move to the example function add(int a, int b) which computes sum and then returns. the remainder value in the variable sum and then displayed.\n");
+   printf(" Example : C program to add two numbers\n");
+   printf("/* without functions*/                           |   /*with user defined function*/                    \n");
+   printf("     #include<stdio.h>                           |       #include stdio.h                              \n");
+   printf("     #include<conio.h>                           |       #include conio.h                              \n");
+   printf("     void main()                                 |       int add(int a,int b);                         \n");
+   printf("     {                                           |       {                                             \n");
+   printf("     int sum a,b;                                |       int sum a,b;                                  \n");
+   printf("     printf(\"enter a and b\");                    |       printf(\"enter a and b\");                    \n");
+   printf("     scanf(\"%%d%%d\",&a,&b);                        |       scanf(\"%%d%%d\",&a,&b);                      \n");
+   printf("     sum=a+b;                                    |       sum=add(a,b);                                 \n");
+   printf("     printf(\"sum is %d\",sum);                    |       printf(\"sum is %d\",sum);                    \n");
+   printf("     getch();                                    |       getch();                                      \n");
+   printf("     }                                           |       }                                             \n");
+   printf("                                                 |       int add(int a,int b)                          \n");
+   printf("                                                 |       {                                             \n");
+   printf("                                                 |       int sum;                                      \n");
+   printf("                                                 |       sum=a+b;                                      \n");
+   printf("                                                 |       return sum;                                   \n");
+   printf("                                                 |       }                                             \n");
+   printf(" Advantages of user defined functions \n");
+   printf(" •can be used in number of places without restrictions as compared to store procedures.\n");
+   printf(" •code can be made less complicated and made easier.\n");
+   printf(" •parameters can be made passed to the function.\n");
+   printf(" •reduction in size of the program code of function can be used again and again by calling it.\n");
+   printf(" •program becomes easy to understand and debug.\n");
+   printf(" •a function can be shared by other programs by compiling this separately and loading and linking them together.\n");
+   printf(" •in C recursive function can call itself. Many calculations can be done easily by using recursive functions such as calculation of factorial of number etc.\n");
+   printf("\n Location of functions in a program \n");
+   printf("\n____________________________________________________________________________________________________");
+   printf("\n|types     |pictorial representation                   |Example                                    |");
+   printf("\n|__________|___________________________________________|___________________________________________|");
+   printf("\n|          |       ____________________                | #include<stdio.h>                         |");
+   printf("\n|          |       |#include and funct|                | int add(int a,int b);    (optional)       |");
+   printf("\n|          |       | declational(opt) |                | int add(int a,int b)                      |");
+   printf("\n|          |       |__________________|                | {                                         |");
+   printf("\n|   1      |                |                          |  int sum ;                                |");
+   printf("\n|          |       _________|__________                |  sum=a+b;                                 |");
+   printf("\n|          |       | function of body |                |  return sum;                              |");
+   printf("\n|          |       |__________________|                | }                                         |");
+   printf("\n|          |                |                          |  void main()                              |");
+   printf("\n|          |          ______|_________                 |  {                                        |");
+   printf("\n|          |          | main program |                 |  int sum a,b;                             |");
+   printf("\n|          |          |______________|                 |  a=10,b=20;                               |");
+   printf("\n|          |                                           |  sum=add(a,b);                            |");
+   printf("\n|          |                                           |  printf(\"sum is %%d\",sum);                 |");
+   printf("\n|          |                                           |  }                                        |");
+   printf("\n|__________|___________________________________________|___________________________________________|");
+   printf("\n|          |       ____________________                | #include<stdio.h>                         |");
+   printf("\n|          |       |#include and funct|                | int add(int a,int b);    (mandatory)      |");
+   printf("\n|          |       | declational(mand)|                | void main()                               |");
+   printf("\n|          |       |__________________|                | {                                         |");
+   printf("\n|   2      |                |                          |  int sum a,b;                             |");
+   printf("\n|          |          ______|_________                 |  a=10,b=20;                               |");
+   printf("\n|          |          | main program |                 |  sum=add(a,b);                            |");
+   printf("\n|          |          |______________|                 |  printf(\"sum is %%d\",sum);                 |");
+   printf("\n|          |                |                          | }                                         |");
+   printf("\n|          |        ________|___________               | int add(int a,int b)                      |");
+   printf("\n|          |        | function of body |               | {                                         |");
+   printf("\n|          |        |__________________|               |  int sum ;                                |");
+   printf("\n|          |                                           |  sum=a+b;                                 |");
+   printf("\n|          |                                           |  return sum;                              |");
+   printf("\n|          |                                           |  }                                        |");
+   printf("\n|__________|___________________________________________|___________________________________________|");
+   printf("\n Location of function refers to the placement of the function definition in relation to the main program .There are mainly two ways to place a program:\n");
+   printf(" •type 1:placing a function first followed by placing the entire program.\n");
+   printf(" •type 2:placing function declaration before main program followed by main program and the followed by function body.\n");
+   printf("\n\n Structure of a function :\n");
+   printf("\n Function is a group of statements that together to perform a specific task.\n Structure of a function is explained by taking an example of a program to display in element of array using functions.\n");
+   printf("\n\n /*program to display  'n' elements of array*/\n");
+   printf("#include<stdio.h>\nvoid display(int b[10]);\nint n;\nvoid main()\n{\n int i,a[10];\n printff(\"enter the number of elements\"); \n scanf(\"%%d \",&n);\n printf(\"enter elements \\n\");for(i=0;i<n;i++)\n scanf(\"%%d\",&a[i]);\n printf(\"element are\");\n display(a);\n getch();\n}\nvoid display(int b[10])\n{\n int i;\n for(i=0;i<n;i++)\n  print(\"%%d\",&b[i]);\n}\n");
+   printf(" \n\n Program to compute the factorial of a given number n using recursion*/\n");
+   printf(" #include\"stdio.h\" \n int fact(int);\n void main()\n {\n  int n ,ans;\n  printf(\"enter the value of n\");\n  scanf(\"%%d\",&n);\n  ans=fact(n);\n  printf(\"ans=%%d\",ans);\n  getch();\n }\n");
+   printf(" int fact(int n )\n {\n  if(n==0)\n  {\n   return 1;\n  }\n  else\n  {\n   return n*fact(n-1);\n  }\n }\n");
+   printf("\n METHOD:\n factorial(5)=5*factorial(4)\n 5*4*factorial(3)\n 5*4*3*factorial(2)\n 5*4*3*2*factorial(1)\n 5*4*3*2*1*factorial(0)\n 5*4*3*2*1*1\n");
+   printf("\n Output :\n  enter the value of n\n  5\n  ans=120");
+   printf("\n\n------------------*----------------------\n");
+   printf("\n\n /* Example for string passing by reference or call by reference*/\n");
+   printf(" #include<stdio.h>\n void display(char ch[]);\n void main()\n {\n  char c[20];\n  printf(\"enter the string\");\n  gets(c);\n  display(c); /*passing entire string c to function */\n }\n");
+   printf(" void display(char ch[])\n {\n  printf(\"string is:\");\n  puts(ch); /*display enter string at a time*/\n\n");
+   printf(" Recursive Function :\n");
+   printf(" •Recursive function are there function that call themselves during than execution until certain conditions are satisfied.\n");
+   printf(" •note while using recursion.programs need to be careful to define an exit condition from the recursion function ,otherwise it will go in infinite loop'\n");
+   printf("                 __________________\n") ;
+   printf("          ------>||rec_function()||\n");
+   printf("          |      ||______________||\n");
+   printf("     _____|_____         |         \n");
+   printf("     | body    |        /\\  \n");
+   printf("     |_________| no    /is\\ \n");
+   printf("          |___________/exit\\\n");
+   printf("                      \\cond/ \n");
+   printf("                       \\  /  \n");
+   printf("                        \\/ yes\n");
+   printf("                   _____|_____\n") ;
+   printf("                   | stop    |\n");
+   printf("                   |_________|\n");
+   printf("\n\n Passing Array in a Function :\n");
+   printf(" •Array elements or an entire array can be passed to a function.\n");
+   printf(" •If we pass the values stored in an array ,single element at a time ,then it is called array passing by values or call by values.\n");
+   printf("\n /*example for array passing by value or call by value*/\n");
+   printf(" #include<stdio.h>\n #include<conio.h>\n void display(int p);\n void main()\n {\n  int n,i,a[10];\n  printf(\"enter the number of elements \\n\");\n  scanf(\"%%d\",&n);\n  printf(\"enter the elemnts\");\n  for(i=0;i<n;i++)\n   display(a[i]);\n  }\n  setch(); }\n");
+   printf(" void display(int p)\n {\n  printf(\"%%d\\t\" ,p);\n }\n/* display the element it recieves */\n");
+   printf("\n /* in call by value we pass the value of single value at a time not an entire array. For every elements display() function is called*/\n\n");
+   printf(" Output :\n enter the number of elements\n 5\n enter the elements\n 1 2 3 4 5\n the elements are\n 1 2 3 4 5\n\n");
+   printf("\n Call By Reference Or Parameter Passing By Reference:\n");
+   printf(" •When an address of the variable is passed to the function during its invocation, then function is called is call by reference or parameter passing by reference.");
+   printf("/* call by reference*/\n");
+   printf("\n #include<stdio.h>\n int add(int *i,int *j);\n void main()\n {                       /*call function invokes function add()\n");
+   printf(" int sum ,a=10 b=20;     and passes the address of variables a and b as parameters.\n sum=add(&a,&b);         Here the address of a and b are the actual parameters*/\n");
+   printf(" printf(\"sum is %%d \",sum);\n getch()\n }\n");
+   printf(" int add(int *i,int *j){     /* here *i and *j are the address of a and b as the actual parameters which are holding the respective\n   int sum;                  values stored in which address are passed as actual parameters.\n");
+   printf("   sum= *i+*j;               using which user defined function add() computers sum and returns a value\n   return sum;               sum to calling a function*/\n }\n\n");
+   printf(" •Instead of values of a and b ,address of a and b are passed and reference *i,*j recieves the values of a and b and preform addition operation .This concept is called call by reference or parameter passing by reference.\n");
+   printf("\n\n Passing strings in Functions:\n");
+   printf(" •Strings are declared in c in similar manner as arrays.\n Only difference is that,strings are char type.\n Strings can be passed to function or similar manner as arrays as, string is also an array.\n");
+   printf("\n /* example for String passing by value or call by value*/\n");
+   printf(" #include<stdio.h>\n void main()\n {\n  char c[50];  printf(\"enter the string \");\n  scanf(\"%%s\",c);\n for(i=0;c[i]!='\\0';i++)\n  {\n   display(c[i]);   /*passing single character of string at a time to function */\n  }\n getch();\n }\n");
+   printf(" void display(char ch)\n {\n  putchar(ch);   /*display single character at a time*/\n }\n");
+   printf("\n\n Function with arguments but no return value :\n");
+   printf(" •Parameter are passed from calling to the called function.\n");
+   printf(" •Called function does not return a value it jut performs the specified action.\n");
+   printf(" /* Program to illustrate functions with parameter but no return*/\n");
+   printf(" #include<stdio.h>\n #include<conio.h>\n int addition(int ,int ,int)\n void main()\n {\n int a,b,c;\n clrscr();\n printf(\"enter the value of a,b,c\");\n scanf(\"%%d%%d%%d\",&a,&b,&c);\n addition(a,b,c);\n getch()\n }\n");
+   printf(" void  addition(int x,int y,int z)\n {\n int s;\n s=x+y+z;\n printf(\"sum of three no.s=%%d\",s);\n }\n\n\n");
+   printf(" output: \n enter the value of a,b and c\n 10 20 30\n sum of three no.s=60\n\n\n");
+   printf(" Parameter Passing Mechanism :\n");
+   printf(" C supports two techniques for passing parameter from one function to another, namely\n");
+   printf(" i)  Pass by value also know as call by value.\n");
+   printf(" ii) pass by reference also known as call by reference\n\n\n");
+   printf(" Call By Value Or Parameter During By value\n\n");
+   printf(" •When a variable as a value is passed to the function during its execution,the function execution is called as call by value or pass by value\n\n");
+   printf(" /* call by value*/\n");
+   printf(" #include<stdio.h>\n int add(int i,int j);\n void main()\n {\n  int sum,a=10,b=20;\n  sum=add(a,b);\n  printf(\"sumis %%d\",sum);\n  getch()\n }\n int add(int i,int j)\n {\n int sum;\n sum=i+j;\n return sum;\n }\n");
+   printf(" •that is a and to the actual parameter,when the function add(s,b) is called the value of actual parameter is except is formed parameter is function definition i and j, this method is without call by value or parameter passed by value\n");
+   printf("\n\n Functions with No Arguments and No return Value :\n");
+   printf(" •No parameter is passed from calling function to the called function.\n");
+   printf(" •called function dose not return any value.\n");
+   printf(" /* Program illustrate function with no return no parameter no return value*/\n");
+   printf(" #include<stdio.h>\n #include<conio.h>\n void addition()\n void main()\n {\n  clrscr();\n  addition()\n  getch()\n }\n");
+   printf(" void addition()\n {\n  int a,b,c,s;\n  printf(\"enter the value of a,b,c\");\n  scanf(\"%%d%%d%%d\",&a,&b,&c);\n  s=a+b+c;\n  printf(\"the sum of three no.s=%%d\",s);\n }\n");
+   printf("\n\n /*program to illustrate static variable*/\n\n");
+   printf(" #include<stdio.h>\n #include<conio.h>\n void display();\n void main()\n {\n  display();\n  display();\n  display();\n  display();\n  display();\n }\n void display()\n {\n static int i=0;\n i++\n printf(\"%%d\\n\",i);\n }\n\n\n");
+   printf(" Category of Function :\n");
+   printf("                                                     _______________________                           \n");
+   printf("                                                     |category of function |                           \n");
+   printf("                                                     |_____________________|                           \n");
+   printf("             __________________________________________________|_______________________________________\n");
+   printf("    _________|_________        ___________|____________         ___________|__________       _________|_________\n");
+   printf("    |function with no |        |function with argument|         |function with argume|       |function with no |\n");
+   printf("    |argument and no  |        |but no return value   |         |nts and with return |       |argument but with|\n");
+   printf("    |return value     |        |                      |         |value               |       |return value     |\n");
+   printf("    |_________________|        |______________________|         |____________________|       |_________________|\n");
+   printf(" Function with No Arguments But Return A value :\n");
+   printf(" •No parameter is passed from calling function to the called function, but function returns a value.\n\n\n");
+   printf(" /* program to illustrate functions without parameter with returning value*/\n\n");
+   printf(" #include<stdio.h>\n #include<conio.h>\n int addition(); void main()\n {\n  int r;\n  clrscr();\n  r=addition();\n  printf(\"sum of three no.s=%%d\",r);\n  getch();\n }\n");
+   printf(" int addition()\n {\n  int a,b,c,s;\n  printf(\" enter the value of a,b and c\");\n  scanf(\"%%d%%d%%d\",&a,&b,&c);\n  s=a+b+c;\n  return s;\n }\n\n\n");
+   printf(" Function with argument and with return value :\n");
+   printf(" •Parameter are passed from calling function to the called function and based on the received parameter values called function performs required action and return a value.\n");
+   printf(" /* program to illustrate functions with parameter and with return value */\n");
+   printf(" #include<stdio.h>\n #include<conio.h>\n int addition(int,int,int);\n void main() {\n  int a,b,c,r;\n  clrscr();\n  printf(\"enter the value of a,b and c\");\n  scanf(\"%%d%%d%%d\",&a,&b,&c);\n  r=addition(a,b,c);\n  printf(\"sum of three no.s=%%d\",r);\n  getch();\n }\n");
+   printf(" int addition(int x,int y,int z)\n {\n int s; s=x+y+z;\n return s;\n }\n\n\n output:\n enter the value of a,b,c\n 10 20 30\n sum of three no.s=60\n\n\n");
+   printf(" Actual and Formal parameters :\n");
+   printf(" •Actual parameters are parameters which are found in signature(call) of a given function. These are the parameter transfered from the calling function to the called function\n");
+   printf(" •formal parameter are parameter which are found in the definition(body) of a given function.\n\n");
+   printf(" Local and Global Variables :\n");
+   printf("_____________________________________________________________________\n");
+   printf("|        | Global variable               |  Local variable          |\n");
+   printf("|________|_______________________________|__________________________|\n");
+   printf("|   1)   | global variables are created  |local variables are create|\n");
+   printf("|        |outside all functions at the   |d inside a function       |\n");
+   printf("|        | begining of a program.        |                          |\n");
+   printf("|   2)   |Global variable are accessible |Local variable are accessi|\n");
+   printf("|        |to all the functions present in|ble to only that respectiv|\n");
+   printf("|        |in the program.                |e function inside which   |\n");
+   printf("|        |                               |they have been created    |\n");
+   printf("|   3)   |if no value is given to a globl|if no value is given to a |\n");
+   printf("|        |variable by the programmer then|local variable then it hol|\n");
+   printf("|        |automatically it is assigned a |d a junk value.           |\n");
+   printf("|        |value O.                       |                          |\n");
+   printf("|   4)   |global variable are alive for  |local variable are alive  |\n");
+   printf("|        |the entire duration of exceutio|only for the duration of  |\n");
+   printf("|        |n of the program.              |execution of the function |\n");
+   printf("|        |                               |inside which they are     |\n");
+   printf("|        |                               |present                   |\n");
+   printf("|________|_______________________________|__________________________|\n");
+   printf("\n\n Register Variable :\n");
+   printf(" •Register variable are such variable which are allotted space not in the main memory but in one of the cpu's register. For a compiler to allocate space for variable in a cpu register the variable has to be declared as\n");
+   printf("     register int i;\n");
+   printf(" •The Advantage of storing a variable in cpu register is that the variable can be accessed much faster. Hence the speed of execution of program increases.\n");
+   printf(" •note :The declaration register int i is just a request by the programmer to the compiler to allocate a cpu register for i\n");
+   printf(" if no cpu register are free available to the compiler, then the compiler would ignore that request and allocate space to the variable i as any other normal local variable\n");
+   printf("\n\n Static Variables :\n");
+   printf(" •Static variables are declared using the keyword static they can be declared outside the function or inside the function\n");
+   printf(" •Memory is allocated to these variables once\n");
+   printf(" •If static variables are defined inside the function, they cannot be accessed outside the function.\n");
+   printf(" •A function cannot use static variable which are declared in any other function.\n");
+   printf("         static int i=0;    \n");
+   printf(" •Multiple actual parameter are separated by comma.\n\n\n /*program to illustrate adding two no.s*/\n\n");
+   printf(" ______________________________________________________________________\n");
+   printf(" |/*without user defined function */ | /*with user defined function */|\n");
+   printf(" | #include<stdio.h>                 | #include<stdio.h>              |\n");
+   printf(" | #include<conio.h>                 | #include<conio.h>              |\n");
+   printf(" | void main()                       | int add(int a,int b);          |\n");
+   printf(" | {                                 | void main()                    |\n");
+   printf(" | int a,b,sum;                      | {                              |\n");
+   printf(" | printf(\"enter a and b\");          | int sum,a,b;                   |\n");
+   printf(" | scanf(\"%%d%%d\",&a,&b);              | printf(\"enter a and b\");       |\n");
+   printf(" | sum=a+b;                          | scanf(\"%%d%%d\",&a,&b);           |\n");
+   printf(" | printf(\"sum is %%d\",sum);          | sum=add(a,b);                  |\n");
+   printf(" | getch();                          | printf(\"sum is %%d\",sum);       |\n");
+   printf(" | }                                 | getch();                       |\n");
+   printf(" |                                   | }                              |\n");
+   printf(" |                                   | int add(int a,int b)           |\n");
+   printf(" |                                   | {                              |\n");
+   printf(" |                                   | int sum;                       |\n");
+   printf(" |                                   | sum = a + b;                   |\n");
+   printf(" |                                   | return sum;                    |\n");
+   printf(" |                                   | }                              |\n");
+   printf(" |___________________________________|________________________________|\n\n\n");
+   printf(" •Formal parameter list gives the input for the operation to be performed by function.\n");
+   printf(" •local variables one variables used only within a function.\n");
+   printf(" •Return statements returns result of function.\n");
+   printf(" •Statements one to perform specific operation.\n");
+   printf("\n\n\n Function Declaration:\n");
+   printf("\n\n •It consist of only the function header with\n 1)return_type 2)function_name 3)formal_parameter\n");
+   printf(" •function declaration is terminated with a semicolon.\n");
+   printf(" •If the function has multiple patterns, separate each of them with commas.\n");
+   printf(" •Identifiers name are not required, but can be used for better readability.\n");
+   printf(" •These identifier names also need not to match with the ones.\n");
+   printf(" •Function declaration  is placed in global declaration section before main.\n");
+   printf("\n\n\n Function Call :\n");
+   printf("\n •It consist of function_name,parenthesis ie() ,and actual parameters\n");
+   printf(" The actual parameter must match the formal parameter in type and order in the parameter list.\n");
+   printf("\n\n User-defined Functions :\n");
+   printf(" •The function written or defined by programmer are called as user-defined function.\n");
+   printf(" •A function name is used 3 times ;\n");
+   printf("  1)during function declaration\n  2)in the function call\n  3)in function definition\n\n");
+   printf(" Function Definition :\n");
+   printf(" •It contains the code for a function  and consist of\n 1)function header 2)function body\n");
+   printf(" syntax\n   return_type function_name(formal_parameter list)\n   {\n    local declaration;\n    statements;\n    return(expression);\n   }\n");
+   printf("\n\n where,\n   •return_type is the data type of value that function returns, it may be int ,char ,float,etc. If it dose not return anything then return_type is void.\n");
+   printf("  •function_name is the actual name of the function\n");
+}
+
+int learn9()
+{
+    printf("\n ********** pointer **********\n\n");
+    printf(" Pointer Definition: Pointer is a variable that holds the address of another variable.\n");
+    printf("\n Declaration and Initialization of Pointer\n\n");
+    printf(" The operators used to represent pointer are :\n • Address operator(&)\n • Indirection operator(*)\n");
+    printf(" syntax :\n ptr_data_type *ptr_variable_name\n ptr_variable_name =& variable_name \n");
+    printf(" where variable_name is variable whose address has to be stored in pointer.\n");
+    printf(" example :\n int a=10;\n int *ptr;\n then   ptr =&a;\n      *ptr =a;\n that is ptr is a pointer holding address of variable 'a' and *ptr holds the value of a.\n");
+    printf("\n example program:\n #include<stdio.h>\n #include<conio.h>\n void main()\n {\n  int a=10;\n  int *ptr;\n  ptr=&a;\n  printf(\"%%d\\n\",a);\n  printf(\"%%d\\n\",&a);\n  printf(\"%%d\\n\",ptr);\n  printf(\"%%d\\n\",*ptr);\n  getch();\n }\n");
+    printf(" output :\n 10\n  2056\n 2056\n 10\n\n");
+    printf(" Pointers and Function ( call by reference):\n\n");
+    printf(" Call by reference method involves use of address of variables as actual parameter in calling function and pointer variable with (*) indirection operator is used at called function to perform required operation that is formal parameters\n\n");
+    printf(" /* consider an example of swapping two numbers using call by reference or using pointers*/\n\n");
+    printf(" #include<stdio.h>\n #include<conio.h>\n void main()\n {\n  int x=10, y=20;\n  swap( &x,&y);\n  printf(\"after swapping :\\n=%%d\\ny=%%d\",x,y);\n  getch();\n }\n");
+    printf(" void swap(int *a,int *b)\n {\n  int temp;\n  temp= *a;\n  *a=*b;  *b=temp;\n }\n\n output :\n  after swapping :\n  x=20\n  y=10\n\n");
+    printf("\n Pointers and Array :\n\n");
+    printf(" The operations performed using array concept can also be done using pointers.\n");
+    printf(" Syntax:\n  data_type *ptr_name;\n  ptr_name = &array_name or ptr_name =array_name;\n\n");
+    printf(" Here pointers dose not point to all the element of array,instead initially it points to the first example of an array later which is increment to get other elements\n\n");
+    printf("example\n int a[10]={11,12,13,14};\n int *ptr;\n ptr =&a or ptr=a; here ptr is a pointer pointing to 11 initially.\n it can be explained using program below.\n\n");
+    printf(" /*program to demonstrate pointers to arrays concept */\n");
+    printf(" #include<stdio.h>\n #include<conio.h>\n void main()\n {\n  int a[10]={11,12,13,14};\n  int *ptr;\n  ptr=a;  /* initially pointing to first element 11 */\n");
+    printf("  for(i=0;i<4 ;i++)  /*four elements */\n  {\n   printf(\"%%d\\t\",a[i]);\n   printf(\"%%d\\n\",&a[i]);\n   printf(\"%%d\\t\",*ptr);\n   printf(\"%%d\\t\",ptr);\n   ptr++;\n   /*making ptr to point next value by doing ptr=ptr+1*/\n  }\n getch();\n }\n");
+    printf("output:\n 11 2056 /*value a[0] pointed by ptr at first iteration and address where that value is stored */\n");
+    printf(" 11 2056 /*value *ptr pointed by ptr at first iteration and address where that value is stored */\n");
+    printf(" 12 2058 /*value a[1] pointed by ptr at second iteration and address where that value is stored */\n");
+    printf(" 12 2058 /*value *ptr pointed by ptr at first iteration and address where that value is stored */\n");
+    printf(" 13 2060 /*value a[2] pointed by ptr at third iteration and address where that value is stored */\n");
+    printf(" 13 2060 /*value *ptr pointed by ptr at first iteration and address where that value is stored */\n");
+    printf(" 14 2062 /*value a[3] pointed by ptr at fourth iteration and address where that value is stored */\n");
+    printf(" 15 2062 /*value *ptr pointed by ptr at first iteration and address where that value is stored */\n");
+    printf(" _____________________\n");
+    printf(" |11  |12  |13  |14  |      since integer type occupies 2 bytes for each element\n");
+    printf(" |____|____|____|____|      If it reserves 2056 for first element as starting address 2056+2 =2058 as\n");
+    printf(" |2056|2058|2060|2062|      second element's starting address 2058+2=2060 for third elements and so on.\n");
+    printf(" |____|____|____|____|\n\n");
+    printf("position    0   1     2    3\n");
+    printf("         _____________________\n");
+    printf("values   |11  |12  |13  |14  |\n");
+    printf("         |____|____|____|____|\n");
+    printf("address  |2056|2058|2060|2062|\n");
+    printf("         |____|____|____|____|\n");
+    printf("            |ptr\n");
+    printf(" at i=0 a[0]=11,&a[0]=2056\n  *ptr=11,ptr=2056\n  i++,ptr++\n  i=1,ptr=2058\n\n");
+    printf("position    0   1     2    3\n");
+    printf("         _____________________\n");
+    printf("values   |11  |12  |13  |14  |\n");
+    printf("         |____|____|____|____|\n");
+    printf("address  |2056|2058|2060|2062|\n");
+    printf("         |____|____|____|____|\n");
+    printf("                |ptr\n");
+    printf(" at i=1 a[1]=12,&a[1]=2058\n  *ptr=12,ptr=2058\n  i++,ptr++\n  i=2,ptr=2060\n\n");
+    printf("position    0   1     2    3\n");
+    printf("         _____________________\n");
+    printf("values   |11  |12  |13  |14  |\n");
+    printf("         |____|____|____|____|\n");
+    printf("address  |2056|2058|2060|2062|\n");
+    printf("         |____|____|____|____|\n");
+    printf("                      |ptr\n");
+    printf(" at i=2 a[2]=13,&a[2]=2060\n  *ptr=13,ptr=2060\n  i++,ptr++\n  i=3,ptr=2062\n\n");
+    printf("position    0   1     2    3\n");
+    printf("         _____________________\n");
+    printf("values   |11  |12  |13  |14  |\n");
+    printf("         |____|____|____|____|\n");
+    printf("address  |2056|2058|2060|2062|\n");
+    printf("         |____|____|____|____|\n");
+    printf("                          |ptr\n");
+    printf(" at i=3 a[3]=14,&a[3]=2056\n  *ptr=14,ptr=2062\n  i++,ptr++\n  i=4,ptr=2064\n\n");
+    printf("\n\n  Character Pointer and Function or Pointer To Strings\n\n");
+    printf(" Strings are array of characters instead of integer values of array, here pointer pointers to the character present in string represented as an array.\n");
+    printf(" Syntax :\n Data_type &ptr_name ;\n ptr_name = string_name;\n example\n char str[20]=\"america\";\n char *ptr;\n ptr=str;\n\n");
+    printf(" Here pointer dose not point to all the character of string, instead of initially it points to all first elements or first character of a string later which is incremented to get other elements it can be explained using below program\n");
+    printf("\n /* string copy using pointer to string concept (using single pointer)\n*/\n\n");
+    printf(" #include<stdio.h>\n #include<conio.h>\n void main()\n {\n  int i;\n  int str1[10]=\"sanju\";\n  int str2[10];\n  int *ptr;\n  ptr=str1;\n  for(i=0;str1[i]!='\\0';i++)\n  {\n   str2[i]=*ptr;\n   ptr++;\n  }\n  str2[i]='\\0';\n  printf(\"strings2 after coping is %%s\",str2);\n  getch();\n }\n");
+    printf("output:\n strings after coping is nanju\n");
+    printf("position    0   1     2    3\n");
+    printf("         _______________________________\n");
+    printf("character|s   |a   |n   |j   |u   |\\0  |    since integer type occupies 1 bytes for each element\n");
+    printf("         |____|____|____|____|____|____|    If it reserves 2051 for first element as starting address 2051+1 =2052 as\n");
+    printf("address  |2051|2052|2053|2054|2055|2056|    second element's starting address 2052+1=2053 for third elements and so on.\n");
+    printf("         |____|____|____|____|____|____|\n");
+    printf("            |ptr\n\n\n");
+    printf("         _______________________________\n");
+    printf("character|s   |a   |n   |j   |u   |\\0  |\n");
+    printf("         |____|____|____|____|____|____|\n");
+    printf("address  |2051|2052|2053|2054|2055|2056|\n");
+    printf("         |____|____|____|____|____|____|\n");
+    printf("            |ptr\n");
+    printf(" at i=0 str1[0]!='\\0'\n str2[0]=*ptr=s\n i++=1,ptr++=2052\n\n");
+    printf("         _______________________________\n");
+    printf("character|s   |a   |n   |j   |u   |\\0  |\n");
+    printf("         |____|____|____|____|____|____|\n");
+    printf("address  |2051|2052|2053|2054|2055|2056|\n");
+    printf("         |____|____|____|____|____|____|\n");
+    printf("                |ptr\n");
+    printf(" at i=1 str1[1]!='\\0'\n str2[1]=*ptr=a\n i++=2,ptr++=2053\n\n");
+    printf("         _______________________________\n");
+    printf("character|s   |a   |n   |j   |u   |\\0  |\n");
+    printf("         |____|____|____|____|____|____|\n");
+    printf("address  |2051|2052|2053|2054|2055|2056|\n");
+    printf("         |____|____|____|____|____|____|\n");
+    printf("                     |ptr\n");
+    printf(" at i=2 str1[2]!='\\0'\n str2[2]=*ptr=n\n i++=3,ptr++=2054\n\n");
+    printf("         _______________________________\n");
+    printf("character|s   |a   |n   |j   |u   |\\0  |\n");
+    printf("         |____|____|____|____|____|____|\n");
+    printf("address  |2051|2052|2053|2054|2055|2056|\n");
+    printf("         |____|____|____|____|____|____|\n");
+    printf("                           |ptr\n");
+    printf(" at i=3 str1[3]!='\\0'\n str2[3]=*ptr=j\n i++=4,ptr++=2055\n\n");
+    printf("         _______________________________\n");
+    printf("character|s   |a   |n   |j   |u   |\\0  |\n");
+    printf("         |____|____|____|____|____|____|\n");
+    printf("address  |2051|2052|2053|2054|2055|2056|\n");
+    printf("         |____|____|____|____|____|____|\n");
+    printf("                                |ptr\n");
+    printf(" at i=4 str1[4]!='\\0'\n str2[4]=*ptr=u\n i++=5,ptr++=2056\n\n");
+    printf("         _______________________________\n");
+    printf("character|s   |a   |n   |j   |u   |\\0  |\n");
+    printf("         |____|____|____|____|____|____|\n");
+    printf("address  |2051|2052|2053|2054|2055|2056|\n");
+    printf("         |____|____|____|____|____|____|\n");
+    printf("                                    |ptr\n");
+    printf(" at i=5 str1[5]=='\\0'\n  so here iterations stops since while (str1[i]=='\\0'\n\n");
+    printf("\n Pointer To Pointer \n");
+    printf(" Pointer is a variable that stores the address of another variable.pointer storing the address of another pointer, that is pointer pointing to another pointer is called as pointer to pointer.\n declaration ;\n data_type **pointer_name;\n\n");
+    printf(" Initialization :\n  pointer_name = &another_pointer_name\n The below example demonstrate pointer to pointer concept\n");
+    printf(" int a=10;\n int *ptr1,**ptr2;\n ptr1=&a;\n ptr2=&ptr1; /*ptr2 is the pointer to the another pointer ptr1*/\n\n");
+    printf("                                  ptr2           ptr1            a\n");
+    printf("                                 ______         ______           ______\n");
+    printf("value stored in pointer          |1283|-------->|2056|---------->|10  |\n");
+    printf("                                 |____|         |____|           |____|\n");
+    printf("address where pointer             356           1283              2056\n");
+    printf(" value is stored        address of ptr2    address of ptr2    address of a\n\n");
+    printf(" #include<stdio.h>\n #include<conio.h>\n void main()\n {\n  int a=10;\n  int *ptr1,**ptr2;\n  ptr1=&a;\n  ptr2=&ptr1;\n  printf(\"%%d\\n\",a);------->10\n  printf(\"%%d\\n\",&a);------->2056\n  printf(\"%%d\\n\",ptr1);------->2056\n  printf(\"%%d\\n\",&ptr1);------->1283\n  printf(\"%%d\\n\",*ptr1);------->10\n  printf(\"%%d\\n\",ptr2);------->1283\n  printf(\"%%d\\n\",*ptr2);------->2056\n  printf(\"%%d\\n\",**ptr2);------->10\n  getch();\n }\n");
+    printf(" Address Arithmetic :\n 1.An integer value can be added or subtracted from a pointer. It can be incremented or incremented \n array\n");
+    printf("         _____________________\n");
+    printf("         |11  |12  |13  |14  |\n");
+    printf("         |____|____|____|____|\n");
+    printf("         |2050|2052|2064|2056|\n");
+    printf("         |____|____|____|____|\n");
+    printf(" #include<stdio.h>\n #include<conio.h>\n void main()\n {\n  int a[4]={11,9,8,14};\n  int *ptr;\n  ptr=&a;------->output\n  printf(\"%%d\\n\",ptr);------->2050\n  printf(\"%%d\\n\",*ptr);------->11\n  ptr++;/*incrementing*/\n  printf(\"%%d\\n\",ptr);------->2052\n  printf(\"%%d\\n\",* ptr);------->9\n  ptr--;/*decrementing*/\n  printf(\"%%d\\n\",ptr);------->2050\n  printf(\"%%d\\n\",*ptr);------->11\n  getch();\n }\n");
+    printf("\n\n Advantages and Disadvantage of pointer \n\n advantages\n • Pointer provide direct access to memory\n • pointer provide a way to return more than one value to the function\n • Reduces the storage space and complexity of program\n • Reduces the execution time of program\n");
+    printf(" • Provides an alternate way to access array elements\n • pointers can be used to pass information back and fourth between the calling function and called function.\n ");
+    printf("\n disadvantages\n • Uninitialized pointers might cause segmentation fault\n • Dynamically allocated block needs to be freed explicitly, Otherwise it would lead to memory leak\n • pointers are slower than normal variables\n");
+    printf(" • if pointer are updated with incorrect values, it might lead to memory corruption\n\n\n");
+    printf(" write a c program to read n elements to an array and print those elements using pointer to array\n");
+    printf(" #include<stdio.h>\n #include<conio.h>\n void main()\n {\n  int a[100],*ptr,i;\n  printf(\"enter number of elements\");\n  scanf(\"%%d\",&n);\n  ptr=a;\n  for(i=0;i<n;i++)\n  {\n   scanf(\"%%d\",ptr);\n   ptr++;\n  }\n  ptr=a;\n  printf(\"array elements are\");\n  for(i=0;i<n;i++)\n  {\n   printf(\"%%d\",ptr);\n   ptr++;\n  }\n  getch();\n }\n");
+    printf(" output :\n  enter the nu. of elements\n  5\n  11 12 13 14 15\n  array elements are\n  11 12 13 14 15\n\n\n");
+    printf(" Dynamic Memory Allocation\n\n");
+    printf(" The processor of allocation of memory size at is called as dynamic memory allocation.\n");
+    printf(" mainly there are four functions for memory management,namely:\n  • malloc()\n  • calloc()\n  • free()\n  • realloc()\n\n\n");
+    printf(" malloc() : It allocates memory from a freely available memory and returns a pointer to a block of contiguous memory of specific size.\n");
+    printf(" syntax : pointer_name =(data_type *)malloc(byte_size);\n example \n int *a;\n a=(int *)malloc(20);\n\n");
+    printf(" calloc() : It allocates memory for array elements and initialize them to zero and also returns a pointer to memory.\n");
+    printf(" syntax : pointer_name =(data_type *)calloc(n,size); where n is no. of memory blocks,size is the size of blocks to be allocated in bytes\n example \n int *a;\n a=(int *)calloc(5,2);\n\n");
+    printf(" free() :  free function is used to free the memory blocks allocated by malloc and calloc.\n");
+    printf(" syntax : free(pointer_name);\n example \n int *ptr;\n free(ptr);\n\n");
+    printf(" realloc() : It is used to modify the size of already allocated memory block.\n");
+    printf(" syntax : pointer_name =realloc(pointer_name,new_size);\n example \n int *ptr;\n a=(int *)realloc(ptr,4);\n\n");
+    printf(" Program to demonstrate allocating memory at runtime using malloc()\n");
+    printf(" here array of elements are stored in dynamically allocated memory without any static allocation of size.\n");
+    printf(" #include<stdio.h>\n #include<conio.h>\n void main()\n {\n  int *ptr,n,i;  printf(\"enter number of elements\");\n  scanf(\"%%d\",&n);\n  ptr= (int *)malloc(n*sizeof(int));\n  for(i=0;i<n;i++)\n  {\n   scanf(\"%%d\",ptr+i);\n  }\n  printf(\"array elements are\");\n  for(i=0;i<n;i++)\n  {\n   printf(\"%%d\",ptr);\n   ptr++;\n  }\n  getch();\n }\n\n");
+    printf(" output\n if we give n=2\n ptr=(int *)malloc(2*sizeof(int));/*allocate 4 bytes memory block */\n");
+    printf("        i=     0             1    \n");
+    printf("         ____________________________________\n");
+    printf("         |                  |               |\n");
+    printf("    |--> |__________________|_______________|\n");
+    printf("   ptr    2bytes(2056)       2bytes(2058)\n");
+    printf(" at i=0\n scanf(\"%%d\",ptr+i)\n stores now elements to ptr+i=2056+0=2056 location\n\n at i=1 scanf(\"%%d\",ptr+i)\n stores now elements to ptr+i=2056+1=2058 location\n similarly printing is done using *(ptr+1)\n\n\n");
+
+
+}
+
+int learn10()
+{
+    printf("\n\n ********** STRUCTURE ************\n\n");
+    printf(" • Structure is a collection of one or more variable or different data types grouped together under a single easy handling.\n");
+    printf(" • Structure is a user different data type that can related information about an entity. Structure is nothing regards about particular entity\n");
+    printf(" Structure Declaration :\n");
+    printf(" syntax:\n struct structure_name\n {\n  data_type member1\n  data_type member2\n  data_type member3\n  .\n  .\n  .\n  data_type member n\n\n");
+    printf(" example :\n  struct employee\n  {\n   int empnumber;\n    char empnames[25];\n   int empage;\n   float empsalary;\n  };\n");
+    printf("\n\n Declaring Structure Variables :\n\n");
+    printf(" • Structure variables are the variables using which members of structure accessed with the help of dot operator.\n");
+    printf(" • C allocates memory for structure variables.\n\n syntax\n   struct structure_name structure_variable_name;\n");
+    printf("\n example\n consider the structure employee defined earlier the variables for employee structure can be declared as,\n");
+    printf(" struct employee emp1;\n");
+    printf("                           ________ _______________\n");
+    printf("          memory to    <-- |      0 |_____________|\n");
+    printf("        stack operation<----_____ 1 |_____________|\n");
+    printf("                           |      2 |_____________|\n");
+    printf("                           |        |             |\n");
+    printf("                          /         |             |\n");
+    printf("    memory to store  <---/          |             |\n");
+    printf("                                    |             |\n");
+    printf("           empname   <---\\          |             |\n");
+    printf("                          \\         |             |\n");
+    printf("                           \\        |_____________|\n");
+    printf("                        ____\\___ 26 |_____________|\n");
+    printf("   memory to store ___ /         27 |_____________|\n");
+    printf("       empage          \\_________28 |_____________|\n");
+    printf("                       /         29 |_____________|\n");
+    printf("  memory to store ____/          30 |_____________|\n");
+    printf("  empsalary           \\          31 |_____________|\n");
+    printf("                       \\_________32 |_____________|\n\n\n");
+    printf(" /* Write a C program to read on employee number, name, age, salary and print details using structure */\n");
+    printf(" #include<stdio.h>\n #include<conio.h>\n struct employee\n {\n  int empnumber\n  char empname[25];\n  int empage;\n  float empsalary;\n };\n");
+    printf(" void main()\n {\n  struct employee emp1;\n  clrscr();\n  printf(\"enter the details\");\n  printf(\"enter the number\\n\");\n  scanf(\"%%d\",&emp.empnumber);\n  printf(\"enter the name\");\n");
+    printf("  scanf(\"%%s\",emp1.empname);\n  printf(\"enter the employee age\");\n  scanf(\"%%d\",&emp1.empage);\n  printf(\"enter the employee salary\");\n  scanf(\"%%f\",&emp1.empsalary);\n  printf(\"enter the details\");\n  printf(\"employee number is %%d\\n\",emp.empnumber);\n  printf(\"employee name is %%s\\n\",emp.empname);\n  printf(\"employee age is %%d\\n\",emp.empage);\n  printf(\"employee salary is %%d\\n\",emp.empsalary);\n }\n");
+    printf("\n\n\n Array of Structure :\n\n");
+    printf(" Considering the employee structure,\n • If we want to read more that one employee details using same structure, then structure variable name has to be declared as an array.\n");
+    printf(" i.e\n struct employee emp[25];\n now,\n  ->emp[0].empnumber ,emp[0].empname ,emp[0].empage ,emp[0].empsalary stores details of first employee.\n");
+    printf("  ->emp[1].empnumber ,emp[1].empname ,emp[1].empage ,emp[1].empsalary stores details of second employee.\n");
+    printf("  ->This reading and displaying details of each employee is done using for loop and generalized as emp[i];\n");
+    printf(" /* Write a C program to read n employee details and display using structure concept. */\n");
+    printf(" #include<stdio.h>\n #include<conio.h>\n struct employee\n {\n  int empnumber\n  char empname[25];\n  int empage;\n  float empsalary;\n };\n");
+    printf(" void main()\n {\n  struct employee emp[19];\n  int n,i;\n  printf(\"enter number of employees\");\n  scanf(\"%%d\",&n);\n  printf(\"enter %%d employee details\\n\",n);\n  for(i=0;i<n;i++)\n  {\n   printf(\"enter %%d employee details\\n\",i+1);\n   printf(\"enter the number\\n\");\n");
+    printf("   scanf(\"%%d\",&emp[i].empnumber);\n   printf(\"enter the name\");\n   scanf(\"%%s\",emp[i].empname);\n   printf(\"enter the employee age\");\n   scanf(\"%%d\",&emp[i].empage);\n   printf(\"enter the employee salary\");\n   scanf(\"%%f\",&emp[i].empsalary);\n  }\n");
+    printf("  printf(\"employee details are\\n\");\n  for(i=0;i<n;i++)\n  {\n  printf(\"details of employee %%d are \\n\",i+1);\n  printf(\"employee number is %%d\\n\",emp.empnumber);\n  printf(\"employee name is %%s\\n\",emp.empname);\n  printf(\"employee age is %%d\\n\",emp.empage);\n  printf(\"employee salary is %%d\\n\",emp.empsalary);\n  }\n");
+    printf("  printf(\"enter the date of birth \\n\");\n  scanf(\"%%d%%d%%d%%s\",&empdob.dd,&empdob.mm,&empdob.yy,empdob.dy);\n  printf(\"employee details are\\n\");\n  printf(\"employee number is %%d\\n\",emp.empnumber);\n  printf(\"employee name is %%s\\n\",emp.empname);\n  printf(\"employee age is %%d\\n\",emp.empage);\n  printf(\"employee salary is %%d\\n\",emp.empsalary);\n  getch();\n }\n");
+    printf("\n Output :\n  enter employee number\n  19\n  enter employee name\n  vikhayth\n  enter employee age\n  24\n  enter employee salary\n  39700.700\n  enter date of birth\n  9 9 1991 monday\n\n  employee details are\n  employee number is 19\n  employee name is vikhyath\n  employee age is 24\n  employee salary is 39700.700\n  employee date of birth is  is 9/9/1991 monday\n\n");
+    printf("\n /* program to illustrate nested structures there are two ways*/\n");
+    printf("\n1)\n #include<stdio.h>\n #include<conio.h>\n struct dob\n {\n  int dd,mm,yy;\n  char dy[25];\n };\n struct employee\n  {\n  int empnum;\n  char empname[25];\n  int empage;  float salary;  struct dob dob;\n };\n");
+    printf(" void main()\n {\n  struct employee emp;\n  printf(\"enter the details\");\n  printf(\"enter the number\\n\");\n  scanf(\"%%d\",&emp.empnumber);\n  printf(\"enter the name\");\n");
+    printf("  scanf(\"%%s\",emp1.empname);\n  printf(\"enter the employee age\");\n  scanf(\"%%d\",&emp1.empage);\n  printf(\"enter the employee salary\");\n  scanf(\"%%f\",&emp1.empsalary);\n }\n");
+    printf("\n\n2)\n #include<stdio.h>\n #include<conio.h>\n struct employee\n {\n  int empnum;\n  char empname[25];\n  int empage;  float empsalary;\n  struct dob\n  {\n   int dd,mm,yy;\n   char dy[25];\n  }dob;\n };\n");
+    printf(" void main()\n {\n  struct employee emp;\n  printf(\"enter the details\");\n  printf(\"enter the number\\n\");\n  scanf(\"%%d\",&emp.empnumber);\n  printf(\"enter the name\");\n");
+    printf("  scanf(\"%%s\",emp1.empname);\n  printf(\"enter the employee age\");\n  scanf(\"%%d\",&emp1.empage);\n  printf(\"enter the employee salary\");\n  scanf(\"%%f\",&emp1.empsalary);\n }\n");
+    printf(" Two ways of creating nested structures\n\n");
+    printf("  1) Declaring structure variable as data member in another structure here the object of date of birth structure is defined in employee structure.\n\n");
+    printf("  2) Defining structure inside another structure here the child structure dob is defined inside employee structure.\n\n");
+    printf("struct structure1\n{\n data_type structure1_member_name;\n .\n .\n .\n};\n\n\nstruct structure2\n{\n data_type structure2_member_name;\n .\n .\n .\n};");
+    printf("\n\n Structure and Functions :\n");
+    printf(" • Structure can be passed to function and returned from it. Function can access members of structure in three ways, that is, passing structure to function can be done in following three ways,\n");
+    printf(" -> Passing individual members.\n -> Passing entire structure or structure variable.\n -> passing address of structure.\n\n");
+    printf(" Passing Individual Members :\n • While calling a function from main,in the place of actual parameters we can use or pass structure member as\n structure_variable_name.structure_member_name\n\n");
+    printf(" /* program to illustrate structure with functions (by passing individual members)*/\n\n");
+    printf(" #include<stdio.h>\n void display(char n[],int en);\n struct employee\n {\n  char empname[25];\n  int empnumber;\n };\n void main()\n {\n  struct employee e;\n  printf(\"enter employee name and number\");\n  scanf(\"%%s%%d\",e.empname,&e.empnumber);\n  display(e.empname,e.empnumber);\n }\n\n void display(char n[21],int en)\n {\n  printf(\"employee details are\\n\");\n  printf(\"employee name is %%s\\t employee number is %%d\\n\",n,en);\n }\n");
+    printf(" output\n enter employee name and number\n vikhyath 19\n employee details are\n employee name is vikhyath  employee number is 19\n\n\n");
+    printf(" Passing the entire structure Or structure variable : \n");
+    printf(" • Instead of passing individual members of structure, entire structure is passed as actual parameter while calling a function. Here the variable of structure is passed to the function.\n");
+    printf("\n /* program to illustrate structure with(passing the structure variable)*/\n\n");
+    printf(" #include<stdio.h>\n struct employee\n {\n  char empname[25];\n  int empnumber;\n };\n void main()\n {\n  struct employee e;\n  printf(\"enter employee name and number\");\n  scanf(\"%%s%%d\",e.empname,&e.empnumber);\n  display(e);\n }\n void display(struct employee e)\n {\n  printf(\"employee details are\\n\");\n  printf(\"employee name is %%s\\t employee number is %%d\\n\",n,en);\n }\n");
+    printf(" output\n enter employee name and number\n vikhyath 19\n employee details are\n employee name is vikhyath  employee number is 19\n\n\n");
+    printf("\n Type definition\n\n • The C programming language provides typedef keyword which allows the user to create a new data type. typedef dose not occupy memory\n");
+    printf(" syntax :\n typedef existing_data_type new_data_type;\n");
+    printf("\n -> Now instead of int a=10; we can declare as integer a=10; which is perform same as int.\n\n\n similarly we can apply for structure as shown below\n\n");
+    printf(" ____________________________________________________________\n");
+    printf(" |/* without typedef */         | /*with typedef */         |\n");
+    printf(" | struct employee              | typedef struct employee   |\n");
+    printf(" | {                            | {                         |\n");
+    printf(" |  char empname[10];           |  char empname[10];        |\n");
+    printf(" |  int empnumber;              |  int empnumber;           |\n");
+    printf(" |  int empage;                 |  int empage;              |\n");
+    printf(" |  float empsalary;            |  float empsalary;         |\n");
+    printf(" |  };                          |  };                       |\n");
+    printf(" |  struct employee emp;        |  employee emp;            |\n");
+    printf(" |                              |/*here employee itself act |\n");
+    printf(" |                              |as data_type which is the  |\n");
+    printf(" |                              |structure  type declare usi|\n");
+    printf(" |                              |ng typedef. Hence, no need |\n");
+    printf(" |                              |of writing struct while    |\n");
+    printf(" |                              | structure variable emp */ |\n");
+    printf(" |______________________________|___________________________|\n\n\n");
+    printf(" Passing Structure through Pointers :\n");
+    printf(" • Structure can be passed to function using pointers.\n");
+    printf("   syntax :\n       struct structure_name structure_variable, *structure_pointer_name;\n        structure_pointer_name = &structure_variable;\n");
+    printf("\n /* program illustrate passing of structures through pointers */\n");
+    printf(" #include<stdio.h>\n #include<conio.h>\n struct employee\n {\n  int empnumber;\n  char empname[25];\n  int empage;\n  float empsalary;\n };\n void display(struct employee *eptr);\n");
+    printf(" void main()\n {\n  struct employee emp;\n  printf(\"enter employee name\");\n  scanf(\"%%s\",emp.empname);\n  printf(\"enter employee number\");\n  scanf(\"%%d\",emp.empnumber);\n  printf(\"enter employee age\");\n  scanf(\"%%d\",emp.empage);\n  printf(\"enter employee salary\");\n  scanf(\"%%f\",emp.empsalary);\n  display(&emp);  getch();\n }\n");
+    printf(" void display(struct employee *eptr)\n {\n  printf(\"employee details are\");\n  printf(\"employee name is %%s\\n\",eptr->empname);\n  printf(\"employee number is %%d\\n\",eptr->empnumber);\n  printf(\"employee age is %%d\\n\",eptr->empage);\n  printf(\"employee salary is %%f\\n\",eptr->empsalary);\n }\n\n");
+}
+
+int learn11()
+{
+    printf("\n*********** Preprocessor Directive *************\n\n\n");
+    printf(" Preprocessor is a program which in invoked by compiler before the compilation of user written program. The declaration of processors statements always begin with (#),usually these are placed before the main() function.\n\n");
+    printf(" #include :Specifies the files to be included\n");
+    printf(" #define :defines a macro substitution\n");
+    printf(" #undef :undefining a macro\n");
+    printf(" #ifdef :verifies whether macro is define or not\n");
+    printf(" #ifndef :verifies whether macro is defined or not, if it is not defined, it assumes condition to be true\n");
+    printf(" #if :used to write generalized condition using relation operator\n");
+    printf(" #else :used as an alternative to #if\n");
+    printf(" #error :prints error message on stdrr\n");
+    printf(" #pragma :give special commands to compiler using standardized method\n");
+    printf(" #endif :ends the #if statements\n\n\n");
+    printf(" #include\n\n #include loads specified file before compilation of user written program.\n");
+    printf(" syntax:\n  #include<header_file_name.h> or  #include\"header_file_name.h\"\n example:\n #include<stdio.h> or #include\"stdio.h\"\n\n");
+    printf(" example program\n #include<stdio.h>\n #include<conio.h>\n void main()\n {\n  printf(\" hello world\");\n  getch();\n }\n\n\n");
+    printf(" #define\n\n #define defines a macro substitution.\n\n Macro definition : It allows to replace an identifier (variables,function names) in a program by a predefined string.\n\n");
+    printf(" syntax:\n  #define identifier string\n example:\n #define pi 3.142\n\n");
+    printf(" 1)simple example program\n #include<stdio.h>\n #define pi 3.142\n void main()\n {\n  float r=11.2,area;\n  area=pi*r*r;\n  printf(\" area is %%f\",area);\n  getch();\n }\n\n\n");
+    printf(" 2)calculation itself can be defined as macro\n #include<stdio.h>\n #define area(r) (r*r*3.142)\n void main()\n {\n  float x,r=11.2;\n  x=area(r)\n  printf(\" area is %%d\",x);\n  getch();\n }\n\n\n");
+    printf(" 3)looping and conditional statements\n #include<stdio.h>\n #define check(x) (if(x%2==0))\\n printf(\"even\");\\nelse\\n printf(\"odd\");\n void main()\n {\n  int x;\n  printf(\"enter the number\");\n  scanf(\"%%d\",&x);\n  check(x);\n  getch();\n }\n\n\n");
+    printf(" 4)nested macro can defined with another macro\n #include<stdio.h>\n #define square(a) (a*a)\n #define cube(a) (square(a)*a)\n void main()\n {\n  int a,z;\n  printf(\"enter the number\");\n  scanf(\"%%d\",&x);\n  z=cube(a);\n  printf(\" cube is %%d\",z);\n  getch();\n }\n\n\n");
+    printf(" #undef\n\n it undefines macro which is defines using #define.\n");
+    printf(" syntax:\n  #undef identifier (macro name)\n example:\n #undef pi\n\n");
+    printf(" example program\n #include<stdio.h>\n #define pi 3.142\n void main()\n {\n  float r=11.2,area;\n  #undef pi\n  area=pi*r*r;\n  printf(\" area is %%f\",area);\n  getch();\n }\n\n\n");
+    printf(" output :\n it gives an error as pi undefined symbol as it is undefined using #undef after its defination #define\n\n\n");
+    printf(" Compiler control directives \n\n");
+    printf(" #ifdef, #ifndef, #if,#else are the preprocessor directives which allows the programmer to include macro definition or header files based on condition specified. These are called as Compiler control directives\n");
+    printf(" #ifdef\n\n  #ifdef checks whether macro is defined or not.\n syntax: #ifdef identifier /*macro name*/\n ex : #ifdef pi\n\n");
+    printf(" example\n #include<stdio.h>\n #define pi 3.142\n void main()\n {\n  #ifdef pi\n    printf(\"area of circle can be calculated\");  #else\n   printf(\"area cannot be calculated as pi undefined\\n\");  #endif\n  getch();\n }\n output:area of circle can be calculated\n\n");
+    printf(" #include<stdio.h>\n void main()\n {\n  #ifdef pi\n    printf(\"area of circle can be calculated\");  #else\n   printf(\"area cannot be calculated as pi undefined\\n\");  #endif\n  getch();\n }\n output:area of circle cannot be calculated as pi is undefined\n\n");
+    printf(" In the first perform pi is defined hence it shows area of circle can be calculated,but in second program pi is undeclared so it shows are cannot be calculated\n\n\n");
+    printf(" #ifndef\n  #ifndef check whether macro is defined or not if it is not defined it assume it is true\n  syntax: #ifndef identifier\n #ifndef pi\n");
+    printf(" example\n #include<stdio.h>\n #define pi 3.142\n void main()\n {\n  #ifdef pi\n    printf(\"area of circle can be calculated\");  #else\n   printf(\"area cannot be calculated as pi undefined\\n\");  #endif\n  getch();\n }\n output:area of circle can be calculated\n\n");
+    printf(" #include<stdio.h>\n void main()\n {\n  #ifdef pi\n    printf(\"area of circle can be calculated\");  #else\n   printf(\"area cannot be calculated as pi undefined\\n\");  #endif\n  getch();\n }\n output:area of circle cannot be calculated as pi is undefined\n\n\n");
+    printf(" #error\n\n #error prints error message on std output display user defined error message\nsyntax : #error \"user error message.\n\"\n ex #error pi not defined\n\n");
+    printf(" #include<stdio.h>\n #include<conio.h>\n void main()\n {\n  #ifdef pi\n    printf(\"area of circle can be calculated\");  #else\n   #error \"pi not defined.\"  #endif\n  getch();\n }\n output:area of circle cannot be calculated as pi is undefined. error message stating pi is undefined\n\n");
+    printf(" #pragma\n\n #pragma gives special commands to compiler using standardized method. It is mainly used to on or off the warnings\n\n");
+    printf(" syntax :\n #pragma war +warning message notation\n #pragma warn -warning message notation.\n  +turns on warning\n  -turns off warning\n");
+    printf(" stu                :       undefined structure\n");
+    printf(" eff                :       code has no effect\n");
+    printf(" rch                :       unreachable code\n");
+    printf(" rvl                :       function should return a value\n");
+    printf(" voi                :       void function cannot return a value\n\n");
+    printf(" example :\n   #pragma warn +rch turns on unreachable code warning.\n   #pragma warn -rch turns off unreachable code warning.\n\n");
+
+
+}
+
+
+
+
+
+
 /*Quiz answers*/
 
 quiz q1={4,2,2,4,3,3,4,2,4,1}; //c-tokens
 quiz q2={4,4,4,3,2,3,4,4,3,4}; //variables
 quiz q3={3,3,2,3,2,4,1,1,2,3}; //constants
 quiz q4={2,3,2,1,3,1,2,1,2,1}; //operators
-quiz q5={1,1,2,3,1,3,2,3,3,2}; //stringh
+quiz q5={1,1,2,3,1,3,2,3,3,2}; //string
+quiz q6={1,3,3,4,2,4,4,4,3,4};
+
+quiz q8={2,4,2,1,2,1,4,3,1,4};//Functions
+
 
 /*Quiz*/
-
-quiz q1={4,2,2,4,3,3,4,2,4,1};
 
 int quiz1() //c-tokens
 {
@@ -991,7 +1970,7 @@ int quiz4() // operators
 }
 
 
-int quiz5() // stringh
+int quiz5() // string
 {   system("clear");
     int x;
 
@@ -1268,6 +2247,156 @@ int quiz6() // Branching and looping
 
 }
 
+
+int quiz8()//Functions
+{
+
+   int x;
+
+    l8.1:   printf("\n1. What is the output of this C code? \n");
+            printf("int main()\n{\nvoid foo(), f();\nf();\n}\nvoid foo()\n{\nprintf("2 ");\n}\nvoid f()\n{\nprintf("1 ");\nfoo();\n}\n");
+            printf("1. Compile time error as foo is local to main\n2. 1   2\n 3.  2   1\n 4.Compile time error due to declaration of functions inside main\n");
+         printf("Enter the choice : ");
+        scanf("%d",&x);
+        if(x==q7.1)
+        {
+            printf("Correct\n");
+            goto l8.2;
+        }
+        else
+
+        {
+            printf("Wrong\n");
+            goto l8.1;
+        }
+    l8.2:  printf("What is the output of this C code")
+        printf("int main()\n{\nvoid foo();\nvoid f(){\nfoo();\n}\nf();\n}\nvoid foo()\n{\nprintf("2 ");\n}\n");
+        printf("1. 2   2\n2. 2\n 3.   Compile time error\n 4.Depends on the compiler\n");
+        printf("Enter the choice : ");
+        scanf("%d",&x);
+        if(x==q7.2)
+        {
+            printf("Correct\n");
+            goto l8.3;
+        }
+        else
+        {
+            printf("wrong\n");
+            goto l8.2;
+        }
+    l8.3:  printf("What is the output of this C code")
+        printf("void foo();\nint main()\n{\nvoid foo();\nfoo();return 0;\n}\nvoid foo()\n{\nprintf("2 ");\n}\n");
+        printf("1. Compile time error\n2. 2\n 3. Depends on the compiler\n 4.Depends on the standard\n");
+        printf("Enter the choice : ");
+        scanf("%d",&x);
+        if(x==q7.3)
+        {
+            printf("Correct\n");
+            goto l8.4;
+        }
+        else
+        {
+            printf("wrong\n");
+            goto l8.3;
+        }
+    l8.4:  printf("4. #include <stdio.h>\nint main()\n{\nprintf(\"%%d\", main);\nreturn 0;\n}");
+        printf("1. Address of main function\n2. conilation error\n 3. Runtime Error\n 4.some random value\n");
+        printf("Enter the choice : ");
+        scanf("%d",&x);
+        if(x==q7.4)
+        {
+            printf("Correct\n");
+            goto l8.5;
+        }
+        else
+        {
+            printf("wrong\n");
+            goto l8.4;
+        }
+    l8.5:  printf("5. In C, what is the meaning of following function prototype with empty parameter list\nvoid fun()\n{\n/*.... */\n}\n1. Function can only be called without any parameter\n2. Function can be called with any number of parameters of any types\n3. Function can be called with any number of integer parameters.\n4. Function can be called with one integer parameter\n");
+        printf("Enter the choice : ");
+        scanf("%d",&x);
+        if(x==q7.5)
+        {
+            printf("Correct\n");
+            goto l8.6;
+        }
+        else
+        {
+            printf("wrong\n");
+            goto l8.5;
+        }
+    l8.6:  printf("6. How many values can a C Function return at a time.?\n1. Only One Value\n2. Maximum of two values\n3. Maximum of three values\n4. Maximum of 8 values\n");
+        printf("Enter the choice : ");
+        scanf("%d",&x);
+        if(x==q7.6)
+        {
+            printf("Correct\n");
+            goto l8.7;
+        }
+        else
+        {
+            printf("wrong\n");
+            goto l8.6;
+        }
+    l8.7: printf("7. Choose a correct statement about C Language Functions.?\n1. A function name can not be same as a predefined C Keyword.\n2. A function name can start with an Underscore( _ ) or A to Z or a to z.\n3. Default return type of any function is an Integer.\n4. All the above.\n");
+        printf("Enter the choice : ");
+        scanf("%d",&x);
+        if(x==q7.7)
+        {
+            printf("Correct\n");
+            goto l8.8;
+        }
+        else
+        {
+            printf("wrong\n");
+            goto l8.7;
+        }
+    l8.8: printf("8. A function which calls itself is called a _ function.\n1. Self Function\n2. Auto Function\n3. Recursive Function\n4. Static Function\n");
+        printf("Enter the choice : ");
+        scanf("%d",&x);
+        if(x==q6.8)
+        {
+            printf("Correct\n");
+            goto 18.9;
+        }
+        else
+        {
+            printf("wrong\n");
+            goto l8.8;
+       }
+    l8.9:  printf("9.What is the output of C Program with functions.?\nvoid main()\n{\n    int a;\n    printf(\"TIGER COUNT=\");\n    a=show();\n    printf(\"%%d\", a);\n}\nint show()\n{\n    return 15;\n    return 35;\n}\n");
+        printf("1. TIGER COUNT=15\n2. TIGER COUNT=35\n3. TIGER COUNT=0\n4. Compiler error\n")
+        printf("Enter the choice : ");
+        scanf("%d",&x);
+        if(x==q7.9)
+        {
+            printf("Correct\n");
+            goto l8.10;
+        }
+        else
+        {
+            printf8("wrong\n");
+            goto l8.9;
+        }
+    l8.10: printf("10. Choose correct statements about C Language Pass By Value.\n1. Pass By Value copies the variable value in one more memory location.\n2. Pass By Value does not use Pointers.\n3. Pass By Value protects your source or original variables from changes in outside functions or called functions.\n4. All the above\n");
+        printf("Enter the choice : ");
+        scanf("%d",&x);
+        if(x==q7.10)
+        {
+            printf("Correct\n");
+            module_3();
+        }
+        else
+        {
+            printf("wrong\n");
+            goto l8.10;
+        }
+
+}
+
+
+
 /* Topics*/
 
 int c_tokens()
@@ -1431,7 +2560,7 @@ int strings()
     return 0;
 }
  /*module-2*/
- int array_and_string()
+int branching_and_looping()
 {   system("clear");
     int o;
     int j;
@@ -1446,7 +2575,7 @@ int strings()
     {
     while (1)
     {
-        printf("\n----------ARRAY & STRING-----------\n");
+        printf("\n----------BRANCHING & LOOPING-----------\n");
         printf("Do you want to\n1.Learn\n2.Quiz\n3.Back to previous menu4.exit\n");
         printf("Enter the option\n");
         scanf("%d",&o);
@@ -1463,6 +2592,174 @@ int strings()
     }
     return 0;
 }
+
+
+int array_and_string()
+{   system("clear");
+    int o;
+    int j;
+    if(automat()==1)
+    {
+        learn7();
+        for(j=0;j<150;j++)  //delay  in sec
+        delay();
+        quiz7();
+    }
+    else
+    {
+    while (1)
+    {
+        printf("\n----------ARRAY AND STRING-----------\n");
+        printf("Do you want to\n1.Learn\n2.Quiz\n3.Back to previous menu4.exit\n");
+        printf("Enter the option\n");
+        scanf("%d",&o);
+        switch (o)
+        {
+            case 1:learn7();break;
+            case 2:quiz7(); break;
+            case 3:return 0;
+            case 4:exit(0);
+            default:printf("Invalid option\n");
+
+        }
+    }
+    }
+    return 0;
+}
+
+
+int functions()
+{   system("clear");
+    int o;
+    int j;
+    if(automat()==1)
+    {
+        learn8();
+        for(j=0;j<150;j++)  //delay  in sec
+        delay();
+        quiz8();
+    }
+    else
+    {
+    while (1)
+    {
+        printf("\n----------FUNCTIONS-----------\n");
+        printf("Do you want to\n1.Learn\n2.Quiz\n3.Back to previous menu4.exit\n");
+        printf("Enter the option\n");
+        scanf("%d",&o);
+        switch (o)
+        {
+            case 1:learn8();break;
+            case 2:quiz8(); break;
+            case 3:return 0;
+            case 4:exit(0);
+            default:printf("Invalid option\n");
+
+        }
+    }
+    }
+    return 0;
+}
+//MODULE-5
+int pointers()
+{   system("clear");
+    int o;
+    int j;
+    if(automat()==1)
+    {
+        learn9();
+        for(j=0;j<150;j++)  //delay  in sec
+        delay();
+        quiz9();
+    }
+    else
+    {
+    while (1)
+    {
+        printf("\n----------POINTERS-----------\n");
+        printf("Do you want to\n1.Learn\n2.Quiz\n3.Back to previous menu4.exit\n");
+        printf("Enter the option\n");
+        scanf("%d",&o);
+        switch (o)
+        {
+            case 1:learn9();break;
+            case 2:quiz9(); break;
+            case 3:return 0;
+            case 4:exit(0);
+            default:printf("Invalid option\n");
+
+        }
+    }
+    }
+    return 0;
+}
+int structure()
+{   system("clear");
+    int o;
+    int j;
+    if(automat()==1)
+    {
+        learn10();
+        for(j=0;j<150;j++)  //delay  in sec
+        delay();
+        quiz10();
+    }
+    else
+    {
+    while (1)
+    {
+        printf("\n----------STRUCTURE-----------\n");
+        printf("Do you want to\n1.Learn\n2.Quiz\n3.Back to previous menu4.exit\n");
+        printf("Enter the option\n");
+        scanf("%d",&o);
+        switch (o)
+        {
+            case 1:learn10();break;
+            case 2:quiz10(); break;
+            case 3:return 0;
+            case 4:exit(0);
+            default:printf("Invalid option\n");
+
+        }
+    }
+    }
+    return 0;
+}
+int preprocessor_directives()
+{   system("clear");
+    int o;
+    int j;
+    if(automat()==1)
+    {
+        learn11();
+        for(j=0;j<150;j++)  //delay  in sec
+        delay();
+        quiz11();
+    }
+    else
+    {
+    while (1)
+    {
+        printf("\n----------PREPROCESSOR DIRECTIVES-----------\n");
+        printf("Do you want to\n1.Learn\n2.Quiz\n3.Back to previous menu4.exit\n");
+        printf("Enter the option\n");
+        scanf("%d",&o);
+        switch (o)
+        {
+            case 1:learn11();break;
+            case 2:quiz11(); break;
+            case 3:return 0;
+            case 4:exit(0);
+            default:printf("Invalid option\n");
+
+        }
+    }
+    }
+    return 0;
+}
+
+
+
 
 
 /* Modules*/
@@ -1498,7 +2795,29 @@ int module_2()
     while(1)
     {
         printf("\n----------MODULE-2----------\n");
-        printf("1.ARRAY AND STRING\n2.BACK TO MAIN MENU\n3.EXIT\n");
+        printf("1. BRANCHING AND LOOPING\n2.BACK TO MAIN MENU\n3.EXIT\n");
+        printf("Enter the option : ");
+        scanf("%d",&o);
+        switch (o)
+        {
+            case 1:branching_and_looping(); break;
+            case 2:return 0;
+            case 3:exit(0);
+
+
+            default:printf("Sorry!! It's an invalid option\n");
+
+        }
+    }
+    return 0;
+}
+int module_3()
+{
+    int o;
+    while(1)
+    {
+        printf("\n----------MODULE-3----------\n");
+        printf("1.ARRAY AND STRINGS\n2.BACK TO MAIN MENU\n3.EXIT\n");
         printf("Enter the option : ");
         scanf("%d",&o);
         switch (o)
@@ -1506,6 +2825,49 @@ int module_2()
             case 1:array_and_string(); break;
             case 2:return 0;
             case 3:exit(0);
+            default:printf("Sorry!! It's an invalid option\n");
+
+        }
+    }
+    return 0;
+}
+int module_4()
+{
+    int o;
+    while(1)
+    {
+        printf("\n----------MODULE-4----------\n");
+        printf("1. FUNCTIONS\n2. BACK TO MAIN MENU\n3.EXIT\n");
+        printf("Enter the option : ");
+        scanf("%d",&o);
+        switch (o)
+        {
+            case 1:functions(); break;
+            case 2:return 0;
+            case 3:exit(0);
+            default:printf("Sorry!! It's an invalid option\n");
+
+        }
+    }
+    return 0;
+}
+
+int module_5()
+{
+    int o;
+    while(1)
+    {
+        printf("\n----------MODULE-5----------\n");
+        printf("1. POINTERS\n2. STRUCTURE\n3. PREPROCESSOR DIRECTIVES\n4.BACK TO MAIN MENU\n5.EXIT\n");
+        printf("Enter the option : ");
+        scanf("%d",&o);
+        switch (o)
+        {
+            case 1:pointer(); break;
+            case 2:structure(); break;
+            case 3:preprocessor_directives(); break;
+            case 4:return 0;
+            case 5:exit(0);
 
 
             default:printf("Sorry!! It's an invalid option\n");

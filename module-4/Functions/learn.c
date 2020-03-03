@@ -1,4 +1,4 @@
- main()
+ int learn8()
 {
    printf("\n************     FUNCTIONS     ***************\n");
    printf("\n\n Function is a group of statements that perform a specific task. the main objective is to avoid the repetition of codes in a program.\n It provides modularity code re-usability.\n");
