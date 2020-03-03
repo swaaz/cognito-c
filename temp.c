@@ -419,7 +419,8 @@ quiz q4={2,3,2,1,3,1,2,1,2,1}; //operators
 quiz q5={1,1,2,3,1,3,2,3,3,2}; //stringh
 
 int quiz1() //c-tokens
-{   system("clear");
+{   
+    system("clear");
     int x;
 
    l1_1:printf("\n1. Which of the following is not a valid declaration in C? \n");
