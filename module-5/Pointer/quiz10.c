@@ -131,7 +131,7 @@ int quiz10() //c-tokens
         if(x==q1.10)
         {
             printf("Correct\n");
-            pointer();
+            pointers();
         }
         else
         {
