@@ -18,7 +18,7 @@ int quiz1() //c-tokens
         else 
         {
             printf("Wrong\n");
-            goto l1_1_
+            goto l1_1;
         }
     l1_2:  printf("2. The format identifier ‘%i’ is also used for _____ data type.\n1) char\n2) int\n3) float\n4) double\n");
         printf("Enter the choice : ");
