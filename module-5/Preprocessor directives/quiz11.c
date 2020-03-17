@@ -138,7 +138,7 @@ int quiz11() //c-tokens
         if(x==q1.10)
         {
             printf("Correct\n");
-            preprocessor_derivatives();
+            preprocessor_directives();
         }
         else
         {
