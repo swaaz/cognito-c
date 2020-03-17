@@ -16,7 +16,7 @@ int quiz10() //c-tokens
         else
         {
             printf("Wrong\n");
-            goto l1_1_
+            goto l1_1;
         }
    l10_2:   printf("2. What will be the output of the following C code?\n #include <stdio.h>\n void foo(int*); int main()\n {\n  int i = 10, *p=&i;\n  foo(p++);\n }\n void foo(int *p)\n {\n  printf(\"%d\n\", *p);\n }\n");
         printf("1.10 \n2.Some garbage value \n3.Compile time error \n4.Segmentation fault \n");
@@ -131,7 +131,7 @@ int quiz10() //c-tokens
         if(x==q1.10)
         {
             printf("Correct\n");
-            c_tokens();
+            pointers();
         }
         else
         {
