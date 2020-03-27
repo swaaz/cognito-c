@@ -1,6 +1,5 @@
-quiz q1={4,1,2,3,3,1,4,3,1,2};
-
-int quiz11() //c-tokens
+quiz q11={4,1,2,3,3,1,4,3,1,2};
+int quiz11() //preprocessor directives
 {
     int x;
 
@@ -74,19 +73,19 @@ int quiz11() //c-tokens
             printf("wrong\n");
             goto l11_5;
         }
-    111_6:printf("6. In Turbo C, Search Path of Directories for #Include is mentioned under the option.?\n");
+    l11_6:printf("6. In Turbo C, Search Path of Directories for #Include is mentioned under the option.?\n");
         printf("1. Include Directories\n2. Exclude Directories\n 3.Add Directories\n4. Extra Directories\n");
         printf("Enter the choice : ");
         scanf("%d",&x);
         if(x==q1.6)
         {
             printf("Correct\n");
-            goto 1l1_7;
+            goto l11_7;
         }
         else
         {
             printf("wrong\n");
-            goto l1_6;
+            goto l11_6;
         }
     l11_7:  printf("7. In Turbo C, Search Path of Directories for #Include is mentioned under the option.?\nint main()\n{\n #if def CVV\n      printf(\"CVV YES\");\n #else        printf(\"CVV199\");\n #endif  printf(\"New CVV=%d\",CVV);\nreturn 0;\n}\n");
         printf("1. CVV 199\n2. printf(\"CVV YES\");\n3. CVV YES\n4. NEW CVV=199\n");
@@ -102,7 +101,7 @@ int quiz11() //c-tokens
             printf("wrong\n");
             goto l11_7;
         }
-    111_8:  printf("8. what is the output of this program. ?\nint main()\n{\n #ifndef CVV\n     #define CVV 199\n      printf(\"CVV =%%d\",CVV);\n #else        printf(\"CVV=%%d\",188);\n #endif\nreturn 0;\n}\n");
+    l11_8:  printf("8. what is the output of this program. ?\nint main()\n{\n #ifndef CVV\n     #define CVV 199\n      printf(\"CVV =%%d\",CVV);\n #else        printf(\"CVV=%%d\",188);\n #endif\nreturn 0;\n}\n");
         printf("1. CVV=188\n2. CVV=0\n3. CVV=199\n4. Compiler error\n");
         printf("Enter the choice : ");
         scanf("%d",&x);
@@ -116,7 +115,7 @@ int quiz11() //c-tokens
             printf("wrong\n");
             goto l11_8;
         }
-    119_9: printf("9. What is the output of c program with #undef.?\n");
+    l19_9: printf("9. What is the output of c program with #undef.?\n");
         printf(" int main()\n {\n  #undef BIRD\n  printf(\"OKAY\");\n  return 0;\n }\n");
         printf("1. OKAY\n2. Compiler error\n3. BIRDOKAY\n4. None of the above\n");
         printf("Enter the choice : ");
