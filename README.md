@@ -42,3 +42,15 @@ eg : git branch swaaz
 - Push the file :
 <pre>$ git push origin -u branch_name</pre>
 
+## Bug Repot
+If there are any bug then create a [issue](https://github.com/swaaz/cognito-c/issues) 
+### To Create an issue 
+- Check the issue [template](https://github.com/swaaz/cognito-c/blob/master/.github/ISSUE_TEMPLATE/bug_report.md)
+- Copy it and paste it on the issue
+- Edit the template in the issue and explain the bug
+- Add all the labels(modules,bug,learn or quiz or module)
+- Assigen `@swaaz` if not assigned 
+- Save it
+### Edit the file and fix error if possible
+If you fix the error then create the pull request and `@swaaz` to review and write the issue number(eg-#32)
+

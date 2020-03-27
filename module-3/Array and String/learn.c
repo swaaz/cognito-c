@@ -1,7 +1,4 @@
-#include <stdio.h>
-#include <stdlib.h>
-
-int main()
+int learn7()//array and atring
 {
 
     printf("\n_____________________________ARRAYS______________________________\n");
@@ -262,4 +259,4 @@ int main()
     printf("main()\n{\nchar a[30];\nprintf(''enter string'':);\nscanf(''%s'',a);\nstrrev(a);\nprintf(''reversed string is:%s'',a);\ngetch();\n}\n\nOUTPUT:\nenter string:vicky\nrversed string is:ykciv\n\n\nstrlwr():\n/*program to illustrate strlwr() function*/\n#include<stdio.h>\n#include<string.h>\nmain()\n{\nchar a[30];\n");
     printf("printf(''enter a string in upper case:'');\nscanf(''%s'',a);\nprintf(''final string is:%s'',strlwr(a));\n}\n\nOUTPUT:\nenter string in uppercase:VICKY\nfinal string is:vicky\n\n\nstrupr():\n/*program to illustrate strupr() function*/\n#include<stdio.h>\n#include<conio.h>\n#include<string,h>\nmain()\n{\nchar a[30];\n");
     printf("printf(''enter the string in lowercase:'');\nscanf(''%s'',a);\nprintf(''final string is:%s'',strupr(a));\ngetch();\n}\n\nOUTPUT:enter a string in lowercase:vicky\nfinal string is:VICKY\n\n\n");
-    }
+}
