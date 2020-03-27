@@ -746,8 +746,270 @@ int learn6() //Branching and looping
 
     return 0;
 }
+int learn7()//array and atring
+{
 
- int learn8()
+    printf("\n_____________________________ARRAYS______________________________\n");
+    printf("An array is the collection of data items of same data, which are stored in consecutive memory location.\n");
+    printf("Each value(data item) is an array is indicated by same name\n that is array name and an index which indicates the position of value in an array.");
+    printf("\nTypes of array:\n");
+    printf("1) One dimensional array.\n2)Two dimensional array.\n3)Multi dimensional array.\n\n");
+    printf("ONE DIMENTIONAL ARRAY:\n");
+    printf("    *the one dimensional array or single dimensional array is the simplest type of array that contains only one row for storing the values of same type.\n");
+    printf("\nDECLARATION OF ONE-DIMENSIONAL ARRAY:\n");
+    printf("Syntax:\n");
+    printf("    data_type array_name[array_size];\n");
+    printf("    where,\n");
+    printf("        *data type defines the types of an array or type of the data stored in it.\n ");
+    printf("*array name is the name given to represent the array items.\n*array size tells number values that can be stored in an array.\n\nExample: int arr[20];\n");
+    printf("\nMemory occupied by one dimensional array:\n         Total memory=array_size*size of(data_type)\nin the above example, int arr[20],\n    arr_size=20\n   data_type is int so size0f(int)=2 bytes(16 bit machine)\n");
+    printf("so,total memory=20*2;");
+    printf("                =40 bytes\n\nSTRUCTURE OF ONE DIMENSIONAL ARRAY:\n*index for an array for n elements starts zero and end with n-1.\nConsider, int array[arr]\n");
+    printf("     _______________________________________________________\n");
+    printf("    |array[0]|array[1]|array[2]|array[3]|  ...   |array[n-1]|\n");
+    printf("    |________|________|________|________|________|__________|\n");
+    printf("        |->holds first element                         |->holds last elements\n\n");
+    printf("INITIALIZING ONE DIMANTIONAL ARRAY:\n");
+    printf("    *Array can be initialized statically one by one and in a single statement or dynamically using loop statements.\n*Array elements can be initialized at the time of declaration,");
+    printf("    syntax:\n");
+    printf("        data_type array_name[array_size]={v1,v2,v3,....vn};\n");
+    printf("Here,\n     *data_type is the type of data to be stored in an array, data type can be char,int, float, double or string.\n");
+    printf("    *array name is the name given to the array.\n     *array name specifies the number of values given to the array i.e array_size specifies size of the array.\n");
+    printf("\nVARIOUS METHODS OF INITIALIZING ONE DIMENTIONAL ARRAY ARE:");
+    printf("1)Initializing all specified memory location.\n2)Partial array initialization.\n3)Initializing without size.\n4)string initialization.\n");
+    printf("5)Dynamic initialization with for or while loop.\n");
+    printf("\n");
+    printf("\n1)INITIALIZIN ALL SPECIFIED MEMORY LOCATION:\n");
+    printf("consider the example,\n");
+    printf("        int a[5]={10,20,30,40,50};\nHere, 5 contiguous memory locations are reserved for array 'a' and all 5 locations are initialized as shown below,\n");
+    printf("        ________________________\n");
+    printf("       | 10 | 20 | 30 | 40 | 50 |\n");
+    printf("       |____|____|____|____|____|\n");
+    printf("        a[0] a[1] a[2] a[3] a[4] \n");
+    printf("\n2)PARTIAL ARRAY INITIALIZATION:\n Here the number of elements to be stored in an array will be the less then the size specified.\nExample,\n  float a[5]={10.5,2.5};\n");
+    printf("    First two locations of the array 'a' will be initialized and left out spaces will be filled with zero's.\n");
+    printf("         ________________________\n");
+    printf("        | 10.5 | 2.5 | 0 | 0 | 0 |\n");
+    printf("        |______|_____|___|___|___|\n");
+    printf("          a[0]  a[1] a[2] a[3] a[4] \n");
+    printf("\n3)INITIALIZATION WITHOUT SIZE:\nHere, array size is not specified,\nExample:\n        int a[]={10,15,20,25,30};\n");
+    printf("    *here though we have not specified the size of the array,\n it will be set to total number of elements to be stored.\n the compiler calculate size of the array using number of elements specified.");
+    printf("*For above example 5*2=10 bytes will be reserved and array will be initialized as follows,\n");
+    printf("         ________________________\n");
+    printf("        | 10 | 15 | 20 | 25 | 30 |\n");
+    printf("        |____|____|____|____|____|\n");
+    printf("          a[0]  a[1] a[2] a[3] a[4] \n");
+    printf("\nARRAY INITIALIZATION WITH STRING:\n");
+    printf("Sequence of characters enclosed within double quotes is called as string.\nString always ends with a NULL character(\\0).\n");
+    printf("example:a)char b[]=''COMPUTER'';\n");
+    printf("         ______________________________________________________\n");
+    printf("        |  C  |  O  |  M  |  P  |  U  |  T  |  E  |  R  |  \\0  |\n");
+    printf("        |_____|_____|_____|_____|_____|_____|_____|_____|______|\n");
+    printf("         b[0]   b[1]  b[2]  b[3]  b[4]  b[5]  b[6]  b[7]  b[8]\n");
+    printf("\n        b)char b[5]=''NAME'';\n");
+    printf("         ______________________________\n");
+    printf("        |  N  |  A  |  M  |  E  |  \\0  |\n");
+    printf("        |_____|_____|_____|_____|______|\n");
+    printf("         b[0]   b[1]  b[2]  b[3]  b[4]");
+    printf("\n5) DYNAMIC INITIALIZATION WITH FOR OR WHILE LOOP:\nConsider, int arr[rr]; //array declaration\n /*initialization using for loop*/\n");
+    printf("for(i=0;i<rr;i++)\n{\nscanf(''%d'',&arr[i]);\n}\n");
+    printf("\n");
+    printf("\n/*Initialization using while loop*/\ni=0;\nwhile(i<rr)\n{\nscanf(''%d'',&arr[i]);\ni++;\n}\n\n");
+    printf("\nTWO DIMWNSIONAL ARRAY:\n    *An array where elements can be stored row wise or column wise is called two dimensional array.\n*a two dimensional array is used to store a table of values of same data type.\n\n");
+    printf("\nDECLARATION OF TWO DIMENSIONAL ARRAY:\nsyntax:\n    data_type array_name[row_size][column_size];\nwhere,\n  *data type indicates type of an array or type of data stored in array.\n");
+    printf("*array name is the name given to represent the array.\n*row_name defines the size of number rows in the array\n*column_size defines the size of number of columns in the array.\nexample: int array[10][5];\n");
+    printf("\nMEMORY OCCUPIED BY TWO DIMENSIONAL ARRAY:\n total memory=row_size*column_size*sizeof(data_type)\n");
+    printf("consider the example, int array[10][5];\n   row_size=10\n   column_size=5\n data_type=int, so sizeof(int)=2 bytes\ntotal memory=10*5*2\n        =100bytes\n");
+    printf("\nSTRUCTURE OF TWO DIMENSIONAL ARRAY:\n*there are two index values,one for representing position in terms of rows and\n and another for representing position in terms of columns.\n");
+    printf("    consider, int array[m][n];\n->here, row index starts from 0 and ends with m-1, where m is the number of rows.\n->column index starts from 0 and ends with n-1,where n is the number of columns,\n\n");
+    printf("    array[0][0] holds first elements\n    array[0][1] holds second element\n      .\n      .\n      .\n   array[m-1][n-1] holds last element\n");
+    printf("     _________________________________________________________________\n");
+    printf("    |array[0][0]  |array[o][1]  |array[0][2]  |  ...  |array[0][n-1]  |\n");
+    printf("    |_____________|_____________|_____________|_______|_______________|\n");
+    printf("    |array[1][0]  |array[1][1]  |array[1][2]  |  ...  |array[1][n-1]  |\n");
+    printf("    |_____________|_____________|_____________|_______|_______________|\n");
+    printf("    |   .         |    .        |    .        |   .   |       .       |\n");
+    printf("    |   :         |    :        |    :        |   :   |       :       |\n");
+    printf("    |_____________|_____________|_____________|_______|_______________|\n");
+    printf("    |array[m-1][0]|array[m-1][1]|array[m-1][2]|  ...  |array[m-1][n-1]|\n");
+    printf("    |_____________|_____________|_____________|_______|_______________|\n");
+    printf("\nINITIALIZATION OF TWO DIMENSIONAL ARRAY:\nSyntax:\n   data_type array_name[row_size][column_size]={{a1,a2,...an},\n\t\t\t\t\t\t{b1,b2,...bn},\n\t\t\t\t\t\t\t.\n\t\t\t\t\t\t\t:\n\t\t\t\t\t\t{z1,z2,...zn}};\n");
+    printf("here,\n->data_type can be any data type like char, int,float etc.\n->row size specifies number of rows and column size specifies number columns.");
+    printf("->{a1,a2,...an} are values assigned to | row and {b1,b2...bn} are values assigned to || row.\nTYPES OF TWO DIMENSIONAL ARRAY INITIALIZATION:\n\n");
+    printf("1)INITIALIZING ALL SPECIFIED MEMORY LOCATIONS:\nConsider,\nint a[4][3]={{11,12,13},{44,55,66},{11,10,9},{33.66.99}};\nHere,4 rows and 3 columns will be reserved for array 'a'and all 4 rows and 4 columns are initialized with same value as shown below,\n");
+    printf("\t\t          0    1    2\n");
+    printf("\t\t         ______________\n");
+    printf("\t\t     | 0| 11 | 12 | 13 |\n");
+    printf("\t\t     |  |____|____|____|\n");
+    printf("\t\t     | 1| 44 | 55 | 66 |\n");
+    printf("\t\trows |  |____|____|____|\n");
+    printf("\t\t     | 2| 11 | 10 | 9  |\n");
+    printf("\t\t     |  |____|____|____|\n");
+    printf("\t\t     | 3| 33 | 66 | 99 |\n");
+    printf("\t\t     V  |____|____|____|\n");
+    printf("\t\t         ------------->\n");
+    printf("\t\t           columns\n");
+    printf("2)PARTIAL ARRAY INITIALIZATION:\n\t*here, number values to be initialized are less then the size of an array.\nthe remaining location will be initialized to zero automatically.\n\t example:\n");
+    printf("\tint a[4][4]={{11,12},{33,44},{55,66},{77,88}};\n*Here the array 'a' has 4 rows and 4 columns out of which only first two columns of each row are initialized\n");
+    printf("\t\t           ___________________\n");
+    printf("\t\t       | 0| 11 | 22 | 0  | 0  |\n");
+    printf("\t\t       |  |____|____|____|____|\n");
+    printf("\t\t       | 1| 33 | 44 | 0  | 0  |\n");
+    printf("\t\t rows  |  |____|____|____|____|\n");
+    printf("\t\t       | 2| 55 | 66 | 0  | 0  |\n");
+    printf("\t\t       |  |____|____|____|____|\n");
+    printf("\t\t       | 3| 77 | 88 | 0  | 0  |\n");
+    printf("\t\t       V  |____|____|____|____|\n");
+    printf("\t\t             0    1    2    3\n");
+    printf("\t\t            ---------------->\n");
+    printf("\t\t                 columns\n");
+    printf("INITIALIZATION CAN ALSO DONE AS BELOW:\nint a[4][3]={10,11,12,13,14,15,20,21,22,44,55,66};\nint a[][3]={10,80,60,30,5,11,19,20,22,30,33,35};\n");
+    printf("Note: While initializing 2D array, it is compulsory to mention the column_size,where as row_size is optional\n\nint a[4][]={10,80,11,14,16,20,30};\nint a[][]={10,80,30,60,70,80};\n");
+    printf("Both are illegal because column size is not mentioned\n\n3)USING FOR LOOP TO INITIALIZE THE 2D ARRAY BLOCKS:\n\nint a[4][3];\nfor(i=0;i<4;i++)\n{\nfor(j=0;j,3;j++)\n{\nprintf(''enter the integer'');\nscanf(''%d'',&a[i][j]);\n}\n}\n\n");
+    printf("MULTI DIMENSIONAL ARRAY:\n\n*C allows arrays of three or more dimensions ,\n the general form of a multi dimensional array is\n\tdata_type array_name[S1][S2][S3]...[Sn];\n");
+    printf("where,\n\t*data_type is the type of items in the array(int,float,char etc)\n\t*array_name is the name to represent the array\n\t->S1 is size of 1 dimension\n\t->S2 is size of 2 dimension\n\t\t.\n\t\t:\n\t->Sn is size of nth dimension\n\n");
+    printf("example:\tint survey[3][5][12]; {T0tal memory=3*5*12*sizeof(int)}\n->In the above example array survey may represent a survey data of rain fall during the 3 years from january to december in five cities.\n*if the first index indicates year,the second city and third index month.\n*the three dimensional array can be represented as a series of 2D arrays as shown below,\n\nConsider,\n");
+    printf("\tsurvey[2][3][10] ->denotes rain fall month of october during\n\t\t\t\tsecond year in second city\n ");
+    printf("\t       |  |  |\n");
+    printf("\t       V  |  |\n");
+    printf("\t     year |  |\n");
+    printf("\t          V  |\n");
+    printf("\t       city  |\n");
+    printf("\t             V\n");
+    printf("\t           month\n\n");
+    printf("/*Reading and displaying elements fom a two dimwnsional array*/\n#include<stdio.h>\n#include<conio.h>\nvoid main()\n{\nint array[20][2],m.n,i,j;\nprintf(''enter number of rows and columns'');\n");
+    printf("for(i=0:\nprintf(''enter %d array elements'',m*n);\nfor(i=0;i<m;i++)\n{\nfor(j=0;j<m;j++)\n{\nscanf(''%d'',&a[i][j];\n}\n}\nprintf(''array elements are'');\nfor(i=0;i<m;i++)\n{\nfor(j=0;j<n;j++)\n{\nprintf(''%d'',a[i][j]);\n}\n}\ngetch();\n}\n");
+    printf("\nOUTPUT:\nenter number of rows and columns\n2\n3\nenter 6 array elements\n11 22 33 44 55 66\narray elements are\n11 22 33\n44 55 66\n");
+    printf("/*Program to generate fibonacci series using array*/\n\n#include<stdio.h>\n#include<conio.h>\nvoid main()\n{\nint fib[20],n,i;\nprintf(''enter number of terms to be generated'');\nscanf(''%d'',&n);\nfib[0]=0;\nfib[1]=1;\nprintf(''fibonacci series'');\n");
+    printf("for(i=2;i<n;i++)\n{\nfib[i]=fib[i-1]+fib[i-2];\n}\nfor(i=0;i<n;i++)\n{\nprintf(''%d'',fib[i]);\n}\ngetch();\n}\n\nOUTPUT:\nenter number of terms to be generated\n7\nfibonacci series\n0 1 1 2 3 5 8\n\n");
+    printf("ADVANTAGES OF ARRAYS:\n*array can be used to store numerous values of the same data type(homogenious data).\n*program is freed from creating many variables.\n\ta single array of required size can be created.\n*reading and writing and to the array is simple.\n\t(loops can be used for this purpose).\n");
+    printf("\nDISADVANTAGES OF ARRAYS:\n*a single array cannot store heterogeneous data(data of different type)\narrays demand contiguous memory locations to store data.\n*size of the array has to be mentioned at the begining of the program itself.\nthis may lead to insufficient memory utilization since all reserved spaces may not be utilized.\n");
+    printf("*addition and deletion of elements at the middle of the array is problamatic.\n");
+    printf("\n");
+    printf("\n");
+    printf("____________________________________________STRINGS______________________________________________\n");
+    printf("*String is an array of characters or a pointer to a portion of memory containing ASCII character.\n*a string can also be defined as sequence of zero or more characters followed by a NULL '\\0' characters.\n");
+    printf("Char type values are enclosed in single quotes.\n\tExample: 'a' is char value.\n*String type values are enclosed in double quotes.\n\tExample:''a'' is string value.\n");
+    printf("\nDECLARING STRING VARIABLES:\nSyntax:\n\tchar string_name[string_size];\n\nwhere,\n\t*char is data_type of strings.\n\t*string name is name for string variables\n\t*string_size is length of string which is to be stored.\n\t\t->string_size is the length of string i.e no. of characters stored in the string(excluding NULL character)\n");
+    printf("example:char name[21];\n\t->Here, 20 characters can be stored and 1 null character should be appended at the end.\n\NINITIALIZATION OF STRING:\n\NCHAR NAME[11]={'P','R','A','K','H'.'Y','A','T','H','\\0'};\n\t\tOr\nchar name[11]=''PRAKHYATH'';\nBoth are same, if we specify characters seperately we should use' ' for each characters and finally enclosing all the characters within flower braces { },\n");
+    printf("and if we directly specify entire string at a time we use '' ''.\n\nin the above example,\n\tchar name[11]={'P','R','K','H','Y','A','T','H','\\0'};\n\t*here string is initialized as a unit, and null character is supplied by the compiler automatically.\n\t*the value stored in these two strings as identical.\n\n");
+    printf("*if the string itself has a double quotes , a escape character is needed in-front of it to tell the compiler that it is not a delimeter.\n*some thing ha sto be done to include backslash in dtring.\nExample:\n");
+    printf("1) won't fit\t\tchar str1[20]=''won\\'t fit'';\n2)the ''king''\t\tchar str2=''the\\''king\\''; '';\n3)c:\mydocs\t\tchar str3[20]=''c:\\\\mydocs'';\n");
+    printf("     0   1   2   3   4   5   6   7   8    9        19\n");
+    printf("    ________________________________________________\n");
+    printf("1) | w | o | n | ' | t |   | f | i | t | \\0 |  ...  |\n");
+    printf("   |___|___|___|___|___|___|___|___|___|____|_______|\n\n\n");
+    printf("     0   1   2   3   4    5   6   7   8   9    10         19\n");
+    printf("    _______________________________________________________\n");
+    printf("2) | t | h | e |   | '' | k | i | n | g | '' | \\0 | ...    |\n");
+    printf("   |___|___|___|___|____|___|___|___|___|____|____|________|\n\n\n");
+    printf("     0   1    2   3   4   5   6   7   8    9            19\n");
+    printf("    ____________________________________________________\n");
+    printf("3) | c | : | \\ | m | y | d | o | c | s | \\0 |   ...     |\n");
+    printf("   |___|___|___|___|___|___|___|___|___|____|___________|\n\n\n");
+    printf("ARRAY OF STRINGS/MULTI DIMENSIONAL STRINGS:\n\n*Two dimensional character array which consists of strings as its individual elements, is said to be an array of strings\nsyntax:\n\tchar string_name[sizeof_rows][sizeof_column];\nexample:char_names[3][10];\n\nINITIALIZTION:");
+    printf("char  day[7][10]={''sunday'',''monday'',''tuesday'',''wednesday'',''thursday'',''friday'',''saturday''};\n\n");
+    printf("    0   1   2   3   4   5    6    7   8    9\n");
+    printf("   ___________________________________________\n");
+    printf(" 0| s | u | n | d | a | y | \\0 |    |    |    |\n");
+    printf("  |___|___|___|___|___|___|____|____|____|____|\n");
+    printf(" 1| m | o | n | d | a | y | \\0 |    |    |    |\n");
+    printf("  |___|___|___|___|___|___|____|____|____|____|\n");
+    printf(" 2| t | u | e | s | d | a | y  | \\0 |    |    |\n");
+    printf("  |___|___|___|___|___|___|____|____|____|____|\n");
+    printf(" 3| w | e | d | n | e | s | d  | a  | y  | \\0 |   memory is created for\n");
+    printf("  |___|___|___|___|___|___|____|____|____|____|   the above initialization\n");
+    printf(" 4| t | h | u | r | s | d | a  | y  | \\0 |    |     illustrated\n");
+    printf("  |___|___|___|___|___|___|____|____|____|____|\n");
+    printf(" 5| f | r | i | d | a | y | \\0 |    |    |    |\n");
+    printf("  |___|___|___|___|___|___|____|____|____|____|\n");
+    printf(" 6| s | t | u | r | d | a | y  | \\0 |    |    |\n");
+    printf("  |___|___|___|___|___|___|____|____|____|____|\n");
+    printf("\n*the above initialization creates 7 rows and 10 columns using which different strings are stored in day array as shown above.\n*last character of each string is always null character '/0'.\n*day[0] contains 1st string i.e ''sunday''\n day[1] contains second string i.e ''monday''\n   .\n   :\n day[6] contains seventh string i.e ''saturday''\n");
+    printf("\nSTRING INPUT/OUTPUT FUNCTION\n");
+    printf("                       string i/o function\n");
+    printf("                               |\n");
+    printf("            ___________________|__________________\n");
+    printf("           |                                      |\n");
+    printf("           V                                      V\n");
+    printf("      Formatted                             un-formatted\n");
+    printf("           |                                      |\n");
+    printf("           |->printf- for output                  |->puts- for output\n");
+    printf("           |                                      |\n");
+    printf("           |->scanf- for input                    |->gets- for input\n\n");
+    printf("/*Program to illustrate formatted i/o for strings*/\n#include<stdio.h>\nvoid mai()\n{\nchar name[20];\nprintf(''enter name'');\nscanf(''%s'',name);\nprintf(''your name is %s'',name);\n}\n\n");
+    printf("OUTPUT:\nEnter name:sachin\nyour name is sachin\n\n");
+    printf("/*program to illustrate un-formatted i/o for strings*/\n#include<stdio.h>\nvoid main()\n{\nchar name[20];\nprintf(''enter name:'');\ngets(name);\nprintf(''your name is:'');\nputs(name);\n}\n\nOUTPUT:\nEnter name:sachin\nyour name is:sachin\n\n");
+    printf("STRING MANUPULATION FUNCTION:\n");
+    printf("   ____________________________________________________________________________\n");
+    printf("  |      string function            |            descriptions                  |\n");
+    printf("  |_________________________________|__________________________________________|\n");
+    printf("  | strlen(str_name);               |this function returns the length of string|\n");
+    printf("  |_________________________________|__________________________________________|\n");
+    printf("  |strcpy(destination str,          |this function copies the string from one  |\n");
+    printf("  |                source str);     |variable to another variable              |\n");
+    printf("  |_________________________________|__________________________________________|\n");
+    printf("  |strncpy(destination,source,      |this function also copies the string from |\n");
+    printf("  |             length);            |one variable to another variable, but only|\n");
+    printf("  |                                 |the specified length                      |\n");
+    printf("  |_________________________________|__________________________________________|\n");
+    printf("  |strcmp(string1,string2);         |this function is used to compare two      |\n");
+    printf("  |                                 | strings. they are case sensitive.        |\n");
+    printf("  |_________________________________|__________________________________________|\n");
+    printf("  |stricmp(string1,string2);        |this function is also used to compare two |\n");
+    printf("  |                                 |strings but they are not case sensitive.  |\n");
+    printf("  |_________________________________|__________________________________________|\n");
+    printf("  |strncmp(string1,string2,length); |this function compare two functions only  |\n");
+    printf("  |                                 |up to a specified length.they are         |\n");
+    printf("  |                                 |case sensitive.                           |\n");
+    printf("  |_________________________________|__________________________________________|\n");
+    printf("  |strnicmp(string1,stringn,length);|this function also compares two strings up|\n");
+    printf("  |                                 |to a specified length,but not             |\n");
+    printf("  |                                 |  case sensitive                          |\n");
+    printf("  |_________________________________|__________________________________________|\n");
+    printf("  |strlwr(string_name);             |this function converts upper case         |\n");
+    printf("  |                                 |characters to lowercase                   |\n");
+    printf("  |_________________________________|__________________________________________|\n");
+    printf("  |strupr(str_name);                |this function converts lowercase          |\n");
+    printf("  |                                 |characters to uppercase                   |\n");
+    printf("  |_________________________________|__________________________________________|\n");
+    printf("  |strcat(string1,string2);         |this function is used join two strings    |\n");
+    printf("  |_________________________________|__________________________________________|\n");
+    printf("  |strrev(string_name);             |this function is used to reverse the      |\n");
+    printf("  |                                 |characters in given string                |\n");
+    printf("  |_________________________________|__________________________________________|\n");
+    printf("  |strset(string,symbol);           |this function replaces all the characters |\n");
+    printf("  |                                 |of a string with a given symbol or        |\n");
+    printf("  |                                 |  characters                              |\n");
+    printf("  |_________________________________|__________________________________________|\n");
+    printf("  |strnset(string,symbol,n)         |this function also replaces all the       |\n");
+    printf("  |                                 |characters of a string with a given symbol|\n");
+    printf("  |                                 |or characters but only to a specific      |\n");
+    printf("  |                                 |  length                                  |\n");
+    printf("  |_________________________________|__________________________________________|\n");
+    printf("\nstrncpy():\n/*program to illustrate strncpy() function*/\n#include<stdio.h>\n#include<string.h>\nmain()\n{\nchar a[10],b[10];\nprintf(''enter a string:'');\nscanf(''%s'',a);\nstrncpy(b,a,3);\nprintf(''value of a:%s'',a);\n");
+    printf("printf(''value of b:%s'',b);\n}\n\nOUTPUT:\nenter a string:sachin\nvalue of a:sachin\nvalue of b:sac\n\n\n");
+    printf("strcmp():\n/*program to illustrate strcmp() function*/\n#include<stdio.h>\n#include<conio.h>\n#include<string.h>\nmain()\n{\nchar a[10],b[10];int n;\nprintf(''enter string one:'');\nscanf(''%s'',a);\nprintf(''enter string two:'');\nscanf(''%s'',b);\n");
+    printf("n=strcmp(a,b);\nif(n==0)\n{\nprintf(''both strings are equal'');\n}\nelse\n{\nprintf(''strings are not equal'');\n}\ngetch();\n}\n\n");
+    printf("OUTPUT1:\nenter string one:vicky\nenter string two:vicky\nboth strings are equal\n\nOUTPUT2:\nenter string one:vicky\nenter string two:vikky\nstrings are not equal\n\n\n");
+    printf("strlen():\n/*illustrating string length function i.e strlen()*/\n#include<stdio.h>\n#include<conio.h>\n#include<string.h>\nmain()\n{\nchar a[30];\nint l;\nprintf(''enter a string'');\nscanf(''%s'',a);\nl=strlen(a);\nprintf(''length of string is %d'',l);\n");
+    printf("getch();\n}\n\nOUTPUT:\nenter a string:chethan\nlength of string is 7\n\n\nstrcpy():\n/*program to illustrate strcpy() function*/\n#include<stdio.h>\n#include<string.h>\nmain()\n{\nchar a[10],b[10];\nprintf(''enter a string:'');\nscanf(''%s'',a);\n");
+    printf("strcpy(b,a);\nprintf(''value of a:%s'',a);\nprintf(''value of b:%s'',b);\n}\n\nOUTPUT:\nenter a string:vicky\nvalue of a:vicky\nvalue of b:vicky\n\n\n");
+    printf("strncmp():\n/*program to illustrate strncmp() function*/\n#include<stdio.h>\n#include<conio.h>\n#include<string.h>\nvoid main()\n{\nchar a[30],b[30];\nint n;\nprintf(''enter string one:'');\nscanf(''%s'',a);\nprintf(''enter string two:'');\nscanf(''%s'',b);\nn=strncmp(a,b,2);\nif(n==0)\n");
+    printf("{\nprintf(''both strings are equal up to two characters'');\n}\nelse\n{\nprintf(''strings are not equal'');\n}\ngetch();\n}\nOUTPUT:\nenter string one:vicky\nenter string two:vikky\nboth strings are equal up to two characters\n\n\n");
+    printf("strnicmp():\n/*program illustrate strnicmp() function*/\n#include<stdio.h>\n#include<conio.h>\n#include<string.h>\nmain()\{\nchar a[30],b[30];\nint n;\nprintf(''enter string one :'');\nscanf(''%s'',a);\nprintf(''enter strin two:'');\nscanf(''%s'',b);\nn=strnicmp(a,b,2);\nif(n==0)\n{\n");
+    printf("printf(''both strings are equal up to first two characters'');\n}\nelse\n{\nprintf(''strings are not equal'');\n}\ngetch();\n}\n\nOUTPUT:\nenter string one:vicky\nenter string two:VIKKY\nboth strings are equal up to first two characters\n\n\n");
+    printf("stricmp():\n/*program to illustrate stricmp() function*/\n#include<stdio.h>\n#include<conio.h>\n#include<string.h>\nmain()\n{\nchar a[30],b[30];\nint n;\nprintf(''enter string one:'');\nscanf(''%s'',a);\nprintf(''enter string two:'');\nscanf(''%s'',b);\nn=stricmp(a,b);\n");
+    printf("if(n==0)\n{\nprintf(''both the strings are equal'');\n}\nelse\n{\nprintf(''strings are not equal'');\n}\n}\n\nOUTPUT:\nenter string one:vicky\nenter the string two:VICKY\nboth te strings are equal\n\n\n");
+    printf("strset():\n/*program to illustrate strset() function*/\n#include<stdio.h>\n#include<conio.h>\n#include<string.h>\nmain()\n{\nchar a[30];\nchar b;\nprintf(''enter a sting'');\ngets(a);\nprintf(''enter a symbol to replace the string:'');\nscanf(''%c'',&b);\nstrset(a,b);\nprintf(''after strset:%s'',a);\n");
+    printf("getch();\n}\n\nOUTPUT:enter a string:vikhyath\nenter a symbol to replace the string:#\nafter strset:########\n\n\nstrcat():\n/*program to illustrate strcat() function*/\n#include<stdio.h>\n#include<conio.h>\n#include<sting.h>\nmain()\n{\nchar a[30],b[30];\nprintf(''enter string one:'');\nscanf(''%s'',a);\n");
+    printf("printf(''enter string two:);\nscanf(''%s'',b);\nstrcat(a,b);\nprintf(''final string is:%s'',a);\ngetch();\n}\n\nOUTPUT:\nenter string one:vicky\nenter string two:rao\nfinal string is:vickyrao\n\n\nstrrev():\n/*program to illustrate strrev() function*/\n#include<stdio.h>\n#include<conio.h>\n#include<string.h>\n");
+    printf("main()\n{\nchar a[30];\nprintf(''enter string'':);\nscanf(''%s'',a);\nstrrev(a);\nprintf(''reversed string is:%s'',a);\ngetch();\n}\n\nOUTPUT:\nenter string:vicky\nrversed string is:ykciv\n\n\nstrlwr():\n/*program to illustrate strlwr() function*/\n#include<stdio.h>\n#include<string.h>\nmain()\n{\nchar a[30];\n");
+    printf("printf(''enter a string in upper case:'');\nscanf(''%s'',a);\nprintf(''final string is:%s'',strlwr(a));\n}\n\nOUTPUT:\nenter string in uppercase:VICKY\nfinal string is:vicky\n\n\nstrupr():\n/*program to illustrate strupr() function*/\n#include<stdio.h>\n#include<conio.h>\n#include<string,h>\nmain()\n{\nchar a[30];\n");
+    printf("printf(''enter the string in lowercase:'');\nscanf(''%s'',a);\nprintf(''final string is:%s'',strupr(a));\ngetch();\n}\n\nOUTPUT:enter a string in lowercase:vicky\nfinal string is:VICKY\n\n\n");
+}
+
+int learn8()//functions
 {
    printf("\n************     FUNCTIONS     ***************\n");
    printf("\n\n Function is a group of statements that perform a specific task. the main objective is to avoid the repetition of codes in a program.\n It provides modularity code re-usability.\n");
@@ -1062,7 +1324,7 @@ int learn6() //Branching and looping
    printf("  •function_name is the actual name of the function\n");
 }
 
-int learn9()
+int learn9()//pointers
 {
     printf("\n ********** pointer **********\n\n");
     printf(" Pointer Definition: Pointer is a variable that holds the address of another variable.\n");
@@ -1237,7 +1499,7 @@ int learn9()
 
 }
 
-int learn10()
+int learn10()//structure
 {
     printf("\n\n ********** STRUCTURE ************\n\n");
     printf(" • Structure is a collection of one or more variable or different data types grouped together under a single easy handling.\n");
@@ -1336,7 +1598,7 @@ int learn10()
     printf(" void display(struct employee *eptr)\n {\n  printf(\"employee details are\");\n  printf(\"employee name is %%s\\n\",eptr->empname);\n  printf(\"employee number is %%d\\n\",eptr->empnumber);\n  printf(\"employee age is %%d\\n\",eptr->empage);\n  printf(\"employee salary is %%f\\n\",eptr->empsalary);\n }\n\n");
 }
 
-int learn11()
+int learn11()//preprocessor directives
 {
     printf("\n*********** Preprocessor Directive *************\n\n\n");
     printf(" Preprocessor is a program which in invoked by compiler before the compilation of user written program. The declaration of processors statements always begin with (#),usually these are placed before the main() function.\n\n");
@@ -2109,7 +2371,7 @@ int quiz5() // string
 
 int quiz6() // Branching and looping
 {
-
+    system("clear");
     int x;
 
    l6_1:  printf("\n1. Assume that i,j and k are integer variables and their values are 8, 5 and 0 respectively. What will be the values of variables i and k after executing the following expression? \n");
@@ -2250,7 +2512,7 @@ int quiz6() // Branching and looping
 
 int quiz8()//Functions
 {
-
+    system("clear");
    int x;
 
     l8.1:   printf("\n1. What is the output of this C code? \n");
