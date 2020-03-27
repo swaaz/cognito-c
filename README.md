@@ -49,4 +49,4 @@ If there are any bug then create a [issue](https://github.com/swaaz/cognito-c/is
 - Copy it and paste it on the issue
 - Edit the template in the issue and explain the bug
 - Add all the labels(modules,bug,learn or quiz or module)
-- Assigen '@swaaz' if not assigned 
+- Assigen `@swaaz` if not assigned 
