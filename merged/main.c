@@ -3417,8 +3417,7 @@ int branching_and_looping()
     }
     return 0;
 }
-
-
+/*module-3*/
 int array_and_string()
 {   system("clear");
     int o;
@@ -3451,8 +3450,7 @@ int array_and_string()
     }
     return 0;
 }
-
-
+/*module-4*/
 int functions()
 {   system("clear");
     int o;
@@ -3714,10 +3712,10 @@ void main()
         switch (o)
         {
             case 1:module_1(); break;
-            //case 2:module-2(); break;
-            //case 3:module-3(); break;
-            //case 4:module-4(); break;
-           // case 5:module-5(); break;
+            case 2:module-2(); break;
+            case 3:module-3(); break;
+            case 4:module-4(); break;
+            case 5:module-5(); break;
             case 6:exit(0);
             default:printf("OPss!!! You entered Invalid option\n");
         }
