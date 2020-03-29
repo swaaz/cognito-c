@@ -19,10 +19,10 @@ typedef struct
 }quiz;
 
 
-int automat(char st)
+int automat(char st[])
 {
     int c;
-    printf("\n\n----------%c----------",st);
+    printf("\n\n----------%s----------",st);
     printf("\nDo you want this module to be automatic?\n");
     printf("1. YES\n2. NO\n");
     printf("Enter the choice\n");
