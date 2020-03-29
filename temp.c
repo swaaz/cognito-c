@@ -22,7 +22,7 @@ typedef struct
 int automat(char st)
 {
     int c;
-    printf("\n\n----------%s----------",st);
+    printf("\n\n----------%c----------",st);
     printf("\nDo you want this module to be automatic?\n");
     printf("1. YES\n2. NO\n");
     printf("Enter the choice\n");
@@ -1803,7 +1803,7 @@ int quiz1() //c-tokens
         if(x==q1.q[9])
         {
             printf("Correct\n");
-            c_tokens();
+            variables();
         }
         else
         {
@@ -3495,11 +3495,11 @@ int functions()
     return 0;
 }
 //MODULE-5
-int pointers("POINTERS")
+int pointers()
 {   system("clear");
     int o;
     int j;
-    if(automat()==1)
+    if(automat("POINTERS")==1)
     {
         learn9();
         for(j=0;j<150;j++)  //delay  in sec
