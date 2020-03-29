@@ -19,9 +19,10 @@ typedef struct
 }quiz;
 
 
-int automat()
+int automat(char st)
 {
     int c;
+    printf("\n\n----------%s----------",st);
     printf("\nDo you want this module to be automatic?\n");
     printf("1. YES\n2. NO\n");
     printf("Enter the choice\n");
@@ -2612,7 +2613,7 @@ int quiz7()//arrays
     l7_8: printf("8. Which of the following array position will be occupied by a new element being pushed for a stack of size N elements(capacity of stack > N).\n   1. S[N-1]\n   2.  S[N]\n   3. S[1]\n   4. S[0]\n");
         printf("Enter the choice : ");
         scanf("%d",&x);
-        if(x==q6.q[7])
+        if(x==q7.q[7])
         {
             printf("Correct\n");
             goto l7_9;
@@ -3238,7 +3239,7 @@ int c_tokens()
 {   system("clear");
     int o;
     int j;
-    if(automat()==1)
+    if(automat("C-TOKENS")==1)
     {
         learn1();
         for(j=0;j<25;j++)  //delay in sec
@@ -3270,7 +3271,7 @@ int variables()
 {   system("clear");
     int o;
     int j;
-    if(automat()==1)
+    if(automat("VARIABLES")==1)
     {
         learn2();
         for(j=0;j<40;j++)         //delay in sec
@@ -3302,7 +3303,7 @@ int constants()
 {   system("clear");
     int o;
     int j;
-    if(automat()==1)
+    if(automat("CONSTANTS")==1)
     {
         learn3();
         for(j=0;j<40;j++)  //delay  in sec
@@ -3334,7 +3335,7 @@ int operators()
 {   system("clear");
     int o;
     int j;
-    if(automat()==1)
+    if(automat("OPERATORE")==1)
     {
         learn4();
         for(j=0;j<200;j++)  //delay  in sec
@@ -3366,7 +3367,7 @@ int strings()
 {   system("clear");
     int o;
     int j;
-    if(automat()==1)
+    if(automat("STRINGS")==1)
     {
         learn5();
         for(j=0;j<130;j++)  //delay  in sec
@@ -3399,7 +3400,7 @@ int branching_and_looping()
 {   system("clear");
     int o;
     int j;
-    if(automat()==1)
+    if(automat("BRANCHING AND LOOPING")==1)
     {
         learn6();
         for(j=0;j<150;j++)  //delay  in sec
@@ -3432,7 +3433,7 @@ int array_and_string()
 {   system("clear");
     int o;
     int j;
-    if(automat()==1)
+    if(automat("ARRAY AND STRINGS")==1)
     {
         learn7();
         for(j=0;j<150;j++)  //delay  in sec
@@ -3465,7 +3466,7 @@ int functions()
 {   system("clear");
     int o;
     int j;
-    if(automat()==1)
+    if(automat("FUNCTIONS")==1)
     {
         learn8();
         for(j=0;j<150;j++)  //delay  in sec
@@ -3494,7 +3495,7 @@ int functions()
     return 0;
 }
 //MODULE-5
-int pointers()
+int pointers("POINTERS")
 {   system("clear");
     int o;
     int j;
@@ -3530,7 +3531,7 @@ int structure()
 {   system("clear");
     int o;
     int j;
-    if(automat()==1)
+    if(automat("STRUCTURE")==1)
     {
         learn10();
         for(j=0;j<150;j++)  //delay  in sec
@@ -3562,7 +3563,7 @@ int preprocessor_directives()
 {   system("clear");
     int o;
     int j;
-    if(automat()==1)
+    if(automat("PROPROCESSOR DIRECTIVES")==1)
     {
         learn11();
         for(j=0;j<150;j++)  //delay  in sec
