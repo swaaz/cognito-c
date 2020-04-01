@@ -113,7 +113,7 @@ int learn3() //constants
 }
 int learn4() //operators
 {
-    printf(" Operators :\n");
+    printf("\n------ Operators ------\n");
     printf("\n  Operators in c are the symbols, which are used to perform operations i.e operators specify the operations to be performed.\n");
     printf("\n    • operands are the data upon which operators act.\n");
     printf("\n\n the operators in c are classified based on :\n");
