@@ -44,7 +44,7 @@ int delay()
 /*Learn*/
 
 int learn1() //c-tokens
-{
+{   system("clear");
     printf("\n----------Learn----------\n");
     printf("C-Tokens and the smallesT individual Hits of a C-program. These are the basic building blocks in a C program that cannot be further broken down into elements\n");
     printf("There are mainly five C tokens namely\nKeywords\nIdentifiers (Variables)\nConstants\nStrings\nOperators\n");
@@ -53,6 +53,7 @@ int learn1() //c-tokens
 
 int learn2() //variables
 {
+    system("clear");
    printf("\n-------------------LEARN---------------------\n");
    printf("Variables :\n");
    printf("Identifiers are the names provided to the elements of a program such as variables,functions and array.Identifiers consist of letter, number or an under score.\n");
@@ -80,6 +81,7 @@ int learn2() //variables
 }
 int learn3() //constants
 {
+    system("clear");
   printf("Constants :\n");
   printf("    \tConstants is a fixed value assigned to a variable which cannot be modified in a program. In C program constants is declared by using a keyword const.\n");
   printf("\nExamples :\n1.const int a=3.14, const char letter='N'.\n");
@@ -113,6 +115,7 @@ int learn3() //constants
 }
 int learn4() //operators
 {
+    system("clear");
     printf("\n------ Operators ------\n");
     printf("\n  Operators in c are the symbols, which are used to perform operations i.e operators specify the operations to be performed.\n");
     printf("\n    • operands are the data upon which operators act.\n");
@@ -150,6 +153,7 @@ int learn4() //operators
     printf("  | /               |   division                            |\n");
     printf("  | %%              |   modulo division( returns remainder  |\n");
     printf("  |_________________|_______________________________________|\n");
+    delay();
     printf("\n Example : program to demonstrate the working of arithmetic operators\n");
     printf("\n/* program to illustrate the working of arithmetic operators */\n");
     printf(" #include<stdio.h>\nvoid main()\n{\n  int a=9, b=4, c;\n  c=a+b;\n  printf(\"a+b=\%%d\\n\",c);\n  c=a+b;\n  printf(\"a-b=\%%d\\n\",c);\n  c=a*b;\n  printf(\"a*b=\%%d\\n\",c);\n  c=a/b;\n  printf(\"a/b=\%%d\\n\",c);\n  c=a%b;\n  printf(\"Remainder when a divided by b=\%%d\\n\",c);\n}\n");
@@ -212,6 +216,7 @@ int learn4() //operators
     printf("                                  (assignment)           \n\n");
     printf("compound assignment operator :\n");
     printf("\n_______________________________________________________________________________________________\n");
+    delay();
     printf("|operator  |statement  |long form  |meaning                                                   |\n");
     printf("|  +=      | x+=100    |x=x+100    |x+100 is first completed and that result is assigned to x |\n");
     printf("|  -=      | x-=100    |x=x-100    |x-100 is first completed and that result is assigned to x |\n");
@@ -293,6 +298,7 @@ int learn4() //operators
     printf("| 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |          | 0 | 0 | 0 | 0 | 1 | 1 | 1 | 0 |\n");
     printf("|___|___|___|___|___|___|___|___|          |___|___|___|___|___|___|___|___|\n    a&b=14\n");
     printf("\nLeft shift operator(<<) :\n it is used to shift the bit by the specified number of position to the left,its general from is:\n a<<num;\n");
+    delay();
     printf("it means that the bits in the variable 'a' must be shifted to the left by number of positions.\n");
     printf("\n ________________________________          ________________________________\n");
     printf("| 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |          | 0 | 0 | 0 | 0 | 1 | 0 | 0 | 1 |\n");
@@ -317,6 +323,7 @@ int learn4() //operators
     printf(" ________________________________          ________________________________\n");
     printf("| 1 | 1 | 1 | 1 | 1 | 1 | 1 | 1 |          | 1 | 1 | 1 | 1 | 0 | 1 | 0 | 1 |\n");
     printf("|___|___|___|___|___|___|___|___|          |___|___|___|___|___|___|___|___|\n    a>>1\n");
+        delay();
     printf("\nSpecial operators in c:\n");
     printf("\n                                              special operators in c\n");
     printf("        ____________________________________________________|_________________________________________________________\n");
@@ -354,6 +361,7 @@ int learn4() //operators
 }
 int learn5() //strings
 {
+    system("clear");
     printf("\n**********  STRING  **********                       \n");
     printf("\n•String is an array of character or a pointer to a portion of memory containing ASCII character\n ");
     printf("\n•String can also be defined as sequence of zero or more character followed by a NULL '\0'character. ");
@@ -419,6 +427,7 @@ int learn5() //strings
 
 int learn6() //Branching and looping
 {
+    system("clear");
     printf("if-else contrd construct :\n");
     printf("• Is used to execute one set of statement if the condition is true and another set of statement if the condition is false.\n");
     printf("syntax :\nif(condition)\n{\n statement a;\n}\nelse\n{\n statement b;\n}\n");
@@ -751,7 +760,7 @@ int learn6() //Branching and looping
 }
 int learn7()//array and atring
 {
-
+    system("clear");
     printf("\n_____________________________ARRAYS______________________________\n");
     printf("An array is the collection of data items of same data, which are stored in consecutive memory location.\n");
     printf("Each value(data item) is an array is indicated by same name\n that is array name and an index which indicates the position of value in an array.");
@@ -1014,6 +1023,7 @@ int learn7()//array and atring
 
 int learn8()//functions
 {
+    system("clear");
    printf("\n************     FUNCTIONS     ***************\n");
    printf("\n\n Function is a group of statements that perform a specific task. the main objective is to avoid the repetition of codes in a program.\n It provides modularity code re-usability.\n");
    printf("\n• A C program is a collection of one or more functions where one of the function must be main().\n");
@@ -1329,6 +1339,7 @@ int learn8()//functions
 
 int learn9()//pointers
 {
+    system("clear");
     printf("\n ********** pointer **********\n\n");
     printf(" Pointer Definition: Pointer is a variable that holds the address of another variable.\n");
     printf("\n Declaration and Initialization of Pointer\n\n");
@@ -1504,6 +1515,7 @@ int learn9()//pointers
 
 int learn10()//structure
 {
+    system("clear");
     printf("\n\n ********** STRUCTURE ************\n\n");
     printf(" • Structure is a collection of one or more variable or different data types grouped together under a single easy handling.\n");
     printf(" • Structure is a user different data type that can related information about an entity. Structure is nothing regards about particular entity\n");
@@ -1603,6 +1615,7 @@ int learn10()//structure
 
 int learn11()//preprocessor directives
 {
+    system("clear");
     printf("\n*********** Preprocessor Directive *************\n\n\n");
     printf(" Preprocessor is a program which in invoked by compiler before the compilation of user written program. The declaration of processors statements always begin with (#),usually these are placed before the main() function.\n\n");
     printf(" #include :Specifies the files to be included\n");
