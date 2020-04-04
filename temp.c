@@ -41,6 +41,13 @@ int delay()
 
 }
 
+int delay_loop(int x)
+{
+    int i;
+    for(int i=0;i<x;i++) delay();
+    return 0;
+}
+
 /*Learn*/
 
 int learn1() //c-tokens
@@ -153,7 +160,7 @@ int learn4() //operators
     printf("  | /               |   division                            |\n");
     printf("  | %%              |   modulo division( returns remainder  |\n");
     printf("  |_________________|_______________________________________|\n");
-    delay();
+    delay_loop(20);
     printf("\n Example : program to demonstrate the working of arithmetic operators\n");
     printf("\n/* program to illustrate the working of arithmetic operators */\n");
     printf(" #include<stdio.h>\nvoid main()\n{\n  int a=9, b=4, c;\n  c=a+b;\n  printf(\"a+b=\%%d\\n\",c);\n  c=a+b;\n  printf(\"a-b=\%%d\\n\",c);\n  c=a*b;\n  printf(\"a*b=\%%d\\n\",c);\n  c=a/b;\n  printf(\"a/b=\%%d\\n\",c);\n  c=a%b;\n  printf(\"Remainder when a divided by b=\%%d\\n\",c);\n}\n");
@@ -196,6 +203,7 @@ int learn4() //operators
     printf("| 1    |  1   |  1    |   1  |  0  |  0   |\n");
     printf("|______|______|_______|______|_____|______|\n");
     printf("\n true is represented by 1 and false is represented by 0\n");
+    delay_loop(20);
     printf("\n General usage :\n");
     printf("Relational expression connector relational expression.\nexample:((a>b)||(a>c))");
     printf("\nExample: program to illustrate logical operators\n");
@@ -216,7 +224,6 @@ int learn4() //operators
     printf("                                  (assignment)           \n\n");
     printf("compound assignment operator :\n");
     printf("\n_______________________________________________________________________________________________\n");
-    delay();
     printf("|operator  |statement  |long form  |meaning                                                   |\n");
     printf("|  +=      | x+=100    |x=x+100    |x+100 is first completed and that result is assigned to x |\n");
     printf("|  -=      | x-=100    |x=x-100    |x-100 is first completed and that result is assigned to x |\n");
@@ -258,6 +265,7 @@ int learn4() //operators
     printf("\n\n     0     1     2      3      4\n");
     printf("  0*2 + 1*2 + 1*2 +  1*2 +  0*2\n");
     printf("\n   0 +  2 +   4  +   8  +   0  =14\n");
+    delay_loop(20);
     printf("\n___________________________________________________________________________________________________________________________________\n");
     printf("|operator  |statement  |long form  |meaning                                                                                        |\n");
     printf("|  BW-AND  |    &      |a&b        |it performs bitwise  AND. If both the the corresponding bits is 1 then result is l else 0      |\n");
@@ -298,7 +306,7 @@ int learn4() //operators
     printf("| 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |          | 0 | 0 | 0 | 0 | 1 | 1 | 1 | 0 |\n");
     printf("|___|___|___|___|___|___|___|___|          |___|___|___|___|___|___|___|___|\n    a&b=14\n");
     printf("\nLeft shift operator(<<) :\n it is used to shift the bit by the specified number of position to the left,its general from is:\n a<<num;\n");
-    delay();
+    delay_loop(20);
     printf("it means that the bits in the variable 'a' must be shifted to the left by number of positions.\n");
     printf("\n ________________________________          ________________________________\n");
     printf("| 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |          | 0 | 0 | 0 | 0 | 1 | 0 | 0 | 1 |\n");
@@ -323,7 +331,7 @@ int learn4() //operators
     printf(" ________________________________          ________________________________\n");
     printf("| 1 | 1 | 1 | 1 | 1 | 1 | 1 | 1 |          | 1 | 1 | 1 | 1 | 0 | 1 | 0 | 1 |\n");
     printf("|___|___|___|___|___|___|___|___|          |___|___|___|___|___|___|___|___|\n    a>>1\n");
-        delay();
+    delay_loop(20);
     printf("\nSpecial operators in c:\n");
     printf("\n                                              special operators in c\n");
     printf("        ____________________________________________________|_________________________________________________________\n");
@@ -357,6 +365,7 @@ int learn4() //operators
     printf("  | conditional     |   ?                           |left to right |\n");
     printf("  |assignment       |=,+=,-=,*=,/=,%%=,&=,|=,<<=,>>=|left to right |\n");
     printf("  |_________________|_______________________________|______________|\n");
+    delay_loop(20);
     return 0;
 }
 int learn5() //strings
@@ -391,6 +400,7 @@ int learn5() //strings
     printf("\n#include<stdio.h>\nvoid main()\n{\n char name[20];\n printf(\"enter Name :\");\n gets(name);\n printf(\"your name is :\");\n puts(name)\n}\n");
     printf("output :\nenter name: prakhayath\nyourname is prakhayath.\n");
     printf("\n\narray of strings /multidimensional strings :\n");
+    delay_loop(20);
     printf("     •The two dimensional character array which consist of strings as its individual elements,is said to be an array of string \nsyntax:\n  char string_name[size_of_rows][size_of_cols];\n ");
     printf("example:char names[3][10];\n initialization:\nchar day[7][10]={\"sunday\",\"monday\",\"tuesday\",\"wednesday\",\"thursday\",\"friday\"}\n");
     printf("\n   0   1   2   3   4   5   6   7   8   9   ");
@@ -423,6 +433,7 @@ int learn5() //strings
     printf("6.strcmp():compare the two string upto the lengths\n7.strincmp():compare of two strings up to their length not case sensitive\n8.strlwr():it convert upper case character into lower case\n9.strupr()it convert lowercase letter into uppercase\n");
     printf("10.strcat():this will combine two strings to make one sentence\n11.strrev():reversing the string the string\n12.strset():replacing the characters by symbols\n13.strnset():replacing the character by symbols upto length specified\n");
     printf("\n\n  This is a brif representation of string. \n");
+    delay_loop(20);
 }
 
 int learn6() //Branching and looping
@@ -449,6 +460,7 @@ int learn6() //Branching and looping
   printf("                    |\n ");
   printf("                    O \n");
   printf("example program to check if the given number is even or odd.\n ");
+  delay_loop(20);
   printf("algorithm : to check even or odd\n");
   printf("step 1:[read the number]\n       input n \nstep 2:[check if the number is even or odd]\n     if(n%2==0)\n       {\n      output\"even number\"\n       }\nstep 3:[finished]\n      stop\n");
   printf("flow chart:\n");
@@ -480,6 +492,7 @@ int learn6() //Branching and looping
   printf("\nProgram to find the largest of three numbers\n");
   printf("\n #include<stdio.h>\nvoid main()\n{\n int a,b,c; clrscr(); printf(\"enter 3 different numbers\"\n scanf(\"%d%d%d\",&a,&b,&c);\n if(a>b&&a>c)  {\n   printf(\"a number is largest\");\n else if(b>a&&b>c)\n  {\n   printf(\"b is largest\");\n  else\n  {\n  printf(\"cis largest\");\n  }\ngetch();\n}\n");
   printf("\nnested if else control construct:\n");
+  delay_loop(20);
   printf("• is used to execute one set of many sets of statements depending upon the outcome of the condition\nit consist if if else control condtruct with in another if or else control construct and hence the\n");
   printf("syntax:\nif(condition 1)\n{\n statement a;\n}\nelse if(condition 2)\n {\n statement b;\n }\n .\n .\n .\nelse if(condition n)\n{\n statement n;\n}\nelse\n{\n default statement;\n}\n");
    printf("                           |\n");
@@ -552,7 +565,8 @@ int learn6() //Branching and looping
   printf("                                                                        |\n ");
   printf("                                                                        O \n");
   printf("\nSwitch pictorial representation :\n");
-    printf("                  ____________      \n   ");
+  delay_loop(20);
+  printf("                    ____________      \n   ");
   printf("                   (____start___)   \n");
   printf("                           |\n");
   printf("                           /\\              \n");
@@ -596,6 +610,7 @@ int learn6() //Branching and looping
   printf("The nested if-else control construct or the else if ladder must be used if one rout has to be selected out of many possible routes (alternatives).\n");
   printf("switch control construct must be used if one route has to be selected out of many possible routes (alternatives).\n");
   printf("\n SWITCH CONTROL CONSTRUCT:\n• switch is a control construct which allows us to make a decision out of many differences\n");
+  delay_loop(20);
   printf("Syntax :  __________________________________________\n");
   printf("          |          switch(an integer expression) |\n");
   printf("          |           case value1: statement 1;    |\n");
@@ -624,6 +639,7 @@ int learn6() //Branching and looping
   printf("\nexample :program illustrate use of goto statement\n");
   printf("#include<stdio.h>\nvoid main()\n{\n int i=1; clrscr();\n back: printf(\"PCD\\n\");\n if(i!=5){\n i++;\n goto back;}\n}\n");
   printf("output:\n PCD\n PCD\n PCD\n PCD\n PCD\n \n");
+  delay_loop(20);
   printf("\nLooping and Repetition :\n");
   printf("\n• The looping control construct are the control constructs which enable us to perform an activity more than :once fill the condition is true ,ie as long as the condition holds good, the activity is repeatedly executed. once the condition fails, the control flows to the statements outside the body.\n");
   printf("\n• c language has 3 looping control constructs namely:\n i) for loop\n ii) while loop\n iii) do while loop\n");
@@ -653,6 +669,7 @@ int learn6() //Branching and looping
   printf("\nii) break control construct :\n");
   printf("• The break control construct is used basically at 2 places\n-> Inside the body of the switch\n-> Inside the body of a looping control construct,in both cases, the break control construct would take the control out of the respective bodies\n");
   printf("\niii) Continue control construct :\n");
+  delay_loop(20);
   printf("\n• During execution of the loop it may be necessary to help a part of loop based on some condition ,continue statement id used in such cases.\n");
   printf("• continue statement when used in loop,terminate the current iteration.\nNote: continue can be used only in loops.\n");
   printf("\n• while loop:                                                 flowchart          \n");
@@ -701,6 +718,7 @@ int learn6() //Branching and looping
   printf("-> break and continue are two unidirectional control contents.\n");
   printf("-> they are called as the undirectional control constructs since they are the sequentially flow without checking any condition.\n");
   printf("-> break control constructs sends the control out of the loop.\n");
+  delay_loop(20);
   printf("-> continue control construct sends the control to the beginning of the loop.\n");
   printf("-> break control construct send the control out of the loop where as continue control construct sends the control to the beginning of the loop.\n");
   printf("\n  /* Loop without break and continue*/  || /*Loop with break*/          ||  /* Loop with continue*/           \n");
@@ -735,6 +753,7 @@ int learn6() //Branching and looping
   printf("Loop control statements are classified based on\n");
   printf("i) pre testing loops and post testing loops \nii) event controlled loops \n");
   printf("Pre-test and Post-test loop:\n");
+  delay_loop(20);
   printf("*  pre-test loop :in a looping construct,if  the condition is checked before each iteration of the loop, the loop is called pre-test loop\n-> the expression is evaluate to true/false at the beginning.\n");
   printf("flow char\n");
   printf("                   | \n");
@@ -755,7 +774,7 @@ int learn6() //Branching and looping
   printf("                       \n");
   printf("\n-> if the condition is false,the loop is terminated\n-> it is also known as entry controlled loop\n example: for loop and while loop\n");
 
-
+    delay_loop(20);
     return 0;
 }
 int learn7()//array and atring
@@ -784,6 +803,7 @@ int learn7()//array and atring
     printf("INITIALIZING ONE DIMANTIONAL ARRAY:\n");
     printf("    *Array can be initialized statically one by one and in a single statement or dynamically using loop statements.\n*Array elements can be initialized at the time of declaration,");
     printf("    syntax:\n");
+    delay_loop(20);
     printf("        data_type array_name[array_size]={v1,v2,v3,....vn};\n");
     printf("Here,\n     *data_type is the type of data to be stored in an array, data type can be char,int, float, double or string.\n");
     printf("    *array name is the name given to the array.\n     *array name specifies the number of values given to the array i.e array_size specifies size of the array.\n");
@@ -812,6 +832,7 @@ int learn7()//array and atring
     printf("        |____|____|____|____|____|\n");
     printf("          a[0]  a[1] a[2] a[3] a[4] \n");
     printf("\nARRAY INITIALIZATION WITH STRING:\n");
+    delay_loop(20);
     printf("Sequence of characters enclosed within double quotes is called as string.\nString always ends with a NULL character(\\0).\n");
     printf("example:a)char b[]=''COMPUTER'';\n");
     printf("         ______________________________________________________\n");
@@ -849,6 +870,7 @@ int learn7()//array and atring
     printf("here,\n->data_type can be any data type like char, int,float etc.\n->row size specifies number of rows and column size specifies number columns.");
     printf("->{a1,a2,...an} are values assigned to | row and {b1,b2...bn} are values assigned to || row.\nTYPES OF TWO DIMENSIONAL ARRAY INITIALIZATION:\n\n");
     printf("1)INITIALIZING ALL SPECIFIED MEMORY LOCATIONS:\nConsider,\nint a[4][3]={{11,12,13},{44,55,66},{11,10,9},{33.66.99}};\nHere,4 rows and 3 columns will be reserved for array 'a'and all 4 rows and 4 columns are initialized with same value as shown below,\n");
+    delay_loop(20);
     printf("\t\t          0    1    2\n");
     printf("\t\t         ______________\n");
     printf("\t\t     | 0| 11 | 12 | 13 |\n");
@@ -897,6 +919,7 @@ int learn7()//array and atring
     printf("ADVANTAGES OF ARRAYS:\n*array can be used to store numerous values of the same data type(homogenious data).\n*program is freed from creating many variables.\n\ta single array of required size can be created.\n*reading and writing and to the array is simple.\n\t(loops can be used for this purpose).\n");
     printf("\nDISADVANTAGES OF ARRAYS:\n*a single array cannot store heterogeneous data(data of different type)\narrays demand contiguous memory locations to store data.\n*size of the array has to be mentioned at the begining of the program itself.\nthis may lead to insufficient memory utilization since all reserved spaces may not be utilized.\n");
     printf("*addition and deletion of elements at the middle of the array is problamatic.\n");
+    delay_loop(20);
     printf("\n");
     printf("\n");
     printf("____________________________________________STRINGS______________________________________________\n");
@@ -937,6 +960,7 @@ int learn7()//array and atring
     printf("  |___|___|___|___|___|___|____|____|____|____|\n");
     printf(" 6| s | t | u | r | d | a | y  | \\0 |    |    |\n");
     printf("  |___|___|___|___|___|___|____|____|____|____|\n");
+    delay_loop(20);
     printf("\n*the above initialization creates 7 rows and 10 columns using which different strings are stored in day array as shown above.\n*last character of each string is always null character '/0'.\n*day[0] contains 1st string i.e ''sunday''\n day[1] contains second string i.e ''monday''\n   .\n   :\n day[6] contains seventh string i.e ''saturday''\n");
     printf("\nSTRING INPUT/OUTPUT FUNCTION\n");
     printf("                       string i/o function\n");
@@ -999,6 +1023,7 @@ int learn7()//array and atring
     printf("  |                                 |or characters but only to a specific      |\n");
     printf("  |                                 |  length                                  |\n");
     printf("  |_________________________________|__________________________________________|\n");
+    delay_loop(20);
     printf("\nstrncpy():\n/*program to illustrate strncpy() function*/\n#include<stdio.h>\n#include<string.h>\nmain()\n{\nchar a[10],b[10];\nprintf(''enter a string:'');\nscanf(''%s'',a);\nstrncpy(b,a,3);\nprintf(''value of a:%s'',a);\n");
     printf("printf(''value of b:%s'',b);\n}\n\nOUTPUT:\nenter a string:sachin\nvalue of a:sachin\nvalue of b:sac\n\n\n");
     printf("strcmp():\n/*program to illustrate strcmp() function*/\n#include<stdio.h>\n#include<conio.h>\n#include<string.h>\nmain()\n{\nchar a[10],b[10];int n;\nprintf(''enter string one:'');\nscanf(''%s'',a);\nprintf(''enter string two:'');\nscanf(''%s'',b);\n");
@@ -1019,11 +1044,12 @@ int learn7()//array and atring
     printf("main()\n{\nchar a[30];\nprintf(''enter string'':);\nscanf(''%s'',a);\nstrrev(a);\nprintf(''reversed string is:%s'',a);\ngetch();\n}\n\nOUTPUT:\nenter string:vicky\nrversed string is:ykciv\n\n\nstrlwr():\n/*program to illustrate strlwr() function*/\n#include<stdio.h>\n#include<string.h>\nmain()\n{\nchar a[30];\n");
     printf("printf(''enter a string in upper case:'');\nscanf(''%s'',a);\nprintf(''final string is:%s'',strlwr(a));\n}\n\nOUTPUT:\nenter string in uppercase:VICKY\nfinal string is:vicky\n\n\nstrupr():\n/*program to illustrate strupr() function*/\n#include<stdio.h>\n#include<conio.h>\n#include<string,h>\nmain()\n{\nchar a[30];\n");
     printf("printf(''enter the string in lowercase:'');\nscanf(''%s'',a);\nprintf(''final string is:%s'',strupr(a));\ngetch();\n}\n\nOUTPUT:enter a string in lowercase:vicky\nfinal string is:VICKY\n\n\n");
+    delay_loop(20);
 }
 
 int learn8()//functions
 {
-    system("clear");
+   system("clear");
    printf("\n************     FUNCTIONS     ***************\n");
    printf("\n\n Function is a group of statements that perform a specific task. the main objective is to avoid the repetition of codes in a program.\n It provides modularity code re-usability.\n");
    printf("\n• A C program is a collection of one or more functions where one of the function must be main().\n");
@@ -1061,6 +1087,7 @@ int learn8()//functions
    printf("  | toupper(ch)     |A uppercase of character ch            |\n");
    printf("  |_________________|_______________________________________|\n");
    printf("\n\n Mathematical Functions :\n   The header file that includes mathematical functions is math .h (#include<math.h>)\n\n");
+   delay_loop(20);
    printf("\n  ___________________________________________________________\n");
    printf("  | functions       | Return                                |\n");
    printf("  |_________________|_______________________________________|\n");
@@ -1113,6 +1140,7 @@ int learn8()//functions
    printf("                                                 |       return sum;                                   \n");
    printf("                                                 |       }                                             \n");
    printf(" Advantages of user defined functions \n");
+   delay_loop(20);
    printf(" •can be used in number of places without restrictions as compared to store procedures.\n");
    printf(" •code can be made less complicated and made easier.\n");
    printf(" •parameters can be made passed to the function.\n");
@@ -1189,6 +1217,7 @@ int learn8()//functions
    printf("                   | stop    |\n");
    printf("                   |_________|\n");
    printf("\n\n Passing Array in a Function :\n");
+   delay_loop(20);
    printf(" •Array elements or an entire array can be passed to a function.\n");
    printf(" •If we pass the values stored in an array ,single element at a time ,then it is called array passing by values or call by values.\n");
    printf("\n /*example for array passing by value or call by value*/\n");
@@ -1235,6 +1264,7 @@ int learn8()//functions
    printf("\n\n /*program to illustrate static variable*/\n\n");
    printf(" #include<stdio.h>\n #include<conio.h>\n void display();\n void main()\n {\n  display();\n  display();\n  display();\n  display();\n  display();\n }\n void display()\n {\n static int i=0;\n i++\n printf(\"%%d\\n\",i);\n }\n\n\n");
    printf(" Category of Function :\n");
+   delay_loop(20);
    printf("                                                     _______________________                           \n");
    printf("                                                     |category of function |                           \n");
    printf("                                                     |_____________________|                           \n");
@@ -1258,6 +1288,7 @@ int learn8()//functions
    printf(" •Actual parameters are parameters which are found in signature(call) of a given function. These are the parameter transfered from the calling function to the called function\n");
    printf(" •formal parameter are parameter which are found in the definition(body) of a given function.\n\n");
    printf(" Local and Global Variables :\n");
+   delay_loop(20);
    printf("_____________________________________________________________________\n");
    printf("|        | Global variable               |  Local variable          |\n");
    printf("|________|_______________________________|__________________________|\n");
@@ -1313,6 +1344,7 @@ int learn8()//functions
    printf(" |                                   | }                              |\n");
    printf(" |___________________________________|________________________________|\n\n\n");
    printf(" •Formal parameter list gives the input for the operation to be performed by function.\n");
+   delay_loop(20);
    printf(" •local variables one variables used only within a function.\n");
    printf(" •Return statements returns result of function.\n");
    printf(" •Statements one to perform specific operation.\n");
@@ -1335,6 +1367,7 @@ int learn8()//functions
    printf(" syntax\n   return_type function_name(formal_parameter list)\n   {\n    local declaration;\n    statements;\n    return(expression);\n   }\n");
    printf("\n\n where,\n   •return_type is the data type of value that function returns, it may be int ,char ,float,etc. If it dose not return anything then return_type is void.\n");
    printf("  •function_name is the actual name of the function\n");
+   delay_loop(20);
 }
 
 int learn9()//pointers
@@ -1370,6 +1403,7 @@ int learn9()//pointers
     printf(" 13 2060 /*value *ptr pointed by ptr at first iteration and address where that value is stored */\n");
     printf(" 14 2062 /*value a[3] pointed by ptr at fourth iteration and address where that value is stored */\n");
     printf(" 15 2062 /*value *ptr pointed by ptr at first iteration and address where that value is stored */\n");
+    delay_loop(20);
     printf(" _____________________\n");
     printf(" |11  |12  |13  |14  |      since integer type occupies 2 bytes for each element\n");
     printf(" |____|____|____|____|      If it reserves 2056 for first element as starting address 2056+2 =2058 as\n");
@@ -1407,6 +1441,7 @@ int learn9()//pointers
     printf("         |____|____|____|____|\n");
     printf("                          |ptr\n");
     printf(" at i=3 a[3]=14,&a[3]=2056\n  *ptr=14,ptr=2062\n  i++,ptr++\n  i=4,ptr=2064\n\n");
+    delay_loop(20);
     printf("\n\n  Character Pointer and Function or Pointer To Strings\n\n");
     printf(" Strings are array of characters instead of integer values of array, here pointer pointers to the character present in string represented as an array.\n");
     printf(" Syntax :\n Data_type &ptr_name ;\n ptr_name = string_name;\n example\n char str[20]=\"america\";\n char *ptr;\n ptr=str;\n\n");
@@ -1462,6 +1497,7 @@ int learn9()//pointers
     printf("address  |2051|2052|2053|2054|2055|2056|\n");
     printf("         |____|____|____|____|____|____|\n");
     printf("                                    |ptr\n");
+    delay_loop(20);
     printf(" at i=5 str1[5]=='\\0'\n  so here iterations stops since while (str1[i]=='\\0'\n\n");
     printf("\n Pointer To Pointer \n");
     printf(" Pointer is a variable that stores the address of another variable.pointer storing the address of another pointer, that is pointer pointing to another pointer is called as pointer to pointer.\n declaration ;\n data_type **pointer_name;\n\n");
@@ -1509,7 +1545,7 @@ int learn9()//pointers
     printf("    |--> |__________________|_______________|\n");
     printf("   ptr    2bytes(2056)       2bytes(2058)\n");
     printf(" at i=0\n scanf(\"%%d\",ptr+i)\n stores now elements to ptr+i=2056+0=2056 location\n\n at i=1 scanf(\"%%d\",ptr+i)\n stores now elements to ptr+i=2056+1=2058 location\n similarly printing is done using *(ptr+1)\n\n\n");
-
+    delay_loop(20);
 
 }
 
@@ -1611,6 +1647,7 @@ int learn10()//structure
     printf(" #include<stdio.h>\n #include<conio.h>\n struct employee\n {\n  int empnumber;\n  char empname[25];\n  int empage;\n  float empsalary;\n };\n void display(struct employee *eptr);\n");
     printf(" void main()\n {\n  struct employee emp;\n  printf(\"enter employee name\");\n  scanf(\"%%s\",emp.empname);\n  printf(\"enter employee number\");\n  scanf(\"%%d\",emp.empnumber);\n  printf(\"enter employee age\");\n  scanf(\"%%d\",emp.empage);\n  printf(\"enter employee salary\");\n  scanf(\"%%f\",emp.empsalary);\n  display(&emp);  getch();\n }\n");
     printf(" void display(struct employee *eptr)\n {\n  printf(\"employee details are\");\n  printf(\"employee name is %%s\\n\",eptr->empname);\n  printf(\"employee number is %%d\\n\",eptr->empnumber);\n  printf(\"employee age is %%d\\n\",eptr->empage);\n  printf(\"employee salary is %%f\\n\",eptr->empsalary);\n }\n\n");
+    delay_loop(20);
 }
 
 int learn11()//preprocessor directives
@@ -1661,7 +1698,7 @@ int learn11()//preprocessor directives
     printf(" voi                :       void function cannot return a value\n\n");
     printf(" example :\n   #pragma warn +rch turns on unreachable code warning.\n   #pragma warn -rch turns off unreachable code warning.\n\n");
 
-
+    delay_loop(20);
 }
 
 
@@ -3249,14 +3286,14 @@ int quiz11() //preprocessor directives
 /* Topics*/
 
 int c_tokens()
-{   system("clear");
+{
+     system("clear");
     int o;
-    int j;
     if(automat("C-TOKENS")==1)
     {
         learn1();
-        for(j=0;j<25;j++)  //delay in sec
-        delay();
+        delay_loop(25);  //delay in sec
+
         quiz1();
     }
     else
@@ -3287,8 +3324,8 @@ int variables()
     if(automat("VARIABLES")==1)
     {
         learn2();
-        for(j=0;j<40;j++)         //delay in sec
-            delay();
+        delay_loop(40); //delay in sec
+
         quiz2();
     }
     else
@@ -3319,8 +3356,7 @@ int constants()
     if(automat("CONSTANTS")==1)
     {
         learn3();
-        for(j=0;j<40;j++)  //delay  in sec
-        delay();
+        delay_loop(40);          //delay  in sec
         quiz3();
     }
     else
@@ -3351,8 +3387,7 @@ int operators()
     if(automat("OPERATORE")==1)
     {
         learn4();
-        for(j=0;j<200;j++)  //delay  in sec
-        delay();
+        delay_loop(200);
         quiz4();
     }
     else
@@ -3383,8 +3418,7 @@ int strings()
     if(automat("STRINGS")==1)
     {
         learn5();
-        for(j=0;j<130;j++)  //delay  in sec
-        delay();
+        delay_loop(130);
         quiz5();
     }
     else
@@ -3416,8 +3450,7 @@ int branching_and_looping()
     if(automat("BRANCHING AND LOOPING")==1)
     {
         learn6();
-        for(j=0;j<150;j++)  //delay  in sec
-        delay();
+        delay_loop(150);
         quiz6();
     }
     else
@@ -3449,8 +3482,7 @@ int array_and_string()
     if(automat("ARRAY AND STRINGS")==1)
     {
         learn7();
-        for(j=0;j<150;j++)  //delay  in sec
-        delay();
+        delay_loop(150);
         quiz7();
     }
     else
@@ -3482,8 +3514,7 @@ int functions()
     if(automat("FUNCTIONS")==1)
     {
         learn8();
-        for(j=0;j<150;j++)  //delay  in sec
-        delay();
+        delay_loop(150);
         quiz8();
     }
     else
@@ -3515,8 +3546,7 @@ int pointers()
     if(automat("POINTERS")==1)
     {
         learn9();
-        for(j=0;j<150;j++)  //delay  in sec
-        delay();
+        delay_loop(150);
         quiz9();
     }
     else
@@ -3547,8 +3577,7 @@ int structure()
     if(automat("STRUCTURE")==1)
     {
         learn10();
-        for(j=0;j<150;j++)  //delay  in sec
-        delay();
+        delay_loop(150);
         quiz10();
     }
     else
@@ -3579,8 +3608,7 @@ int preprocessor_directives()
     if(automat("PROPROCESSOR DIRECTIVES")==1)
     {
         learn11();
-        for(j=0;j<150;j++)  //delay  in sec
-        delay();
+        delay_loop(150);
         quiz11();
     }
     else
