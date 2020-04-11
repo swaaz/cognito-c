@@ -12,13 +12,14 @@
 //#include<learn2.h>
 //#include<learn3.h>
 
+/*structure to store the answers of quiz*/
 typedef struct
 {
     int q[10];
 
 }quiz;
 
-
+/*function used to automate*/
 int automat(char st[])
 {
     int c;
@@ -31,7 +32,7 @@ int automat(char st[])
     else if(c==2) return 2;
     else return 0;
 }
-
+/*function whic is used to delay for one sec*/
 int delay()
 {
     long int i;
@@ -40,7 +41,7 @@ int delay()
     return 0;
 
 }
-
+/*function which is used to delay depending upon the argument passed to the function in sec*/
 int delay_loop(int x)
 {
     int i;
@@ -584,8 +585,8 @@ int learn6() //Branching and looping
   printf("     |_______|   |________|   |________|   |_______|\n");
   printf("          |___________|_____________|_________|\n");
   printf("                     _______|_______\n ");
-  printf("                    (______stop_____)\n\n");
- printf("\n ___________________________                ___________________________\n");
+  printf("                    (______stop_____)\n\n\n");
+  printf(" ___________________________                ___________________________\n");
   printf(" | if else control construct|               | switch control construct |\n");
   printf(" |__________________________|               |__________________________|\n");
   printf("      ------------------                          ---------------\n");
