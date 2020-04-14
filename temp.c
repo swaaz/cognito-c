@@ -29,7 +29,6 @@ int automat(char st[])
     printf("Enter the choice\n");
     scanf("%d",&c);
     if(c==1) return 1;
-    else if(c==2) return 2;
     else return 0;
 }
 /*function which is used to delay for one sec*/
