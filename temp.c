@@ -22,7 +22,9 @@ typedef struct
 /*function used to automate*/
 int automat(char st[])
 {
+   
     int c;
+    system("clear");
     printf("\n\n----------%s----------",st);
     printf("\nDo you want this module to be automatic?\n");
     printf("1. YES\n2. NO\n");
@@ -54,11 +56,11 @@ int learn1() //c-tokens
 {   
     system("clear");
     printf("\n----------Learn----------\n");
-    printf("\tC-Tokens and the smallesT individual Hits of a C-program. These are the basic building blocks in a C program that cannot be further broken down into elements\n");
+    printf(" C-Tokens and the smallesT individual Hits of a C-program. These are the basic building blocks in a C program that cannot be further broken down into elements\n");
     printf("There are mainly five C tokens namely\nKeywords\nIdentifiers (Variables)\nConstants\nStrings\nOperators\n");
     printf("Keywords\nKeywords are the predefined words in a C compiler which are meant to perform specific function in C program Keywords cannot be used for naming variables, identifiers and functions. C Language supports 32 keywords namely int, float, double, long, short, char, if,else switch, case, for, while, goto, do, break, continue, struct, enum, extern, typedef, const,auto, register, default, volatile, sizeof, static, signed, return, union, void, unsigned\n");
+    delay_loop(5);
 }
-
 int learn2() //variables
 {
    system("clear");
@@ -85,11 +87,11 @@ int learn2() //variables
    printf("Intialization :\n");
    printf("The declaration of variables be the assigned value at the declaration time is called initalization.later the assigned value can be changed\n");
    printf("Examples:\n1.int age=18,2.int num=100\n");
-
+    delay_loop(10);
 }
 int learn3() //constants
 {
-    system("clear");
+  system("clear");
   printf("Constants :\n");
   printf("    \tConstants is a fixed value assigned to a variable which cannot be modified in a program. In C program constants is declared by using a keyword const.\n");
   printf("\nExamples :\n1.const int a=3.14, const char letter='N'.\n");
@@ -120,6 +122,7 @@ int learn3() //constants
   printf("\n String constants :\n");
   printf("These constants are single alphabet single digit or single special alphabet(s), single or several digit(s) or single several special symbols or combination of these enclosed within double quotes.\n");
   printf("Example :'a@34','745','sony' etc.\n");
+  delay_loop(10);
 }
 int learn4() //operators
 {
