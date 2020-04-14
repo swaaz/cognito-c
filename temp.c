@@ -22,17 +22,18 @@ typedef struct
 /*function used to automate*/
 int automat(char st[])
 {
+   
     int c;
+    system("clear");
     printf("\n\n----------%s----------",st);
     printf("\nDo you want this module to be automatic?\n");
     printf("1. YES\n2. NO\n");
     printf("Enter the choice\n");
     scanf("%d",&c);
     if(c==1) return 1;
-    else if(c==2) return 2;
     else return 0;
 }
-/*function whic is used to delay for one sec*/
+/*function which is used to delay for one sec*/
 int delay()
 {
     long int i;
@@ -50,18 +51,19 @@ int delay_loop(int x)
 }
 
 /*Learn*/
-
+/*Module-1*/
 int learn1() //c-tokens
-{   system("clear");
+{   
+    system("clear");
     printf("\n----------Learn----------\n");
-    printf("C-Tokens and the smallesT individual Hits of a C-program. These are the basic building blocks in a C program that cannot be further broken down into elements\n");
+    printf(" C-Tokens and the smallesT individual Hits of a C-program. These are the basic building blocks in a C program that cannot be further broken down into elements\n");
     printf("There are mainly five C tokens namely\nKeywords\nIdentifiers (Variables)\nConstants\nStrings\nOperators\n");
     printf("Keywords\nKeywords are the predefined words in a C compiler which are meant to perform specific function in C program Keywords cannot be used for naming variables, identifiers and functions. C Language supports 32 keywords namely int, float, double, long, short, char, if,else switch, case, for, while, goto, do, break, continue, struct, enum, extern, typedef, const,auto, register, default, volatile, sizeof, static, signed, return, union, void, unsigned\n");
+    delay_loop(5);
 }
-
 int learn2() //variables
 {
-    system("clear");
+   system("clear");
    printf("\n-------------------LEARN---------------------\n");
    printf("Variables :\n");
    printf("Identifiers are the names provided to the elements of a program such as variables,functions and array.Identifiers consist of letter, number or an under score.\n");
@@ -85,11 +87,11 @@ int learn2() //variables
    printf("Intialization :\n");
    printf("The declaration of variables be the assigned value at the declaration time is called initalization.later the assigned value can be changed\n");
    printf("Examples:\n1.int age=18,2.int num=100\n");
-
+    delay_loop(10);
 }
 int learn3() //constants
 {
-    system("clear");
+  system("clear");
   printf("Constants :\n");
   printf("    \tConstants is a fixed value assigned to a variable which cannot be modified in a program. In C program constants is declared by using a keyword const.\n");
   printf("\nExamples :\n1.const int a=3.14, const char letter='N'.\n");
@@ -120,6 +122,7 @@ int learn3() //constants
   printf("\n String constants :\n");
   printf("These constants are single alphabet single digit or single special alphabet(s), single or several digit(s) or single several special symbols or combination of these enclosed within double quotes.\n");
   printf("Example :'a@34','745','sony' etc.\n");
+  delay_loop(10);
 }
 int learn4() //operators
 {
@@ -436,7 +439,7 @@ int learn5() //strings
     printf("\n\n  This is a brif representation of string. \n");
     delay_loop(20);
 }
-
+/*module-2*/
 int learn6() //Branching and looping
 {
     system("clear");
@@ -778,6 +781,7 @@ int learn6() //Branching and looping
     delay_loop(20);
     return 0;
 }
+/*module-3*/
 int learn7()//array and atring
 {
     system("clear");
@@ -1047,7 +1051,7 @@ int learn7()//array and atring
     printf("printf(''enter the string in lowercase:'');\nscanf(''%s'',a);\nprintf(''final string is:%s'',strupr(a));\ngetch();\n}\n\nOUTPUT:enter a string in lowercase:vicky\nfinal string is:VICKY\n\n\n");
     delay_loop(20);
 }
-
+/*module-4*/
 int learn8()//functions
 {
    system("clear");
@@ -1370,7 +1374,7 @@ int learn8()//functions
    printf("  •function_name is the actual name of the function\n");
    delay_loop(20);
 }
-
+/*moudle-5*/
 int learn9()//pointers
 {
     system("clear");
@@ -1702,28 +1706,27 @@ int learn11()//preprocessor directives
     delay_loop(20);
 }
 
-
-
-
-
-
 /*Quiz answers*/
-
+/*module-1*/
 quiz q1={4,2,2,4,3,3,4,2,4,1};  //c-tokens
 quiz q2={4,4,4,3,2,3,4,4,3,4}; //variables
 quiz q3={3,3,2,3,2,4,1,1,2,3}; //constants
 quiz q4={2,3,2,1,3,1,2,1,2,1}; //operators
 quiz q5={1,1,2,3,1,3,2,3,3,2}; //string
+/*module-2*/
 quiz q6={1,3,3,4,2,4,4,4,3,4};//branching and looping
+/*module-3*/
 quiz q7={3,1,3,3,3,1,1,2,1,4};//array and string
+/*module-4*/
 quiz q8={2,4,2,1,2,1,4,3,1,4};//Functions
+/*module-5*/
 quiz q9={3,1,1,1,2,1,3,2,2,4};//pointers
 quiz q10={2,4,3,4,2,2,2,4,4,4};//structure
 quiz q11={4,1,2,3,3,1,4,3,1,2};//preprocessor directives
 
 
 /*Quiz*/
-
+/*module-1*/
 int quiz1() //c-tokens
 {
    system("clear");
@@ -2419,7 +2422,7 @@ int quiz5() // string
                 goto l5_10;
             }
 }
-
+/*module-2*/
 int quiz6() // Branching and looping
 {
     system("clear");
@@ -2559,7 +2562,7 @@ int quiz6() // Branching and looping
         }
 
 }
-
+/*module-3*/
 int quiz7()//arrays
 {
 
@@ -2702,7 +2705,7 @@ int quiz7()//arrays
         }
 
 }
-
+/*module-4*/
 int quiz8()//Functions
 {
     system("clear");
@@ -2857,8 +2860,8 @@ int quiz8()//Functions
         }
 
 }
-
-int quiz9() //c-tokens
+/*module-5*/
+int quiz9() //pointers
 {
     int x;
 
@@ -3285,12 +3288,12 @@ int quiz11() //preprocessor directives
 
 
 /* Topics*/
-
+/*module-1*/
 int c_tokens()
 {
-     system("clear");
+     
     int o;
-    if(automat("C-TOKENS")==1)
+    if(automat("C-TOKENS"))
     {
         learn1();
         delay_loop(25);  //delay in sec
@@ -3301,6 +3304,7 @@ int c_tokens()
     {
     while (1)
     {
+        system("clear");
         printf("\n----------C-TOKENS----------\n");
         printf("Do you want to\n1.Learn\n2.Quiz\n3.Back to previous menu\n4.Exit\n");
         printf("Enter the option : ");
@@ -3319,10 +3323,10 @@ int c_tokens()
     return 0;
 }
 int variables()
-{   system("clear");
+{   
     int o;
     int j;
-    if(automat("VARIABLES")==1)
+    if(automat("VARIABLES"))
     {
         learn2();
         delay_loop(40); //delay in sec
@@ -3333,6 +3337,7 @@ int variables()
     {
     while (1)
     {
+        system("clear");
         printf("\n----------VARIABLES----------\n");
         printf("Do you want to\n1.Learn\n2.Quiz\n3.Back to previous menu\n4.Exit\n");
         printf("Enter the option : ");
@@ -3351,10 +3356,10 @@ int variables()
     return 0;
 }
 int constants()
-{   system("clear");
+{   
     int o;
     int j;
-    if(automat("CONSTANTS")==1)
+    if(automat("CONSTANTS"))
     {
         learn3();
         delay_loop(40);          //delay  in sec
@@ -3364,6 +3369,7 @@ int constants()
     {
     while (1)
     {
+        system("clear");
         printf("\n----------CONSTANTS----------\n");
         printf("Do you want to\n1.Learn\n2.Quiz\n3.Back to previous menu\n4.exit\n");
         printf("Enter the option : ");
@@ -3382,10 +3388,10 @@ int constants()
     return 0;
 }
 int operators()
-{   system("clear");
+{  
     int o;
     int j;
-    if(automat("OPERATORE")==1)
+    if(automat("OPERATORE"))
     {
         learn4();
         delay_loop(200);
@@ -3395,6 +3401,7 @@ int operators()
     {
     while (1)
     {
+        system("clear");
         printf("\n----------OPERATORS----------\n");
         printf("Do you want to\n1.Learn\n2.Quiz\n3.Back to previous menu\n4.Exit\n");
         printf("Enter the option : ");
@@ -3413,10 +3420,11 @@ int operators()
     return 0;
 }
 int strings()
-{   system("clear");
+{   
+   
     int o;
     int j;
-    if(automat("STRINGS")==1)
+    if(automat("STRINGS"))
     {
         learn5();
         delay_loop(130);
@@ -3426,6 +3434,7 @@ int strings()
     {
     while (1)
     {
+        system("clear");
         printf("\n----------STRINGS-----------\n");
         printf("Do you want to\n1.Learn\n2.Quiz\n3.Back to previous menu4.exit\n");
         printf("Enter the option\n");
@@ -3445,10 +3454,10 @@ int strings()
 }
  /*module-2*/
 int branching_and_looping()
-{   system("clear");
+{  
     int o;
     int j;
-    if(automat("BRANCHING AND LOOPING")==1)
+    if(automat("BRANCHING AND LOOPING"))
     {
         learn6();
         delay_loop(150);
@@ -3458,6 +3467,7 @@ int branching_and_looping()
     {
     while (1)
     {
+        system("clear");
         printf("\n----------BRANCHING & LOOPING-----------\n");
         printf("Do you want to\n1.Learn\n2.Quiz\n3.Back to previous menu4.exit\n");
         printf("Enter the option\n");
@@ -3477,10 +3487,10 @@ int branching_and_looping()
 }
 /*module-3*/
 int array_and_string()
-{   system("clear");
+{  
     int o;
     int j;
-    if(automat("ARRAY AND STRINGS")==1)
+    if(automat("ARRAY AND STRINGS"))
     {
         learn7();
         delay_loop(150);
@@ -3490,6 +3500,7 @@ int array_and_string()
     {
     while (1)
     {
+        system("clear");
         printf("\n----------ARRAY AND STRING-----------\n");
         printf("Do you want to\n1.Learn\n2.Quiz\n3.Back to previous menu4.exit\n");
         printf("Enter the option\n");
@@ -3509,10 +3520,11 @@ int array_and_string()
 }
 /*module-4*/
 int functions()
-{   system("clear");
+{   
+    
     int o;
     int j;
-    if(automat("FUNCTIONS")==1)
+    if(automat("FUNCTIONS"))
     {
         learn8();
         delay_loop(150);
@@ -3522,6 +3534,7 @@ int functions()
     {
     while (1)
     {
+        system("clear");
         printf("\n----------FUNCTIONS-----------\n");
         printf("Do you want to\n1.Learn\n2.Quiz\n3.Back to previous menu4.exit\n");
         printf("Enter the option\n");
@@ -3539,12 +3552,13 @@ int functions()
     }
     return 0;
 }
-//MODULE-5
+/*module-5*/
 int pointers()
-{   system("clear");
+{  
+    
     int o;
     int j;
-    if(automat("POINTERS")==1)
+    if(automat("POINTERS"))
     {
         learn9();
         delay_loop(150);
@@ -3554,6 +3568,7 @@ int pointers()
     {
     while (1)
     {
+        system("clear");
         printf("\n----------POINTERS-----------\n");
         printf("Do you want to\n1.Learn\n2.Quiz\n3.Back to previous menu4.exit\n");
         printf("Enter the option\n");
@@ -3572,10 +3587,11 @@ int pointers()
     return 0;
 }
 int structure()
-{   system("clear");
+{   
+    
     int o;
     int j;
-    if(automat("STRUCTURE")==1)
+    if(automat("STRUCTURE"))
     {
         learn10();
         delay_loop(150);
@@ -3585,6 +3601,7 @@ int structure()
     {
     while (1)
     {
+        system("clear");
         printf("\n----------STRUCTURE-----------\n");
         printf("Do you want to\n1.Learn\n2.Quiz\n3.Back to previous menu4.exit\n");
         printf("Enter the option\n");
@@ -3603,10 +3620,10 @@ int structure()
     return 0;
 }
 int preprocessor_directives()
-{   system("clear");
+{ 
     int o;
     int j;
-    if(automat("PROPROCESSOR DIRECTIVES")==1)
+    if(automat("PROPROCESSOR DIRECTIVES"))
     {
         learn11();
         delay_loop(150);
@@ -3616,6 +3633,7 @@ int preprocessor_directives()
     {
     while (1)
     {
+        system("clear");
         printf("\n----------PREPROCESSOR DIRECTIVES-----------\n");
         printf("Do you want to\n1.Learn\n2.Quiz\n3.Back to previous menu4.exit\n");
         printf("Enter the option\n");
@@ -3642,9 +3660,11 @@ int preprocessor_directives()
 
 int module_1()
 {
+    
     int o;
     while(1)
     {
+         system("clear");
         printf("\n----------MODULE-1----------\n");
         printf("1.C TOKENS\n2.VARIABLES\n3.CONSTANTS\n4.OPERATORS\n5.STRING\n6.BACK TO MAIN MENU\n7.EXIT\n");
         printf("Enter the option : ");
@@ -3667,9 +3687,11 @@ int module_1()
 
 int module_2()
 {
+    
     int o;
     while(1)
     {
+         system("clear");
         printf("\n----------MODULE-2----------\n");
         printf("1. BRANCHING AND LOOPING\n2.BACK TO MAIN MENU\n3.EXIT\n");
         printf("Enter the option : ");
@@ -3689,9 +3711,11 @@ int module_2()
 }
 int module_3()
 {
+   
     int o;
     while(1)
     {
+          system("clear");
         printf("\n----------MODULE-3----------\n");
         printf("1.ARRAY AND STRINGS\n2.BACK TO MAIN MENU\n3.EXIT\n");
         printf("Enter the option : ");
@@ -3709,9 +3733,11 @@ int module_3()
 }
 int module_4()
 {
+   
     int o;
     while(1)
     {
+          system("clear");
         printf("\n----------MODULE-4----------\n");
         printf("1. FUNCTIONS\n2. BACK TO MAIN MENU\n3.EXIT\n");
         printf("Enter the option : ");
@@ -3730,9 +3756,11 @@ int module_4()
 
 int module_5()
 {
+    
     int o;
     while(1)
     {
+         system("clear");
         printf("\n----------MODULE-5----------\n");
         printf("1. POINTERS\n2. STRUCTURE\n3. PREPROCESSOR DIRECTIVES\n4.BACK TO MAIN MENU\n5.EXIT\n");
         printf("Enter the option : ");
@@ -3755,10 +3783,11 @@ int module_5()
 
 void main()
 {
+     printf("\n----------WELCOME----------\n");
     int o;
     while(1)
     {
-        printf("\n----------WELCOME----------\n");
+        system("clear");
         printf("1.Module-1\n2.Module-2\n3.Module-3\n4.Module-4\n5.Module-5\n6.Exit\n");
         printf("Enter the option : ");
         scanf("%d",&o);
