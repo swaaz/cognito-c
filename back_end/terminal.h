@@ -25,3 +25,4 @@ void heading()
     printf("\n\n\n");
     reset();
 }
+
