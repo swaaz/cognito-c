@@ -3992,7 +3992,7 @@ void main()
         case 6:
             exit(0);
         default:
-            printf("OPss!!! You entered Invalid option\n");
+            printf("Oops!!! You entered Invalid option\n");
         }
     }
     
