@@ -1,4 +1,4 @@
-int learn()
+int learn1() //c-tokens
 {
     printf("\n----------Learn----------\n");
     printf("C-Tokens and the smallesT individual Hits of a C-program. These are the basic building blocks in a C program that cannot be further broken down into elements\n");
