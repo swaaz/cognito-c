@@ -3823,7 +3823,8 @@ int module_1()
     int o;
     while (1)
     {
-        printf("\n----------MODULE-1----------\n");
+        // printf("\n----------MODULE-1----------\n");
+        mod_1();
         printf("1.C TOKENS\n2.VARIABLES\n3.CONSTANTS\n4.OPERATORS\n5.STRING\n6.BACK TO MAIN MENU\n7.EXIT\n");
         printf("Enter the option : ");
         scanf("%d", &o);
@@ -3860,7 +3861,8 @@ int module_2()
     int o;
     while (1)
     {
-        printf("\n----------MODULE-2----------\n");
+        // printf("\n----------MODULE-2----------\n");
+        mod_2();
         printf("1. BRANCHING AND LOOPING\n2.BACK TO MAIN MENU\n3.EXIT\n");
         printf("Enter the option : ");
         scanf("%d", &o);
@@ -3885,7 +3887,8 @@ int module_3()
     int o;
     while (1)
     {
-        printf("\n----------MODULE-3----------\n");
+        // printf("\n----------MODULE-3----------\n");
+        mod_3();
         printf("1.ARRAY AND STRINGS\n2.BACK TO MAIN MENU\n3.EXIT\n");
         printf("Enter the option : ");
         scanf("%d", &o);
@@ -3909,7 +3912,8 @@ int module_4()
     int o;
     while (1)
     {
-        printf("\n----------MODULE-4----------\n");
+        // printf("\n----------MODULE-4----------\n");
+        mod_4();
         printf("1. FUNCTIONS\n2. BACK TO MAIN MENU\n3.EXIT\n");
         printf("Enter the option : ");
         scanf("%d", &o);
@@ -3934,7 +3938,8 @@ int module_5()
     int o;
     while (1)
     {
-        printf("\n----------MODULE-5----------\n");
+        // printf("\n----------MODULE-5----------\n");
+        mod_5();
         printf("1. POINTERS\n2. STRUCTURE\n3. PREPROCESSOR DIRECTIVES\n4.BACK TO MAIN MENU\n5.EXIT\n");
         printf("Enter the option : ");
         scanf("%d", &o);
